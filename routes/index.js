@@ -6,6 +6,7 @@ var crypto = require('crypto'),
 	fs = require('fs'),
     User = require('../models/user.js'),
     Post = require('../models/post.js'),
+    Pic = require('../models/pic.js'),
     Comment = require('../models/comment.js');
 module.exports = function (app) {
 	app.get('/', function (req, res) {
@@ -119,7 +120,7 @@ module.exports = function (app) {
 	app.post('/post', function (req, res) {
 		var currentUser = req.session.user,
 			tags = [req.body.tag1, req.body.tag2, req.body.tag3]
-		    post = new Post(currentUser.name, req.body.title, tags, req.body.post);
+		    post = new Post(currentUser.name, currentUser.head, req.body.title, tags, req.body.post);
 			post.save(function (err) {
 			   	if (err) {
 			    	req.flash('error', err); 
@@ -153,15 +154,15 @@ module.exports = function (app) {
 	  	for (var i in req.files) {
 	    	if (req.files[i].size == 0){
 	      // 使用同步方式删除一个文件
-	     	fs.unlinkSync(req.files[i].path);
-	      	console.log('Successfully removed an empty file!');
-	    } else {
-	      	var target_path = './public/images/' + req.files[i].name;
+	     		fs.unlinkSync(req.files[i].path);
+	      		console.log('Successfully removed an empty file!');
+	    	} else {
+	      		var target_path = './public/images/' + req.files[i].name;
 	      // 使用同步方式重命名一个文件
-	      	fs.renameSync(req.files[i].path, target_path);
-	      	console.log('Successfully renamed a file!');
-	    }
-	}
+	      		fs.renameSync(req.files[i].path, target_path);
+	      		console.log('Successfully renamed a file!');
+	    	}
+		}
 		req.flash('success', '文件上传成功!');
 		res.redirect('/upload');
 	});
@@ -276,16 +277,20 @@ module.exports = function (app) {
 	});
 	//留言
 	app.post('/u/:name/:day/:title', function (req, res) {
-	  var date = new Date(),
-	      time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
+	  	var date = new Date(),
+	     	time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
 	             date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
-	  var comment = {
-	      name: req.body.name,
-	      email: req.body.email,
-	      website: req.body.website,
-	      time: time,
-	      content: req.body.content
-	  };
+	       	md5 = crypto.createHash('md5'),
+           	email_MD5 = md5.update(req.body.email.toLowerCase()).digest('hex'),
+           	head = "http://www.gravatar.com/avatar/" + email_MD5 + "?s=48"; 
+	  		comment = {
+			    name: req.body.name,
+			    head: head,
+			    email: req.body.email,
+			    website: req.body.website,
+			    time: time,
+			    content: req.body.content
+			};
 	  var newComment = new Comment(req.params.name, req.params.day, req.params.title, comment);
 	  newComment.save(function (err) {
 	    if (err) {

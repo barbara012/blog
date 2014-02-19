@@ -38,19 +38,10 @@
             </div>
         </div>
     </div>
-    <div id="container" class="container">   
-        <form method="post" action='/upload' class="form-horizontal" enctype='multipart/form-data'>
-            <fieldset>
-                <div class="form-group">
-                    <input type="file" name='file1'/><br>
-                    <input type="file" name='file2'/><br>
-                    <input type="file" name='file3'/><br>
-                    <input type="file" name='file4'/><br>
-                    <input type="file" name='file5'/><br>
-                </div>
-                <button type="submit" class="btn">提交</button>
-            </fieldset>
-        </form>        
+    <div id="container" class="container">
+         <div id="upload-drag" class="upload-drag"></div>
+         <br/>
+         <button class="btn upload-submit">提交</button>     
         <% include footer %>
     </div>
   </body>

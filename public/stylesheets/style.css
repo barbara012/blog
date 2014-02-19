@@ -18,3 +18,50 @@ a {
 .search{border:0;width:6em;text-align:center;font-size:1em;margin:0.5em 0;}
 .l_head{float:left;margin-left:-4em;box-shadow:0px 1px 4px #888;}
 .r_head{float:right;margin-top:-2.5em;box-shadow:0px 1px 4px #888;}
+/*#load-pic input[type="file"] {visibility: hidden; height: 2px;}*/
+.upload-drag {
+	padding: 10px;
+	border: 2px dashed rgb(221, 221, 221);
+	border-radius: 2px;
+	min-height: 40px;
+	height: auto; 
+	transition: all 0.2s ease;
+}
+.upload-drag .thumbnail,
+.upload-drag .thumbnail img{
+	width:200px;
+	height:150px;
+}
+.upload-drag .thumbnail {
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+}
+.close-img {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 10;
+	background: #ffffff;
+	height: 20px;
+	width: 20px;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #000000;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+.upload-drag .thumbnail:hover {
+	border-color: rgb(221, 221, 221);
+}
+.upload-drag .thumbnail:hover .close-img {
+	opacity: 1;
+}
+.upload-drag .thumbnail .close-img:hover {
+	background: #0078b6;
+	color: #ffffff;
+	border-color: #ffffff;
+	text-decoration: none;
+}
+
