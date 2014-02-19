@@ -23,7 +23,7 @@ a {
 	padding: 10px;
 	border: 2px dashed rgb(221, 221, 221);
 	border-radius: 2px;
-	min-height: 40px;
+	min-height: 240px;
 	height: auto; 
 	transition: all 0.2s ease;
 }

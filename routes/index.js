@@ -151,18 +151,30 @@ module.exports = function (app) {
 	});
 	app.post('/upload', checkLogin);
 	app.post('/upload', function (req, res) {
+		var dbpic = [],
+			blobArr,
+			pic;
 	  	for (var i in req.files) {
 	    	if (req.files[i].size == 0){
 	      // 使用同步方式删除一个文件
-	     		fs.unlinkSync(req.files[i].path);
+	     		fs.unlinkSync(req.files[i].path);	     		
 	      		console.log('Successfully removed an empty file!');
 	    	} else {
-	      		var target_path = './public/images/' + req.files[i].name;
+	      		var target_path = './public/images/dbimg/' + req.files[i].name;	      		
 	      // 使用同步方式重命名一个文件
 	      		fs.renameSync(req.files[i].path, target_path);
-	      		console.log('Successfully renamed a file!');
+	      		var dbImgUrl = '/images/dbimg/' + req.files[i].name;
+	      		var date = new Date();
+	      		var time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
+	    			date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+	    		blobArr = {};
+	    		blobArr.time = time;
+	    		blobArr.pic = dbImgUrl;
+	      		dbpic.push(blobArr);
 	    	}
 		}
+		pic = new Pic(dbpic);
+	    pic.save(function(){});
 		req.flash('success', '文件上传成功!');
 		res.redirect('/upload');
 	});

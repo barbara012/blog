@@ -94,8 +94,12 @@ $(function () {
 		request.send(formdata);
 	};
 	$('.upload-submit').click(function () {
-		postFormData(url, data, function(){
-			box.innerHTML = '';
-		});
+		if (box.innerHTML != ''){
+			postFormData(url, data, function(){
+				box.innerHTML = '';
+				data = [];
+				imgNumbers = 0;
+			});
+		};		
 	})
 });

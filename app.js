@@ -30,7 +30,7 @@ app.use(express.logger({stream: accessLog}));
 app.use(express.bodyParser(
 	{
 		keepExtensions: true,
-		uploadDir: './public/images'
+		uploadDir: './public/images/dbimg'
 	}
 ));
 app.use(express.methodOverride());

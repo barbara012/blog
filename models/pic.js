@@ -2,7 +2,7 @@ var mongodb = require('./db');
 
 function Pic (pic) {
 	this.pic = pic;
-}
+};
 
 module.exports = Pic;
 
@@ -17,33 +17,33 @@ Pic.prototype.save = function (callback) {
 	    day : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
 	    minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
 	    date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) 
-	}
-	//要存入数据库的文档
-	var pic = {
-	    time: time,
-	    pic: this.pic
 	};
+	var arrPic = this.pic;
+	//要存入数据库的文档
 	//打开数据库
 	mongodb.open(function (err, db) {
 		if (err) {
 			return callback(err);
-		}
+		};
 		//读取 pics 集合
 		db.collection('pics', function (err, collection) {
 		  	if (err) {
 		    	mongodb.close();
 		    	return callback(err);
-		  	}
+		  	};
 		  //将文档插入 pics 集合
-		  	collection.insert(pic, {
-		    	safe: true
-		  	}, function (err) {
-		    	mongodb.close();
-		    	if (err) {
-		      		return callback(err);//失败！返回 err
-		    	}
-		    	callback(null);//返回 err 为 null
-		  	});
+		  	for (var i = 0; i < arrPic.length; i++) {
+		  		console.log(arrPic[i].pic+ ',' + i);
+		  		collection.insert(arrPic[i], {safe: true}, function (err) {
+		  			//mongodb.close();
+			  	  	if (err) {
+			  	    		return callback(err);//失败！返回 err
+			  	  	};
+		  		});
+		  		
+		  	};
+		  	
 		});
+		mongodb.close()
 	});
 };
