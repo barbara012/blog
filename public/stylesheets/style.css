@@ -27,12 +27,12 @@ a {
 	height: auto; 
 	transition: all 0.2s ease;
 }
-.upload-drag .thumbnail,
-.upload-drag .thumbnail img{
+.thumbnail,
+.thumbnail img{
 	width:200px;
 	height:150px;
 }
-.upload-drag .thumbnail {
+.thumbnail {
 	display: inline-block;
 	position: relative;
 	margin-right: 10px;
@@ -52,13 +52,13 @@ a {
 	opacity: 0;
 	transition: all 0.2s ease;
 }
-.upload-drag .thumbnail:hover {
+.thumbnail:hover {
 	border-color: rgb(221, 221, 221);
 }
-.upload-drag .thumbnail:hover .close-img {
+.thumbnail:hover .close-img {
 	opacity: 1;
 }
-.upload-drag .thumbnail .close-img:hover {
+.thumbnail .close-img:hover {
 	background: #0078b6;
 	color: #ffffff;
 	border-color: #ffffff;

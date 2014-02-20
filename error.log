@@ -910,3 +910,159 @@ Error: db object already connecting, open cannot be called multiple times
     at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
     at checkLogin (D:\blog\routes\index.js:397:4)
     at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Thu Feb 20 2014 21:10:46 GMT+0800 (中国标准时间)] /album
+ReferenceError: D:\blog\views\album.ejs:18
+    16|   							<a href="/">首页</a>
+    17|   						</li>
+ >> 18|   					<% if (user) { %>
+    19|   						<li>
+    20|   							<a href="/post">发布</a>
+    21|   						</li>
+
+user is not defined
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:509)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:66)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:144:7
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Thu Feb 20 2014 21:10:52 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 20 2014 21:12:14 GMT+0800 (中国标准时间)] /album
+ReferenceError: D:\blog\views\album.ejs:18
+    16|   							<a href="/">首页</a>
+    17|   						</li>
+ >> 18|   					<% if (user) { %>
+    19|   						<li>
+    20|   							<a href="/post">发布</a>
+    21|   						</li>
+
+user is not defined
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:509)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:33:66)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:144:7
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Thu Feb 20 2014 21:12:35 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 20 2014 21:14:21 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 20 2014 21:50:09 GMT+0800 (中国标准时间)] /album
+ReferenceError: D:\blog\views\index.ejs:58
+    56|   		<form action="/search" method="GET"><input type="text" name="keyword" placeholder="SEARCH" class="search" /></form>
+    57|   		<article>
+ >> 58| 			<% posts.forEach(function (post, index) { %>
+    59| 			  <p>
+    60| 			  	<h2><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
+    61| 			  	<a href="/u/<%= post.name %>"><img src="<%= post.head %>" class="r_head" /></a>
+
+posts is not defined
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1667)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:66)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:150:8
+    at D:\blog\models\post.js:132:25
+[Thu Feb 20 2014 21:50:21 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 20 2014 21:50:25 GMT+0800 (中国标准时间)] /album
+ReferenceError: D:\blog\views\index.ejs:58
+    56|   		<form action="/search" method="GET"><input type="text" name="keyword" placeholder="SEARCH" class="search" /></form>
+    57|   		<article>
+ >> 58| 			<% posts.forEach(function (post, index) { %>
+    59| 			  <p>
+    60| 			  	<h2><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
+    61| 			  	<a href="/u/<%= post.name %>"><img src="<%= post.head %>" class="r_head" /></a>
+
+posts is not defined
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1667)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:66)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:150:8
+    at D:\blog\models\post.js:132:25
+[Thu Feb 20 2014 21:50:34 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 20 2014 21:50:51 GMT+0800 (中国标准时间)] /album
+ReferenceError: D:\blog\views\index.ejs:58
+    56|   		<form action="/search" method="GET"><input type="text" name="keyword" placeholder="SEARCH" class="search" /></form>
+    57|   		<article>
+ >> 58| 			<% posts.forEach(function (post, index) { %>
+    59| 			  <p>
+    60| 			  	<h2><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
+    61| 			  	<a href="/u/<%= post.name %>"><img src="<%= post.head %>" class="r_head" /></a>
+
+posts is not defined
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1667)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:66)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:150:8
+    at D:\blog\models\post.js:132:25
+[Thu Feb 20 2014 21:50:57 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 20 2014 21:52:12 GMT+0800 (中国标准时间)] /album
+ReferenceError: D:\blog\views\index.ejs:58
+    56|   		<form action="/search" method="GET"><input type="text" name="keyword" placeholder="SEARCH" class="search" /></form>
+    57|   		<article>
+ >> 58| 			<% posts.forEach(function (post, index) { %>
+    59| 			  <p>
+    60| 			  	<h2><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
+    61| 			  	<a href="/u/<%= post.name %>"><img src="<%= post.head %>" class="r_head" /></a>
+
+posts is not defined
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1667)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:66)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:150:8
+    at D:\blog\models\pic.js:77:12
+[Thu Feb 20 2014 21:52:18 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 20 2014 21:56:41 GMT+0800 (中国标准时间)] /album
+ReferenceError: D:\blog\views\index.ejs:58
+    56|   		<form action="/search" method="GET"><input type="text" name="keyword" placeholder="SEARCH" class="search" /></form>
+    57|   		<article>
+ >> 58| 			<% posts.forEach(function (post, index) { %>
+    59| 			  <p>
+    60| 			  	<h2><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
+    61| 			  	<a href="/u/<%= post.name %>"><img src="<%= post.head %>" class="r_head" /></a>
+
+posts is not defined
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1667)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:66)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:150:8
+    at D:\blog\models\pic.js:77:12
+[Thu Feb 20 2014 21:56:47 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'

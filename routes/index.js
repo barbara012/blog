@@ -138,7 +138,27 @@ module.exports = function (app) {
 		res.redirect('/');//登出成功后跳转到主页
 	});
 
-
+//相册
+	app.get('/album', checkLogin);
+	app.get('/album', function (req, res) {
+		var page = page = req.query.p ? parseInt(req.query.p) : 1;
+		//查询并返回第 page 页的 10 篇文章
+		Pic.getTen(null, page, function (err, imgs, total) {
+			if (err) {
+				imgs = [];
+			} 
+			res.render('album', {
+				title: '首页',
+				imgs: imgs,
+				page: page,
+				isFirstPage: (page - 1) == 0,
+				isLastPage: ((page - 1) * 10 + imgs.length) == total,
+				user: req.session.user,
+				success: req.flash('success').toString(),
+				error: req.flash('error').toString()
+	    	});
+		});
+	});
 //上传文件
 	app.get('/upload', checkLogin);
 	app.get('/upload', function (req, res) {
