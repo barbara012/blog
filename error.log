@@ -1066,3 +1066,381 @@ posts is not defined
     at D:\blog\models\pic.js:77:12
 [Thu Feb 20 2014 21:56:47 GMT+0800 (中国标准时间)] /favicon.ico
 Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 19:08:53 GMT+0800 (中国标准时间)] /
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Sat Feb 22 2014 19:08:54 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 19:08:56 GMT+0800 (中国标准时间)] /
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Sat Feb 22 2014 19:08:56 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 19:08:57 GMT+0800 (中国标准时间)] /
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Sat Feb 22 2014 19:08:57 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 19:08:58 GMT+0800 (中国标准时间)] /
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Sat Feb 22 2014 19:08:58 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 19:08:59 GMT+0800 (中国标准时间)] /
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Sat Feb 22 2014 19:08:59 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 19:09:00 GMT+0800 (中国标准时间)] /
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Sat Feb 22 2014 19:09:01 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 19:09:01 GMT+0800 (中国标准时间)] /
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Sat Feb 22 2014 19:09:01 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 19:09:02 GMT+0800 (中国标准时间)] /
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Sat Feb 22 2014 19:09:03 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 19:09:03 GMT+0800 (中国标准时间)] /
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Sat Feb 22 2014 19:09:03 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 19:09:04 GMT+0800 (中国标准时间)] /
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Sat Feb 22 2014 19:09:04 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 23:06:08 GMT+0800 (中国标准时间)] /
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\index.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:20:10
+    at D:\blog\models\post.js:132:25
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:162:16
+[Sat Feb 22 2014 23:06:09 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 23:06:26 GMT+0800 (中国标准时间)] /
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\index.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:20:10
+    at D:\blog\models\post.js:132:25
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:162:16
+[Sat Feb 22 2014 23:06:26 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 23:06:37 GMT+0800 (中国标准时间)] /
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\index.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:20:10
+    at D:\blog\models\post.js:132:25
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:162:16
+[Sat Feb 22 2014 23:06:38 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 23:07:05 GMT+0800 (中国标准时间)] /
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\index.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:20:10
+    at D:\blog\models\post.js:132:25
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:162:16
+[Sat Feb 22 2014 23:07:05 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 23:07:32 GMT+0800 (中国标准时间)] /
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\index.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:20:10
+    at D:\blog\models\post.js:132:25
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:162:16
+[Sat Feb 22 2014 23:07:32 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 23:07:32 GMT+0800 (中国标准时间)] /
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\index.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:20:10
+    at D:\blog\models\post.js:132:25
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:162:16
+[Sat Feb 22 2014 23:07:32 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 23:07:32 GMT+0800 (中国标准时间)] /
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\index.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:20:10
+    at D:\blog\models\post.js:132:25
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:162:16
+[Sat Feb 22 2014 23:07:33 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 23:08:08 GMT+0800 (中国标准时间)] /
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\index.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:20:10
+    at D:\blog\models\post.js:132:25
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:162:16
+[Sat Feb 22 2014 23:08:09 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sat Feb 22 2014 23:08:10 GMT+0800 (中国标准时间)] /
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\index.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:20:10
+    at D:\blog\models\post.js:132:25
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:162:16
+[Sat Feb 22 2014 23:08:10 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sun Feb 23 2014 14:55:47 GMT+0800 (中国标准时间)] /u/yoyo/2014-2-20/%E9%9C%9C%E6%9D%91%E6%A1%82%E6%9E%97
+SyntaxError: Unexpected token ) in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:301:10
+    at D:\blog\models\post.js:180:11
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Sun Feb 23 2014 14:55:47 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sun Feb 23 2014 16:22:44 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (D:\blog\models\post.js:101:13)
+    at D:\blog\routes\index.js:16:9
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:315:9)
+[Sun Feb 23 2014 16:22:53 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Sun Feb 23 2014 20:44:26 GMT+0800 (中国标准时间)] /login
+Error: ENOENT, no such file or directory 'D:\blog\views\footor.ejs'
+    at Object.fs.openSync (fs.js:427:18)
+    at fs.readFileSync (fs.js:284:15)
+    at Object.exports.parse (D:\blog\node_modules\ejs\lib\ejs.js:159:19)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:224:15)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:82:7
+[Sun Feb 23 2014 20:44:27 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Mon Feb 24 2014 20:35:49 GMT+0800 (中国标准时间)] /u/yoyo/2014-2-23/OneDrive%20-%20%E5%BE%AE%E8%BD%AF%E2%80%9C%E5%85%A8%E6%96%B0%E2%80%9D%E7%9A%84%E5%85%8D%E8%B4%B9%E4%BA%91%E5%AD%98%E5%82%A8%E5%90%8C%E6%AD%A5%E7%BD%91%E7%9B%98%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83%E4%B8%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8B%E8%BD%BD%20(%E6%9B%BF%E4%BB%A3%E5%8E%9FSkyDrive)
+TypeError: D:\blog\views\article.ejs:31
+    29| 							<a href="/post">发布</a>
+    30| 						</li>						
+ >> 31| 					<% if (user.name == 'yoyo') { %>
+    32| 						<li>
+    33| 							<a href="/album">相册</a>
+    34| 						</li>
+
+Cannot read property 'name' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:948)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:10
+    at D:\blog\models\post.js:180:11
+[Mon Feb 24 2014 20:35:49 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Mon Feb 24 2014 22:34:26 GMT+0800 (中国标准时间)] /post
+TypeError: Cannot read property 'tag' of undefined
+    at D:\blog\routes\index.js:123:22
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:420:4)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+[Mon Feb 24 2014 22:36:56 GMT+0800 (中国标准时间)] /post
+TypeError: Cannot read property 'tag' of undefined
+    at D:\blog\routes\index.js:123:22
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:420:4)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+[Mon Feb 24 2014 22:40:56 GMT+0800 (中国标准时间)] /post
+TypeError: Cannot read property 'tag' of undefined
+    at D:\blog\routes\index.js:123:22
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:420:4)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+[Mon Feb 24 2014 22:41:57 GMT+0800 (中国标准时间)] /post
+TypeError: Cannot read property 'tag' of undefined
+    at D:\blog\routes\index.js:123:22
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:420:4)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)

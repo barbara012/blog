@@ -14,7 +14,7 @@ User.prototype.save = function(callback) {
   //要存入数据库的用户文档
     var md5 = crypto.createHash('md5'),
         email_MD5 = md5.update(this.email.toLowerCase()).digest('hex'),
-        head = "http://www.gravatar.com/avatar/" + email_MD5 + "?s=48",
+        head = "http://www.gravatar.com/avatar/" + email_MD5 + "?s=220",
     //要存入数据库的用户信息文档
        user = {
           name: this.name,

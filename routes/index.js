@@ -119,8 +119,11 @@ module.exports = function (app) {
 	app.post('/post', checkLogin);
 	app.post('/post', function (req, res) {
 		var currentUser = req.session.user,
-			tags = [req.body.tag1, req.body.tag2, req.body.tag3]
-		    post = new Post(currentUser.name, currentUser.head, req.body.title, tags, req.body.post);
+			md5 = crypto.createHash('md5'),
+			tags = req.body.tag.split('，'),
+			email_MD5 = md5.update(currentUser.email.toLowerCase()).digest('hex'),
+			head = "http://www.gravatar.com/avatar/" + email_MD5 + "?s=60",
+		    post = new Post(currentUser.name, head, req.body.title, tags, req.body.post);
 			post.save(function (err) {
 			   	if (err) {
 			    	req.flash('error', err); 
@@ -314,7 +317,7 @@ module.exports = function (app) {
 	             date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
 	       	md5 = crypto.createHash('md5'),
            	email_MD5 = md5.update(req.body.email.toLowerCase()).digest('hex'),
-           	head = "http://www.gravatar.com/avatar/" + email_MD5 + "?s=48"; 
+           	head = "http://www.gravatar.com/avatar/" + email_MD5 + "?s=60"; 
 	  		comment = {
 			    name: req.body.name,
 			    head: head,

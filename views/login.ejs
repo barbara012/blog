@@ -1,57 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <% include head %>
-  <body>
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li>
-                            <a href="/">首页</a>
-                        </li>
-                        <li class="active">
-                            <a href="/login">登录</a>
-                        </li>
-                        <li>
-                            <a href="/reg">注册</a>
-                        </li>
-                    </ul>
-                </div>
+    <head>
+        <% include head %>
+    </head>
+    <body>
+        <div class="login">
+            <div id="container" class="container">
+                <form class="form-inline" method="post" role="form">
+                    <legend>用戶登入</legend>
+                    <div class="form-group">
+                        <label class="sr-only" for="username">用戶名</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="password">密码</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="密码">
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox">记住我
+                        </label>                    
+                    </div>
+                    <button type="submit" class="btn btn-primary">登入</button>
+                </form>
             </div>
+            <%= include footer %>
         </div>
-    </div>
-    <div id="container" class="container">
-        <form class="form-horizontal" method="post">
-          <fieldset>
-            <legend>用戶登入</legend>
-            <div class="control-group">
-              <label class="control-label" for="username">用戶名</label>
-              <div class="controls">
-                <input type="text" class="input-xlarge" id="username" name="username">
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" for="password">口令</label>
-              <div class="controls">
-                <input type="password" class="input-xlarge" id="password" name="password">
-              </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <label class="checkbox">
-                        <input type="checkbox">记住我
-                    </label>
-                    <button type="submit" class="btn">登入</button>
-                </div>                
-            </div>
-          </fieldset>
-        </form>
-    </div>
-  </body>
+    </body>
 </html>

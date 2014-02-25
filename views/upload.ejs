@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <% include head %>
-  <body>
+    <head>
+         <% include head %>        
+    </head>   
+    <body>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
@@ -39,10 +41,11 @@
         </div>
     </div>
     <div id="container" class="container">
-         <div id="upload-drag" class="upload-drag"></div>
-         <br/>
-         <button class="btn upload-submit">提交</button>     
-        <% include footer %>
+        <div id="upload-drag" class="upload-drag"></div>
+        <br/>
+        <button class="btn upload-submit">提交</button>
     </div>
+    <% include footer %>
+	<script src="/javascripts/upload.js"></script>
   </body>
 </html>

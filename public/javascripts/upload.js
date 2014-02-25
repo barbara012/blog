@@ -84,7 +84,6 @@ $(function () {
 				callback(request);
 		};
 		var formdata = new FormData();
-		console.log(data);
 		for (var name in data) {
 			if (!data.hasOwnProperty(name)) continue;
 			var value = data[name];
