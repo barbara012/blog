@@ -1,4 +1,5 @@
-var mongodb = require('./db'),
+var ObjectID = require('mongodb').ObjectID,
+	mongodb = require('./db'),
     markdown = require('markdown').markdown;
 
 function Post(name, head, title, tags, post) {
@@ -20,8 +21,8 @@ Post.prototype.save = function(callback) {
         year : date.getFullYear(),
         month : date.getFullYear() + "-" + (date.getMonth() + 1),
         day : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
-        minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
-        date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) 
+        minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + "-" + 
+        date.getHours() + "-" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) 
     }
     //要存入数据库的文档
     var post = {
@@ -60,41 +61,6 @@ Post.prototype.save = function(callback) {
     });
 };
 
-// //读取文章及其相关信息
-// Post.getAll = function(name, callback) {
-//   //打开数据库
-//   mongodb.open(function (err, db) {
-//     if (err) {
-//       return callback(err);
-//     }
-//     //读取 posts 集合
-//     db.collection('posts', function(err, collection) {
-//       if (err) {
-//         mongodb.close();
-//         return callback(err);
-//       }
-//       var query = {};
-//       if (name) {
-//         query.name = name;
-//       }
-//       //根据 query 对象查询文章
-//       collection.find(query).sort({
-//         time: -1
-//       }).toArray(function (err, docs) {
-//         mongodb.close();
-//         if (err) {
-//           return callback(err);//失败！返回 err
-//         }
-
-//         //解析 markdown 为 html
-//         docs.forEach(function (doc) {
-//           doc.post = markdown.toHTML(doc.post);
-//         });
-//         callback(null, docs);//成功！以数组形式返回查询的结果
-//       });
-//     });
-//   });
-// };
 //一次获取十篇文章
 Post.getTen = function(name, page, callback) {
   //打开数据库
@@ -136,113 +102,124 @@ Post.getTen = function(name, page, callback) {
     });
 };
 //获取一篇文章
-Post.getOne = function(name, day, title, callback) {
+Post.getOne = function(id, callback) {
   //打开数据库
-  mongodb.open(function (err, db) {
-    if (err) {
-      return callback(err);
-    }
+  	mongodb.open(function (err, db) {
+    	if (err) {
+      		return callback(err);
+    	}
     //读取 posts 集合
-    db.collection('posts', function (err, collection) {
-      if (err) {
-        mongodb.close();
-        return callback(err);
-      }
-      //根据用户名、发表日期及文章名进行查询
-      collection.findOne({
-        "name": name,
-        "time.day": day,
-        "title": title
-      }, function (err, doc) {
-        if (err) {
-          mongodb.close();
-          return callback(err);
-        }
-        if (doc) {
-          //每访问 1 次，pv 值增加 1
-          collection.update({
-            "name": name,
-            "time.day": day,
-            "title": title
-          }, {
-            $inc: {"pv": 1}
-          }, function (err) {
-            mongodb.close();
-            if (err) {
-              return callback(err);
-            }
-          });
+    	db.collection('posts', function (err, collection) {
+      		if (err) {
+        		mongodb.close();
+        		return callback(err);
+      		}
+      		//根据用户名、发表日期及文章名进行查询
+      		collection.findOne({
+      			'_id': new ObjectID(id)
+      		}, function (err, doc) {
+        		if (err) {
+          			mongodb.close();
+          			return callback(err);
+        		}
+        		if (doc) {
+
+          	//每访问 1 次，pv 值增加 1
+          			collection.update(
+          				{
+          					'_id': new ObjectID(id)
+          				},
+          				{
+           					$inc: {"pv": 1}
+          				},
+          				function (err) {
+            				mongodb.close();
+            				if (err) {
+              					return callback(err);
+            				}
+          				}
+          			);
           //解析 markdown 为 html
-          doc.post = markdown.toHTML(doc.post);
-          doc.comments.forEach(function (comment) {
-            comment.content = markdown.toHTML(comment.content);
-          });
-          callback(null, doc);//返回查询的一篇文章
-        }
-      });
-    });
-  });
+          			doc.post = markdown.toHTML(doc.post);
+          			doc.comments.forEach(function (comment) {
+            			comment.content = markdown.toHTML(comment.content);
+          			});
+          			callback(null, doc);//返回查询的一篇文章
+        		}
+      		});
+    	});
+  	});
 };
 //返回原始发表的内容（markdown 格式）
-Post.edit = function(name, day, title, callback) {
-  //打开数据库
-  mongodb.open(function (err, db) {
-    if (err) {
-      return callback(err);
-    }
-    //读取 posts 集合
-    db.collection('posts', function (err, collection) {
-      if (err) {
-        mongodb.close();
-        return callback(err);
-      }
-      //根据用户名、发表日期及文章名进行查询
-      collection.findOne({
-        "name": name,
-        "time.day": day,
-        "title": title
-      }, function (err, doc) {
-        mongodb.close();
-        if (err) {
-          return callback(err);
-        }
-        callback(null, doc);//返回查询的一篇文章（markdown 格式）
-      });
-    });
-  });
+Post.edit = function(id, callback) {  	
+  	//打开数据库
+  	mongodb.open(function (err, db) {
+    	if (err) {
+      		return callback(err);
+    	}
+    	//读取 posts 集合
+    	db.collection('posts', function (err, collection) {
+      		if (err) {
+        		mongodb.close();
+        		return callback(err);
+      		}
+      		//根据用户名、发表日期及文章名进行查询
+      		collection.findOne({
+      			'_id': new ObjectID(id)
+      		}, function (err, doc) {
+        		mongodb.close();
+        		if (err) {
+          			return callback(err);
+        		}
+       			callback(null, doc);//返回查询的一篇文章（markdown 格式）
+      		});
+    	});
+  	});
 };
 //更新一篇文章及其相关信息
-Post.update = function(name, day, title, post, callback) {
+Post.update = function(id, tags, title, post, callback) {
+	var date = new Date(),
+		time = {
+			date: date,
+			year : date.getFullYear(),
+			month : date.getFullYear() + "-" + (date.getMonth() + 1),
+			day : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
+			minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + "-" + 
+			date.getHours() + "-" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) 
+		};
   //打开数据库
-  mongodb.open(function (err, db) {
-    if (err) {
-      return callback(err);
-    }
-    //读取 posts 集合
-    db.collection('posts', function (err, collection) {
-      if (err) {
-        mongodb.close();
-        return callback(err);
-      }
-      //更新文章内容
-      collection.update({
-        "name": name,
-        "time.day": day,
-        "title": title
-      }, {
-        $set: {post: post}
-      }, function (err) {
-        mongodb.close();
-        if (err) {
-          return callback(err);
-        }
-        callback(null);
-      });
-    });
-  });
+	mongodb.open(function (err, db) {
+    	if (err) {
+      		return callback(err);
+    	}
+    	//读取 posts 集合
+    	db.collection('posts', function (err, collection) {
+      		if (err) {
+        		mongodb.close();
+        		return callback(err);
+      		}
+      	//更新文章内容
+      		collection.update({
+        		"_id": new ObjectID(id)
+      		}, {
+        		$set: {
+        			tags: tags,
+        			title: title,
+        			time: time,
+        			post: post
+        		}
+      		}, function (err) {
+        		mongodb.close();
+        		if (err) {
+          			return callback(err);
+        		}
+        		callback(null);
+      		});
+    	});
+  	});
 };
 //删除一篇文章
-Post.remove = function(name, day, title, callback) {
+Post.remove = function(name, minute, title, callback) {
   //打开数据库
   mongodb.open(function (err, db) {
     if (err) {
@@ -257,7 +234,7 @@ Post.remove = function(name, day, title, callback) {
       //查询要删除的文档
       collection.findOne({
         "name": name,
-        "time.day": day,
+        "time.minute": minute,
         "title": title
       }, function (err, doc) {
         if (err) {
@@ -273,13 +250,13 @@ Post.remove = function(name, day, title, callback) {
           //更新原文章所在文档的 reprint_to
           collection.update({
             "name": reprint_from.name,
-            "time.day": reprint_from.day,
+            "time.minute": reprint_from.minute,
             "title": reprint_from.title
           }, {
             $pull: {
               "reprint_info.reprint_to": {
                 "name": name,
-                "day": day,
+                "minute": minute,
                 "title": title
             }}
           }, function (err) {
@@ -293,7 +270,7 @@ Post.remove = function(name, day, title, callback) {
         //删除转载来的文章所在的文档
         collection.remove({
           "name": name,
-          "time.day": day,
+          "time.minute": minute,
           "title": title
         }, {
           w: 1

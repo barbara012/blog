@@ -1444,3 +1444,1879 @@ TypeError: Cannot read property 'tag' of undefined
     at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
     at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
     at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+[Tue Feb 25 2014 12:58:36 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25/%3E%E5%A3%B0%E9%9F%B3%E7%A9%BA%E7%81%B5%EF%BC%8C%E7%BA%AF%E5%87%80%EF%BC%8C%E6%AD%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:10
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 12:58:37 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 12:59:46 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (D:\blog\models\post.js:101:13)
+    at D:\blog\routes\index.js:16:9
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:315:9)
+[Tue Feb 25 2014 12:59:46 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 12:59:48 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 12:59:48 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25/%3E%E5%A3%B0%E9%9F%B3%E7%A9%BA%E7%81%B5%EF%BC%8C%E7%BA%AF%E5%87%80%EF%BC%8C%E6%AD%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:10
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 12:59:48 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 13:01:55 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25/%3E%E5%A3%B0%E9%9F%B3%E7%A9%BA%E7%81%B5%EF%BC%8C%E7%BA%AF%E5%87%80%EF%BC%8C%E6%AD%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:10
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 13:01:56 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 13:27:11 GMT+0800 (中国标准时间)] /u/HwH/2014-2-20%2022:14/%E9%9C%9C%E6%9D%91%E6%A1%82%E6%9E%97
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getOne (D:\blog\models\post.js:141:11)
+    at D:\blog\routes\index.js:299:9
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+[Tue Feb 25 2014 13:27:11 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 13:28:58 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-24%2022:53/%E5%A7%9A%E8%B4%9D%E5%A8%9C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:10
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 13:28:58 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 13:30:26 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-24%2022:53/%E5%A7%9A%E8%B4%9D%E5%A8%9C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:10
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 13:30:27 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 13:31:19 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25-13-31/%E6%88%91%E4%BB%AC%E6%98%AF%E4%B8%80%E5%AE%B6%E5%B9%B4%E8%BD%BB%E7%9A%84%E4%BA%92%E8%81%94
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:10
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 13:31:19 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 13:32:36 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 14:16:27 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25-14-14/%E8%83%A1%E6%B6%A6%E5%85%A8%E7%90%83%E5%AF%8C%E8%B1%AA%E6%A6%9C%EF%BC%9A%E7%9B%96%E8%8C%A84100%E4%BA%BF%E5%85%83%E5%86%8D%E5%A4%BA%E4%B8%96%E7%95%8C%E9%A6%96%E5%AF%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:10
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 14:16:27 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 14:18:42 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25-14-14/%E8%83%A1%E6%B6%A6%E5%85%A8%E7%90%83%E5%AF%8C%E8%B1%AA%E6%A6%9C%EF%BC%9A%E7%9B%96%E8%8C%A84100%E4%BA%BF%E5%85%83%E5%86%8D%E5%A4%BA%E4%B8%96%E7%95%8C%E9%A6%96%E5%AF%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:10
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 14:18:42 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 14:18:54 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25-14-14/%E8%83%A1%E6%B6%A6%E5%85%A8%E7%90%83%E5%AF%8C%E8%B1%AA%E6%A6%9C%EF%BC%9A%E7%9B%96%E8%8C%A84100%E4%BA%BF%E5%85%83%E5%86%8D%E5%A4%BA%E4%B8%96%E7%95%8C%E9%A6%96%E5%AF%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:10
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 14:18:55 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 15:00:28 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25-14-14/%E8%83%A1%E6%B6%A6%E5%85%A8%E7%90%83%E5%AF%8C%E8%B1%AA%E6%A6%9C%EF%BC%9A%E7%9B%96%E8%8C%A84100%E4%BA%BF%E5%85%83%E5%86%8D%E5%A4%BA%E4%B8%96%E7%95%8C%E9%A6%96%E5%AF%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:11
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 15:00:28 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 15:02:52 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25-14-14/%E8%83%A1%E6%B6%A6%E5%85%A8%E7%90%83%E5%AF%8C%E8%B1%AA%E6%A6%9C%EF%BC%9A%E7%9B%96%E8%8C%A84100%E4%BA%BF%E5%85%83%E5%86%8D%E5%A4%BA%E4%B8%96%E7%95%8C%E9%A6%96%E5%AF%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:11
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 15:02:53 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 15:02:56 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25-14-14/%E8%83%A1%E6%B6%A6%E5%85%A8%E7%90%83%E5%AF%8C%E8%B1%AA%E6%A6%9C%EF%BC%9A%E7%9B%96%E8%8C%A84100%E4%BA%BF%E5%85%83%E5%86%8D%E5%A4%BA%E4%B8%96%E7%95%8C%E9%A6%96%E5%AF%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:11
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 15:02:56 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 15:02:59 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25-14-14/%E8%83%A1%E6%B6%A6%E5%85%A8%E7%90%83%E5%AF%8C%E8%B1%AA%E6%A6%9C%EF%BC%9A%E7%9B%96%E8%8C%A84100%E4%BA%BF%E5%85%83%E5%86%8D%E5%A4%BA%E4%B8%96%E7%95%8C%E9%A6%96%E5%AF%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:11
+    at D:\blog\models\post.js:209:11
+[Tue Feb 25 2014 15:03:00 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 15:17:01 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25-14-14/%E8%83%A1%E6%B6%A6%E5%85%A8%E7%90%83%E5%AF%8C%E8%B1%AA%E6%A6%9C%EF%BC%9A%E7%9B%96%E8%8C%A84100%E4%BA%BF%E5%85%83%E5%86%8D%E5%A4%BA%E4%B8%96%E7%95%8C%E9%A6%96%E5%AF%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:11
+    at D:\blog\models\post.js:212:11
+[Tue Feb 25 2014 15:17:01 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 15:17:53 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25-14-14/%E8%83%A1%E6%B6%A6%E5%85%A8%E7%90%83%E5%AF%8C%E8%B1%AA%E6%A6%9C%EF%BC%9A%E7%9B%96%E8%8C%A84100%E4%BA%BF%E5%85%83%E5%86%8D%E5%A4%BA%E4%B8%96%E7%95%8C%E9%A6%96%E5%AF%8C
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:11
+    at D:\blog\models\post.js:212:11
+[Tue Feb 25 2014 15:17:53 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 15:18:09 GMT+0800 (中国标准时间)] /edit/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/2014-2-25-13-31/%E6%88%91%E4%BB%AC%E6%98%AF%E4%B8%80%E5%AE%B6%E5%B9%B4%E8%BD%BB%E7%9A%84%E4%BA%92%E8%81%94
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:11
+    at D:\blog\models\post.js:212:11
+[Tue Feb 25 2014 15:18:09 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Tue Feb 25 2014 16:58:34 GMT+0800 (中国标准时间)] /p/530c4a500d8a61580f5efc71
+ReferenceError: D:\blog\views\article.ejs:1
+ >> 1| <!DOCTYPE html>
+    2| <html>
+    3|     <head>
+    4|         <% include head %>        
+
+title is not defined
+    at __stack.lineno (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:30:49)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:23)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+[Tue Feb 25 2014 17:01:05 GMT+0800 (中国标准时间)] /p/530c34c56140e3401fb04695
+ReferenceError: D:\blog\views\article.ejs:1
+ >> 1| <!DOCTYPE html>
+    2| <html>
+    3|     <head>
+    4|         <% include head %>        
+
+title is not defined
+    at __stack.lineno (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:30:49)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:23)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+[Tue Feb 25 2014 17:01:10 GMT+0800 (中国标准时间)] /p/530c4a500d8a61580f5efc71
+ReferenceError: D:\blog\views\article.ejs:1
+ >> 1| <!DOCTYPE html>
+    2| <html>
+    3|     <head>
+    4|         <% include head %>        
+
+title is not defined
+    at __stack.lineno (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:30:49)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:23)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+[Tue Feb 25 2014 17:05:29 GMT+0800 (中国标准时间)] /p/530c34c56140e3401fb04695
+ReferenceError: D:\blog\views\article.ejs:1
+ >> 1| <!DOCTYPE html>
+    2| <html>
+    3|     <head>
+    4|         <% include head %>        
+
+title is not defined
+    at __stack.lineno (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:30:49)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:23)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+[Tue Feb 25 2014 17:05:48 GMT+0800 (中国标准时间)] /p/530c34c56140e3401fb04695
+ReferenceError: D:\blog\views\article.ejs:1
+ >> 1| <!DOCTYPE html>
+    2| <html>
+    3|     <head>
+    4|         <% include head %>        
+
+title is not defined
+    at __stack.lineno (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:30:49)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:23)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+[Tue Feb 25 2014 17:05:51 GMT+0800 (中国标准时间)] /p/530c2a9f12d2d1ec1b2ee737
+ReferenceError: D:\blog\views\article.ejs:1
+ >> 1| <!DOCTYPE html>
+    2| <html>
+    3|     <head>
+    4|         <% include head %>        
+
+title is not defined
+    at __stack.lineno (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:30:49)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:23)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+[Tue Feb 25 2014 17:06:13 GMT+0800 (中国标准时间)] /p/530c34c56140e3401fb04695
+ReferenceError: D:\blog\views\article.ejs:1
+ >> 1| <!DOCTYPE html>
+    2| <html>
+    3|     <head>
+    4|         <% include head %>        
+
+title is not defined
+    at __stack.lineno (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:30:49)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:23)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+[Tue Feb 25 2014 17:06:43 GMT+0800 (中国标准时间)] /p/530c2a9f12d2d1ec1b2ee737
+ReferenceError: D:\blog\views\article.ejs:1
+ >> 1| <!DOCTYPE html>
+    2| <html>
+    3|     <head>
+    4|         <% include head %>        
+
+title is not defined
+    at __stack.lineno (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:30:49)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:23)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+[Tue Feb 25 2014 17:08:32 GMT+0800 (中国标准时间)] /p/530c2a9f12d2d1ec1b2ee737
+ReferenceError: D:\blog\views\article.ejs:1
+ >> 1| <!DOCTYPE html>
+    2| <html>
+    3|     <head>
+    4|         <% include head %>        
+
+title is not defined
+    at __stack.lineno (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:30:49)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:23)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+[Tue Feb 25 2014 17:09:16 GMT+0800 (中国标准时间)] /p/530c2a9f12d2d1ec1b2ee737
+ReferenceError: D:\blog\views\article.ejs:1
+ >> 1| <!DOCTYPE html>
+    2| <html>
+    3|     <head>
+    4|         <% include head %>        
+
+title is not defined
+    at __stack.lineno (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:30:49)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:23)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+[Tue Feb 25 2014 19:26:17 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:421:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:30:14 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:421:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:31:44 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:31:54 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:32:42 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:33:27 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:364:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:424:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:33:56 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:364:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:424:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:35:48 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:364:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:424:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:36:05 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:364:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:424:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:36:13 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:364:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:424:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:36:35 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:364:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:424:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:36:42 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:364:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:424:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:38:05 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:364:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:424:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:38:18 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:38:20 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:35 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:44 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:46 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:47 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:47 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:47 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:48 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:48 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:48 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:48 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:48 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:49 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:49 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:39:49 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:40:23 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:40:25 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:40:36 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:41:03 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:182:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:41:23 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:9)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:42:46 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:45:52 GMT+0800 (中国标准时间)] /p/530c7bf675595c9825e44e5b
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getOne (D:\blog\models\post.js:107:12)
+    at D:\blog\routes\index.js:299:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Tue Feb 25 2014 19:48:51 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:52 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:53 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:53 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:54 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:54 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:54 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:54 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:54 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:55 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:55 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:55 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:55 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:55 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:55 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:56 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:56 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:56 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:56 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:48:56 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:49:18 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:183:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:49:34 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:184:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 19:50:04 GMT+0800 (中国标准时间)] /edit/530c7bf675595c9825e44e5b
+ReferenceError: date is not defined
+    at Function.Post.update (D:\blog\models\post.js:184:10)
+    at D:\blog\routes\index.js:363:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 20:00:59 GMT+0800 (中国标准时间)] /edit/530c84b99249d36c236e0d31
+Error: Error setting TTL index on collection : sessions
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:161:23
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1404:28
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1542:30
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:159:22
+    at commandHandler (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:678:48)
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1806:9
+    at __executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1636:44)
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1805:7)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.toArray (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:158:10)
+[Tue Feb 25 2014 20:22:47 GMT+0800 (中国标准时间)] /edit/530c84b99249d36c236e0d31
+TypeError: D:\blog\views\edit.ejs:45
+    43| 		    <div class="textarea clearfix pos-rela">
+    44| 		        <div class="post-title pos-abso">
+ >> 45| 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
+    46| 		        </div>
+    47| 		        <div class="editor pull-left">
+    48| 		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
+
+Cannot read property 'title' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1664)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4130)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:349:11
+    at D:\blog\models\post.js:174:11
+[Tue Feb 25 2014 20:22:57 GMT+0800 (中国标准时间)] /edit/530c84b99249d36c236e0d31
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.edit (D:\blog\models\post.js:156:12)
+    at D:\blog\routes\index.js:344:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (D:\blog\routes\index.js:423:5)
+[Tue Feb 25 2014 20:23:03 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (D:\blog\models\post.js:67:13)
+    at D:\blog\routes\index.js:16:9
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:315:9)
+[Tue Feb 25 2014 20:23:15 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (D:\blog\models\post.js:67:13)
+    at D:\blog\routes\index.js:16:9
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:315:9)
+[Tue Feb 25 2014 20:53:25 GMT+0800 (中国标准时间)] /post
+ReferenceError: D:\blog\views\post.ejs:28
+    26|                     <ul class="nav navbar-nav navbar-right">
+    27|                         <li>
+ >> 28|                             <a href="/u/<%= post.name %>" class="head" title="<%= post.title %>">
+    29|                                 <img src="<%= post.head %>" alt="<%= post.title %>">
+    30|                             </a>
+    31|                         </li>
+
+post is not defined
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1314)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4637)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:113:7
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Tue Feb 25 2014 20:53:36 GMT+0800 (中国标准时间)] /post
+ReferenceError: D:\blog\views\post.ejs:28
+    26|                     <ul class="nav navbar-nav navbar-right">
+    27|                         <li>
+ >> 28|                             <a href="/u/<%= post.name %>" class="head" title="<%= post.title %>">
+    29|                                 <img src="<%= post.head %>" alt="<%= post.title %>">
+    30|                             </a>
+    31|                         </li>
+
+post is not defined
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:1314)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4637)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:113:7
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+[Wed Feb 26 2014 12:25:11 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+TypeError: D:\blog\views\article.ejs:31
+    29| 							<a href="/post">发布</a>
+    30| 						</li>						
+ >> 31| 					<% if (user.name == 'yoyo') { %>
+    32| 						<li>
+    33| 							<a href="/album">相册</a>
+    34| 						</li>
+
+Cannot read property 'name' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:948)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+    at D:\blog\models\post.js:147:14
+[Wed Feb 26 2014 12:25:19 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+TypeError: D:\blog\views\article.ejs:31
+    29| 							<a href="/post">发布</a>
+    30| 						</li>						
+ >> 31| 					<% if (user.name == 'yoyo') { %>
+    32| 						<li>
+    33| 							<a href="/album">相册</a>
+    34| 						</li>
+
+Cannot read property 'name' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:948)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+    at D:\blog\models\post.js:147:14
+[Wed Feb 26 2014 12:25:30 GMT+0800 (中国标准时间)] /p/530c9bab9c4d9910286a45cf
+TypeError: D:\blog\views\article.ejs:31
+    29| 							<a href="/post">发布</a>
+    30| 						</li>						
+ >> 31| 					<% if (user.name == 'yoyo') { %>
+    32| 						<li>
+    33| 							<a href="/album">相册</a>
+    34| 						</li>
+
+Cannot read property 'name' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:948)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+    at D:\blog\models\post.js:147:14
+[Wed Feb 26 2014 12:25:32 GMT+0800 (中国标准时间)] /p/530c9bab9c4d9910286a45cf
+TypeError: D:\blog\views\article.ejs:31
+    29| 							<a href="/post">发布</a>
+    30| 						</li>						
+ >> 31| 					<% if (user.name == 'yoyo') { %>
+    32| 						<li>
+    33| 							<a href="/album">相册</a>
+    34| 						</li>
+
+Cannot read property 'name' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:948)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+    at D:\blog\models\post.js:147:14
+[Wed Feb 26 2014 12:25:36 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+TypeError: D:\blog\views\article.ejs:31
+    29| 							<a href="/post">发布</a>
+    30| 						</li>						
+ >> 31| 					<% if (user.name == 'yoyo') { %>
+    32| 						<li>
+    33| 							<a href="/album">相册</a>
+    34| 						</li>
+
+Cannot read property 'name' of null
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:948)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:114)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:304:11
+    at D:\blog\models\post.js:147:14
+[Wed Feb 26 2014 13:35:55 GMT+0800 (中国标准时间)] /stylesheets/bootstrap-responsive.css
+Error: Error setting TTL index on collection : sessions
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:161:23
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1404:28
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1542:30
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:159:22
+    at commandHandler (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:678:48)
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:12)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.toArray (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:158:10)
+    at Cursor.toArray (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:10:20)
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1541:65
+[Wed Feb 26 2014 13:35:55 GMT+0800 (中国标准时间)] /stylesheets/bootstrap.css
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Wed Feb 26 2014 13:35:55 GMT+0800 (中国标准时间)] /javascripts/jquery-2.0.3.min.js
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Wed Feb 26 2014 13:35:55 GMT+0800 (中国标准时间)] /javascripts/bootstrap.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:36:06 GMT+0800 (中国标准时间)] /stylesheets/style.css
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getOne (D:\blog\models\post.js:107:12)
+    at D:\blog\routes\index.js:299:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+[Wed Feb 26 2014 13:36:07 GMT+0800 (中国标准时间)] /stylesheets/bootstrap-responsive.css
+Error: Error setting TTL index on collection : sessions
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:161:23
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1404:28
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1542:30
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:159:22
+    at commandHandler (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:678:48)
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:12)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.toArray (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:158:10)
+    at Cursor.toArray (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:10:20)
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1541:65
+[Wed Feb 26 2014 13:36:07 GMT+0800 (中国标准时间)] /javascripts/jquery-2.0.3.min.js
+Error: no open connections
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:21)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.cookieParser [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\cookieParser.js:65:5)
+[Wed Feb 26 2014 13:36:07 GMT+0800 (中国标准时间)] /javascripts/singlepage.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:36:07 GMT+0800 (中国标准时间)] /javascripts/bootstrap.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:36:07 GMT+0800 (中国标准时间)] /javascripts/comment.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:36:15 GMT+0800 (中国标准时间)] /stylesheets/style.css
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getOne (D:\blog\models\post.js:107:12)
+    at D:\blog\routes\index.js:299:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+[Wed Feb 26 2014 13:36:16 GMT+0800 (中国标准时间)] /stylesheets/bootstrap-responsive.css
+Error: Error setting TTL index on collection : sessions
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:161:23
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1404:28
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1542:30
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:159:22
+    at commandHandler (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:678:48)
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:12)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.toArray (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:158:10)
+    at Cursor.toArray (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:10:20)
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1541:65
+[Wed Feb 26 2014 13:36:16 GMT+0800 (中国标准时间)] /javascripts/bootstrap.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:36:16 GMT+0800 (中国标准时间)] /javascripts/jquery-2.0.3.min.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:36:39 GMT+0800 (中国标准时间)] /stylesheets/style.css
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getOne (D:\blog\models\post.js:107:12)
+    at D:\blog\routes\index.js:299:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+[Wed Feb 26 2014 13:36:39 GMT+0800 (中国标准时间)] /javascripts/jquery-2.0.3.min.js
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getOne (D:\blog\models\post.js:107:12)
+    at D:\blog\routes\index.js:299:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+[Wed Feb 26 2014 13:36:39 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (D:\blog\models\post.js:67:13)
+    at D:\blog\routes\index.js:16:9
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:315:9)
+[Wed Feb 26 2014 13:37:21 GMT+0800 (中国标准时间)] /javascripts/bootstrap.js
+Error: Error setting TTL index on collection : sessions
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:161:23
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1404:28
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1542:30
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:159:22
+    at commandHandler (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:678:48)
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1802:12)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.toArray (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:158:10)
+    at Cursor.toArray (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:10:20)
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1541:65
+[Wed Feb 26 2014 13:38:36 GMT+0800 (中国标准时间)] /stylesheets/bootstrap.css
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getOne (D:\blog\models\post.js:107:12)
+    at D:\blog\routes\index.js:299:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+[Wed Feb 26 2014 13:38:36 GMT+0800 (中国标准时间)] /javascripts/jquery-2.0.3.min.js
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getOne (D:\blog\models\post.js:107:12)
+    at D:\blog\routes\index.js:299:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+[Wed Feb 26 2014 13:38:36 GMT+0800 (中国标准时间)] /stylesheets/style.css
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getOne (D:\blog\models\post.js:107:12)
+    at D:\blog\routes\index.js:299:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+[Wed Feb 26 2014 13:38:36 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (D:\blog\models\post.js:67:13)
+    at D:\blog\routes\index.js:16:9
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:315:9)
+[Wed Feb 26 2014 13:38:36 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (D:\blog\models\post.js:67:13)
+    at D:\blog\routes\index.js:16:9
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:315:9)
+[Wed Feb 26 2014 13:38:40 GMT+0800 (中国标准时间)] /stylesheets/style.css
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (D:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getOne (D:\blog\models\post.js:107:12)
+    at D:\blog\routes\index.js:299:10
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at param (D:\blog\node_modules\express\lib\router\index.js:135:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (D:\blog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (D:\blog\node_modules\express\lib\router\index.js:33:10)
+[Wed Feb 26 2014 13:38:41 GMT+0800 (中国标准时间)] /stylesheets/bootstrap.css
+Error: Error setting TTL index on collection : sessions
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:161:23
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1404:28
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1542:30
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:159:22
+    at commandHandler (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:678:48)
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1806:9
+    at __executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1636:44)
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1805:7)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.toArray (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:158:10)
+[Wed Feb 26 2014 13:38:41 GMT+0800 (中国标准时间)] /javascripts/jquery-2.0.3.min.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:38:41 GMT+0800 (中国标准时间)] /javascripts/bootstrap.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:39:38 GMT+0800 (中国标准时间)] /stylesheets/bootstrap-responsive.css
+Error: Error setting TTL index on collection : sessions
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:161:23
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1404:28
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1542:30
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:159:22
+    at commandHandler (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:678:48)
+    at D:\blog\node_modules\mongodb\lib\mongodb\db.js:1806:9
+    at __executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1636:44)
+    at Db._executeQueryCommand (D:\blog\node_modules\mongodb\lib\mongodb\db.js:1805:7)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:729:13)
+    at Cursor.toArray (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:158:10)
+[Wed Feb 26 2014 13:39:38 GMT+0800 (中国标准时间)] /javascripts/singlepage.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:39:38 GMT+0800 (中国标准时间)] /stylesheets/bootstrap.css
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:39:38 GMT+0800 (中国标准时间)] /javascripts/jquery-2.0.3.min.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:39:38 GMT+0800 (中国标准时间)] /javascripts/bootstrap.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Wed Feb 26 2014 13:39:38 GMT+0800 (中国标准时间)] /javascripts/comment.js
+Error: Cannot determine state of server
+    at canCheckoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:767:12)
+    at Server.checkoutReader (D:\blog\node_modules\mongodb\lib\mongodb\connection\server.js:779:16)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:720:48)
+    at Cursor.nextObject (D:\blog\node_modules\mongodb\lib\mongodb\scope.js:22:20)
+    at Collection.findOne (D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:145:10)
+    at D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:212:18
+    at MongoStore._get_collection (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:148:21)
+    at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
+    at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
+    at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)

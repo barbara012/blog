@@ -1,37 +1,39 @@
-<% post.comments.forEach(function (comment, index) { %>
-<div class="commented pos-rela">
-	<a class="comment_head pos-abso"><img src="<%= comment.head %>"/></a>
-	<p><%- comment.content %></p>
-    <p>
-		<a href="<%= comment.website %>"><%= comment.name %></a>
-		<span class="info"> 回复于 <%= comment.time %></span>
-	</p>  
-</div>
-<% }) %>
 <div class="comment">
 	<form method="post" class="form-inline" rola="form">
 	<% if (user) { %>
 		<div class="form-group">
 			<label class="sr-only" for="name">名</label>
-			<input type="text" class="form-control" name="name" value="<%= user.name %>" placeholder="用户名"/>
+			<input type="text" class="form-control" name="name" id="form_comment_name" value="<%= user.name %>" placeholder="用户名"/>
 		</div>
 		<div class="form-group">
 			<label class="sr-only" for="email">名</label>
-			<input type="email" class="form-control" name="email" value="<%= user.email %>" placeholder="邮箱"/>
+			<input type="email" class="form-control" name="email" id="form_comment_email" value="<%= user.email %>" placeholder="邮箱"/>
 		</div>
 	<% } else { %>
 		<div class="form-group">
 			<label class="sr-only" for="name">名</label>
-			<input type="text" class="form-control" name="name" placeholder="用户名"/>
+			<input type="text" class="form-control" name="name" id="form_comment_name" placeholder="用户名"/>
 		</div>
 		<div class="form-group">
 			<label class="sr-only" for="email">名</label>
-			<input type="email" class="form-control" name="email" placeholder="邮箱"/>
+			<input type="email" class="form-control" name="email" id="fomr_comment_email" placeholder="邮箱"/>
 		</div>
 	<% } %>
-		<textarea name="content" class="form-control textarea" rows="3"></textarea><br />
+		<textarea name="content" class="form-control textarea" id="form_comment_content" rows="3"></textarea><br />
 		<div class="clearfix">
-			<input type="submit" class="btn btn-primary pull-right" value="留言" />
+			<a href="javascript:;" class="btn btn-comment btn-primary pull-right">留言</a>
 		</div>
-	</form>
+	</form>	
 </div>
+<% post.comments.forEach(function (comment, index) { %>
+<div class="commented pos-rela">
+	<a class="comment_head pos-abso"><img src="<%= comment.head %>"/></a>
+	<div class="comment_content">
+		<p><%- comment.content %></p>
+	    <p class="info">
+			<a href="<%= comment.website %>"><%= comment.name %></a>
+			<span> 回复于 <%= comment.time %></span>
+		</p>
+	</div>	 
+</div>
+<% }) %>

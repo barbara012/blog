@@ -1,30 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <% include head %>
-    </head>
-    <body>
-        <div class="login">
-            <div id="container" class="container">
-                <form class="form-inline" method="post" role="form">
-                    <legend>用戶登入</legend>
-                    <div class="form-group">
-                        <label class="sr-only" for="username">用戶名</label>
-                        <input type="text" class="form-control" id="username" name="username" placeholder="用户名">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="password">密码</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="密码">
-                    </div>
-                    <div class="checkbox">
-                        <label class="checkbox">
-                            <input type="checkbox">记住我
-                        </label>                    
-                    </div>
-                    <button type="submit" class="btn btn-primary">登入</button>
-                </form>
-            </div>
-            <%= include footer %>
-        </div>
-    </body>
+	<head>
+		<% include head %>
+	</head>
+	<body>
+		<div class="login pos-rela">
+			<div id="login" class="pos-abso">
+				<div class="log">
+					<div class="head">
+						<img src="/img/head.jpg" alt="头像">
+					</div>
+					<div class="body">
+						<input type="text" class="form-control" id="username" name="username" placeholder="用户名">
+						<input type="password" class="form-control" id="password"  name="password" placeholder="密码">
+						<a class="btn btn-login btn-primary" title="登录">
+							<span class="glyphicon glyphicon-log-in"></span>
+						</a>
+						<div class="clearfix">
+							<a href="javascript:;" class="pull-right show-reg">注册</a>
+							<a href="#" class="pull-left">忘记密码？</a>
+						</div>
+					</div>
+					<div class="tip username-tip pos-abso popover right">
+						<div class="arrow"></div>
+						<p>用户名不存在！</p>
+					</div>
+					<div class="tip password-tip pos-abso popover right">
+						<div class="arrow"></div>
+						<p>密码错误！</p>
+					</div>
+				</div>				
+				<div class="reg pos-abso">
+					<p class="txt-center"><a href="javascript:;" title="返回登录窗" class="return-log glyphicon glyphicon-circle-arrow-left"></a></p>
+					<div class="form-group">
+						<label for="reg_username" class="control-label">* &nbsp;用户名</label>
+						<input type="text" id="reg_username" class="form-control" name="reg_username" placeholder="用户名">
+						<div class="tip reg_name-tip pos-abso popover right">
+							<div class="arrow"></div>
+							<p>用户名已存在！</p>
+						</div>
+					</div>					
+					<div class="form-group">
+						<label for="reg_password" class="control-label">* &nbsp;密码</label>
+						<input type="password" id="reg_password" class="form-control" name="reg_password" placeholder="密码">
+						<div class="tip reg_pass-tip input-tip pos-abso popover right">
+							<div class="arrow"></div>
+							<p>请输入密码！</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="reg_password-repeat" class="control-label">* &nbsp;重复输入密码</label>
+						<input type="password" id="reg_password-repeat" class="form-control" name="reg_password-repeat" placeholder="重复输入密码">
+						<div class="tip reg_repeat-tip pos-abso popover right">
+							<div class="arrow"></div>
+							<p>两次输入密码不相同！</p>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="reg_email" class="control-label">邮箱<span>（方便找回密码）</span></label>
+						<input type="email" id="reg_email" class="form-control" name="reg_email" placeholder="邮箱">
+						<div class="tip reg_email-tip pos-abso popover right">
+							<div class="arrow"></div>
+							<p>邮箱格式不对。正确格式如：xxx@xxx.com！</p>
+						</div>
+					</div>
+					<a class="btn btn-reg btn-success" href="javascript:;" title="注册">
+						<span class="glyphicon glyphicon-registration-mark"></span>
+					</a>
+				</div> 
+			</div>
+		</div>
+		<script src="/javascripts/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="/javascripts/login.js"></script>
+	</body>
 </html>

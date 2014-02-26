@@ -11,13 +11,21 @@ html, body, p, div, ul, li, a, span {
 .navbar .nav-100 {
 	width: 100%;
 }
-.head {width: 28px; height: 28px;}
+.post .nav .user_head {
+}
+.user_head img {
+	height: 28px;
+	width: 28px;
+}
 .pos-rela {
 	position: relative;
 }
 .pos-abso {
 	position: absolute;
 	display: block;
+}
+.txt-center {
+	text-align: center;
 }
 .prepage a{float:left;text-decoration:none;padding:.5em 1em;color:#ff0000;font-weight:bold;}
 .nextpage a{float:right;text-decoration:none;padding:.5em 1em;color:#ff0000;font-weight:bold;}
@@ -98,14 +106,17 @@ html, body, p, div, ul, li, a, span {
 }
 .home-page .poem {
 	color: transparent;
-	margin-top: 100px;
+	margin-top: 120px;
 	font-size: 12px;
 	letter-spacing: 2px;
+	opacity: 0;
 	-webkit-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
 .home-page .poem:hover {
 	color: #000000;
+	opacity: 1;
+	margin-top: 115px;
 	text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
 }
 .bottom {
@@ -115,24 +126,31 @@ html, body, p, div, ul, li, a, span {
 	right: 0;
 	bottom: 0;
 }
-.home-page .page_header .head {
+.home-page .page_header .head,
+.home-page .page_header .no-head {
 	position: absolute;
 	height: 212px;
 	width: 212px;
 	line-height: 212px;
 	text-align: center;
-	border-radius: 106px;
+	border-radius: 10px;
 	bottom: -106px;
 	left: 50%;
 	margin-left: -106px;
 	background: #ffffff;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.home-page .glyphicon {
+	font-size: 200px;
+	line-height: 212px;
+	top: 3px;
 }
 .home-page .page_header .head:after {
 	content: "";
 	width: 100%;
 	height: 106px;
-	border-bottom-left-radius: 106px;
-	border-bottom-right-radius: 106px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 	position: absolute;
 	z-index: 8;
 	bottom: 0;
@@ -207,6 +225,9 @@ article h2 a {
 .singlepage .article_content .remove {
 	color: #ffffff;
 	font-size: 18px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.13);
+}	
+.singlepage .about_author .glyphicon-home {
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.23);
 }
 .singlepage .article_content .edit {
@@ -237,7 +258,7 @@ article h2 a {
 	background: #ffffff;
 	border-radius: 4px;
 	box-shadow: 0 0 0 2px #ffffff;
-	margin: 40px auto 10px;
+	margin: 66px auto 10px;
 }
 .singlepage .author_head img {
 	width: 60px;
@@ -248,17 +269,161 @@ article h2 a {
 	line-height: 2;
 	letter-spacing: 1px;
 }
+
+/* 注册 */
+.login {
+	height: 100%;
+	width: 100%;
+	background-color: #fafafa;
+	background-image: url(../img/grain.png);
+}
+#login {
+	width: 220px;
+	padding: 10px; 30px 30px;
+	top: 10%;
+	left: 50%;
+	margin-left: -110px;
+	background: #ffffff;
+	font-size: 12px;
+	box-shadow: 0 0 1px rgba(0,0,0,0.23);
+	transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+}
+.login .matte:after {
+	content: "";
+	height: 100%;
+	width: 220px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #ffffff;
+	filter: alpha(opacity=0.9);
+	opacity: 0.9;
+}
+#login .form-control {
+	margin-bottom: 20px;
+	height: auto;
+	padding: 4px 12px;
+	font-size: 12px;
+}
+#login .head,
+#login .head img {
+	width: 60px;
+	height: 60px;
+}
+#login .head {
+	margin: 0px auto 10px;
+}
+#login .btn {
+	width: 100%;
+	margin-bottom: 10px;
+}
+#login .tip {
+	left: 220px;
+	min-width: 100px;
+	top: 80px;
+	border-radius: 2px;
+	padding: 6px 10px;
+	background: #E27B7B;
+	color: #ffffff;
+	box-shadow: none;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+}
+#login .password-tip {
+	top: 130px;
+}
+#login .reg_name-tip {
+	top: 42px;
+}
+#login .reg_pass-tip {
+	top: 107px;
+}
+#login .reg_repeat-tip {
+	top: 172px;
+}
+#login .reg_email-tip {
+	top: 235px;
+}
+#login .input-tip {
+	background: #3276b1;
+}
+#login .tip p {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+#login .popover.right {
+	border: none;
+}
+#login .popover.right .arrow {
+	border-width: 6px;
+	left: -12px;
+	margin-top: -6px;
+	box-shadow: none;
+}
+#login .popover.right .arrow:after {
+	border-right-color: #E27B7B;
+	box-shadow: none;
+}
+#login .input-tip.right .arrow:after {
+	border-right-color: #3276b1;
+}
+#login .reg {
+	left: 220px;
+	top: 0px;
+	width: 220px;
+	padding: 4px 10px 10px;
+	background: #ffffff;
+	filter :alpha(opacity=0);
+	opacity: 0;
+	box-shadow: 0 0 1px rgba(0,0,0,0.25);
+	transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+}
+#login .reg .return-log {
+	font-size: 14px;
+	color: #47a447;
+}
+#login .reg label {
+	color: #666666;
+}
+#login .reg .form-control {
+	margin-bottom: 10px;
+}
+#login .reg .control-label span {
+	font-weight: normal;
+	color: #999999;
+}
 /* conmment */
 .commented {
 	padding-left: 50px;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px dashed #cfcfcf;
 }
 .comment_head {
-	top: 0;
+	top: 10;
 	left: 4px;
 }
 .comment_head img {
-	width: 40px;
-	height: 40px;
+	width: 20px;
+	height: 20px;
+}
+.comment_content {
+	padding: 4px 6px;
+}
+.comment_content p {
+	word-wrap: break-word;
+	color: #888888;
+	font-size: 12px;
+}
+.comment_content .info {
+	text-align: right;
+	margin-top: 6px;
 }
 .comment {
 	margin-top: 20px;
@@ -272,6 +437,12 @@ article h2 a {
 	height: 100%;
 	background: #edece4;
 }
+.post .navbar-nav.navbar-right:last-child {
+	margin-right: 0;
+}
+.post .navbar li .user_head {
+	padding: 10px 0 10px;
+}
 .post .textarea {
 	height: 100%;
 	padding: 160px 0 70px;
@@ -279,6 +450,7 @@ article h2 a {
 .post .editor {	
 	height: 100%;
 	width: 47%;
+	padding: 20px;
 	margin: 0 1% 0 2%;
 	background: #ffffff;
 }
@@ -298,10 +470,14 @@ article h2 a {
 	font-size: 24px;
 	color: #555555;
 }
+.post-title_input:focus {
+	box-shadow: none;
+	border: none;
+	outline: 0;
+}
 .post .editor textarea {
 	height: 100%;
-	width: 100%;
-	padding: 20px;
+	width: 100%;	
 	border: none;
 	resize: none;
 	outline: none;
@@ -313,6 +489,11 @@ article h2 a {
 	padding: 20px;
 	margin: 0 2% 0 1%;
 	background: #ffffff;
+}
+.post .preview #preview {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
 }
 .post .dropdown-menu input {
 	background: transparent;
