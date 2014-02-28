@@ -15,13 +15,17 @@ User.prototype.save = function(callback) {
     var md5 = crypto.createHash('md5'),
         email_MD5 = md5.update(this.email.toLowerCase()).digest('hex'),
         head = "http://www.gravatar.com/avatar/" + email_MD5 + "?s=220",
+		date = new Date(),
+		time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
+			date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()),
     //要存入数据库的用户信息文档
-       user = {
-          name: this.name,
-          password: this.password,
-          email: this.email,
-          head: head
-      };
+		user = {
+			name: this.name,
+			password: this.password,
+			email: this.email,
+			head: head,
+			time: time
+		};
   //打开数据库
     mongodb.open(function (err, db) {
         if (err) {

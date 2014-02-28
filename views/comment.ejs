@@ -1,39 +1,40 @@
 <div class="comment">
-	<form method="post" class="form-inline" rola="form">
-	<% if (user) { %>
-		<div class="form-group">
-			<label class="sr-only" for="name">名</label>
-			<input type="text" class="form-control" name="name" id="form_comment_name" value="<%= user.name %>" placeholder="用户名"/>
-		</div>
-		<div class="form-group">
-			<label class="sr-only" for="email">名</label>
-			<input type="email" class="form-control" name="email" id="form_comment_email" value="<%= user.email %>" placeholder="邮箱"/>
-		</div>
-	<% } else { %>
-		<div class="form-group">
-			<label class="sr-only" for="name">名</label>
-			<input type="text" class="form-control" name="name" id="form_comment_name" placeholder="用户名"/>
-		</div>
-		<div class="form-group">
-			<label class="sr-only" for="email">名</label>
-			<input type="email" class="form-control" name="email" id="fomr_comment_email" placeholder="邮箱"/>
-		</div>
-	<% } %>
+	<form method="post" class="form-inline" rola="form">	
 		<textarea name="content" class="form-control textarea" id="form_comment_content" rows="3"></textarea><br />
-		<div class="clearfix">
-			<a href="javascript:;" class="btn btn-comment btn-primary pull-right">留言</a>
+		<% if (user) { %>
+		<div class="clearfix pos-rela">
+			<input type="text" class="form-control" name="name" id="form_comment_name" value="<%= user.name %>" placeholder="用户名"/>
+			<input type="email" class="form-control" name="email" id="form_comment_email" value="<%= user.email %>" placeholder="邮箱"/>
+			<a href="javascript:;" class="btn btn-comment btn-primary pull-right" data-container="body" data-to>留言</a>
+			<div class="tip time-tip pos-abso popover right">
+				<div class="arrow"></div>
+				<p>稍后再试！</p>
+			</div>
 		</div>
+		<% } else { %>
+			<div class="clearfix pos-rela">
+				<input type="text" class="form-control pull-left" name="name" id="form_comment_name" value="匿名" placeholder="用户名"/>
+				<input type="email" class="form-control pull-left" name="email" id="form_comment_email" value="5201314@520.com" placeholder="邮箱"/>
+				<a href="javascript:;" class="btn btn-comment btn-primary pull-right" data-container="body" data-to>留言</a>
+				<div class="tip time-tip pos-abso popover right">
+					<div class="arrow"></div>
+					<p>稍后再试！</p>
+				</div>
+			</div>
+		<% } %>
 	</form>	
 </div>
-<% post.comments.forEach(function (comment, index) { %>
-<div class="commented pos-rela">
-	<a class="comment_head pos-abso"><img src="<%= comment.head %>"/></a>
-	<div class="comment_content">
-		<p><%- comment.content %></p>
-	    <p class="info">
-			<a href="<%= comment.website %>"><%= comment.name %></a>
-			<span> 回复于 <%= comment.time %></span>
-		</p>
-	</div>	 
+<div class="comments">
+	<% post.comments.reverse().forEach(function (comment, index) { %>
+	<div class="commented pos-rela">
+		<a class="comment_head pos-abso"><img src="<%= comment.head %>"/></a>
+		<div class="comment_content">
+			<p><%- comment.content %></p>
+			<p class="info">
+				<a href="javascript:;"><%= comment.name %></a>
+				<span> 回复于 <%= comment.time %></span>
+			</p>
+		</div>	 
+	</div>
+	<% }) %>
 </div>
-<% }) %>

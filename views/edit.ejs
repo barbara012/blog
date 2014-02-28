@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<div class="post">
-		    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		        <div class="navbar-header">
 		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
 		                <span class="sr-only">Toggle navigation</span>
@@ -20,31 +20,38 @@
                             <a href="/" class="home pos-abso" title="返回首页"><span class="glyphicon glyphicon-home"></span></a>
                         </li>
                         <li class="active">
-                            <a href="/edit">编辑</a>
-                        </li>                        
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                            <a href="javascript:;" title="编辑"><span class="glyphicon glyphicon-edit"></span></a>
+                        </li>
                         <li>
-                            <a href="/u/<%= user.name %>" class="user_head" title="<%= user.name %>">
-                                <img src="<%= user.head %>" alt="<%= user.name %>">
-                            </a>
-                        </li>
-                        <li class="navbar-right">
-                            <a href="/logout">登出</a>
-                        </li>
+                            <a href="/personal-articles" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+                        </li>                       
                     </ul>
+                   	<ul class="nav navbar-nav navbar-right">
+	                  	<li>
+	                      	<a href="/u/<%= user.name %>" class="user_head" title="<%= user.name %>">
+	                          	<img src="<%= user.head %>" alt="<%= user.name %>">
+	                      	</a>
+	                  	</li>
+	                  	<li class="navbar-right">
+	                      	<a href="/logout"><span class="glyphicon glyphicon-log-out"></span></a>
+	                  	</li>
+	              	</ul>
 		        </div>
 		    </nav>
 		    <div class="textarea clearfix pos-rela">
 		        <div class="post-title pos-abso">
 		            <input type="text" class="post-title_input" id="title" value="<%= post.title %>" placeholder="文章标题">
 		        </div>
-		        <div class="editor pull-left">
-		            <textarea oninput="this.editor.update()" id="post" rows="10" class="form-control" rows="3" name="post"><%= post.post %></textarea>
-		        </div>
-		        <div class="preview pull-right">
-		        	<div id="preview"></div>
-		        </div>		        
+		        <div class="editor-container pull-left">
+                    <div class="editor pull-right">
+                        <textarea oninput="this.editor.update()" id="post"  name="post"><%- post.post %></textarea>
+                    </div>
+                </div>
+		        <div class="preview-container pull-right">
+                    <div class="preview pull-left">
+                        <div id="preview"></div>
+                    </div>
+                </div>
 		    </div>
 		    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
 		        <div class="navbar-header">

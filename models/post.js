@@ -102,13 +102,33 @@ Post.getTen = function(name, page, callback) {
     });
 };
 //获取一篇文章
-Post.getOne = function(id, callback) {
+Post.getOne = function(id, name, callback) {
   //打开数据库
   	mongodb.open(function (err, db) {
     	if (err) {
       		return callback(err);
     	}
-    //读取 posts 集合
+	//根据文章用户名获取用户名创建时间
+		var userCreateName;
+		db.collection('users', function (err, collect) {
+			if (err) {
+				mongodb.close();
+				return callback(err);
+			};
+			collect.findOne(
+				{
+					'name': name
+				},
+				function (err, user) {
+					if (err) {
+						mongodb.close();
+						return callback(err);
+					}
+					userCreateName = user.time;
+				}
+			);
+		});
+    	//读取 posts 集合
     	db.collection('posts', function (err, collection) {
       		if (err) {
         		mongodb.close();
@@ -138,9 +158,10 @@ Post.getOne = function(id, callback) {
               					return callback(err);
             				}
           				}
-          			);
+          			);          	
           //解析 markdown 为 html
           			doc.post = markdown.toHTML(doc.post);
+          			doc.createTime = userCreateName;
           			doc.comments.forEach(function (comment) {
             			comment.content = markdown.toHTML(comment.content);
           			});
@@ -184,8 +205,8 @@ Post.update = function(id, tags, title, post, callback) {
 			year : date.getFullYear(),
 			month : date.getFullYear() + "-" + (date.getMonth() + 1),
 			day : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
-			minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + "-" + 
-			date.getHours() + "-" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) 
+			minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
+			date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) 
 		};
   //打开数据库
 	mongodb.open(function (err, db) {

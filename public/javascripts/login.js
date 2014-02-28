@@ -48,20 +48,28 @@
 			'left': '220px',
 			'opacity': 0
 		},
-		lrAjax = function (url, data) {
+		lrAjax = function (url, data, option) {
 			$.ajax(
 				{
 					type: 'POST',
 					url: url,
 					data: data,
 					success: function (mes) {
-						if (mes['type'] === 1) {
-							$usernameTip.css(tipCssSet);
-						} else if (mes['type'] === 2){
-							$passwordTip.css(tipCssSet);
+						if (option === 'log') {
+							if (mes['type'] === 1) {
+								$usernameTip.css(tipCssSet);
+							} else if (mes['type'] === 2){
+								$passwordTip.css(tipCssSet);
+							} else {
+								location.href = '/';
+							}
 						} else {
-							location.href = '/';
-						}
+							if (mes['type'] === 1) {
+								$regNameTip.css(tipCssSet);
+							} else {
+								location.href = '/';
+							}
+						}						
 					}
 				}
 			)
@@ -87,8 +95,13 @@
 		$regEmailTip.css(tipCssReset);
 	});
 
-	$btnLogin.click(function () {
-		
+	$btnLogin.click(Login);
+	$(document).keydown(function (e) {
+		if (e.keyCode === 13) {
+			Login();
+		}
+	});
+	function Login () {
 		if (!$username.val()) {
 			$usernameTip.addClass('input-tip')
 						.css(tipCssSet)
@@ -99,12 +112,13 @@
 		data['username'] = $username.val();
 		data['password'] = $password.val();
 
-		lrAjax(location.pathname, data);
-
-	});
-	$()
+		lrAjax(location.pathname, data, 'log');
+	}
 	//show register
 	$showReg.click(function () {
+		$usernameTip.css(tipCssReset)
+					.find('p').text('用户名不存在！');		
+		$passwordTip.css(tipCssReset);
 		$login.addClass('matte').css(logCssSet);
 		var t = setTimeout(
 			function () {
@@ -116,6 +130,12 @@
 	});
 	//返回登录窗口
 	$returnLogin.click(function () {
+		$regNameTip.css(tipCssReset)
+				.find('p').text('用户名已存在！');
+		$regPassTip.css(tipCssReset);
+		$regRepeatTip.css(tipCssReset);
+		$regEmailTip.css(tipCssReset);
+
 		$reg.css(regCssReset);
 		var t = setTimeout(
 			function () {
@@ -147,6 +167,12 @@
 			$regEmailTip.css(tipCssSet);
 			return false;
 		}
+
+		data = {};
+		data['regUserName'] = $regUsername.val();
+		data['regPassword'] = $regPassword.val();
+		data['regEmail'] = $regEmail.val();
+		lrAjax('/reg', data, 'reg');
 
 	});
 })();

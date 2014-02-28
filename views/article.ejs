@@ -1,82 +1,94 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <% include head %>        
+        <%- include head %>        
     </head>    
     <body>	  	
 	  	<div class="clearfix  singlepage">
-  			<div class="about_author pull-left pos-rela">
-				<a href="/" class="home pos-abso" title="返回首页"><span class="glyphicon glyphicon-home"></span></a>
-  				<a href="#" class="author_head"><img src="<%- post.head %>"></a>
-  				<h4 class="author_id"><%- post.name %></h4>
+			<div class="about_author pull-left pos-rela">
+  				<div class="author_info">
+					<a href="/" class="home pos-abso" title="返回首页">
+						<span class="glyphicon glyphicon-home"></span>
+					</a>
+	  				<a href="#" class="author_head">
+	  					<img src="<%= post.head %>">
+	  				</a>
+	  				<p><span>用户名：</span><%= post.name %></p>
+	  				<p><span>创建时间：</span><%= post.createTime %></p>
+  				</div>
   			</div>
   		  	<div class="article_content pull-left pos-rela">
 				<% if (user && (user.name == post.name)) { %>
-					<a class="edit pos-abso" href="/edit/<%= post._id %>" title="编辑">
-						<span class="glyphicon glyphicon-edit"></span>
-					</a>
-					<a class="remove pos-abso" href="/remove/<%= post.name %>/<%= post.time.minute %>/<%= post.title %>" title="删除">
-						<span class="glyphicon glyphicon-trash"></span>
-					</a>
+				<a class="edit pos-abso" href="/edit/<%= post._id %>" title="编辑">
+					<span class="glyphicon glyphicon-edit"></span>
+				</a>
+				<a class="remove pos-abso" href="/remove/<%= post.name %>/<%= post.time.minute %>/<%= post.title %>" title="删除">
+					<span class="glyphicon glyphicon-trash"></span>
+				</a>
 				<% } %>
 				<% var flag = 1 %>
-  		        <% if (user && (user.name != post.name)) { %>
-  		            <% if ((post.reprint_info.reprint_from != undefined) && (user.name == post.reprint_info.reprint_from.name)) { %>
-  		              <% flag = 0 %>
-  		            <% } %>
-  		            <% if ((post.reprint_info.reprint_to != undefined)) { %>
-  		              <% post.reprint_info.reprint_to.forEach(function (reprint_to, index) { %>
-  		                <% if (user.name == reprint_to.name) { %>
-  		                  <% flag = 0 %>
-  		                <% } %>
-  		              <% }) %>
-  		            <% } %>
-  		          <% } else { %>
-  		            <% flag = 0 %>
-  		          <% } %>
-  		          <% if (flag) { %>
-  		            <span><a class="edit" href="/reprint/<%= post.name %>/<%= post.time.minute %>/<%= post.title %>">转载</a></span>
-  		          <% } %>
+				<% if (user && (user.name != post.name)) { %>
+					<% if ((post.reprint_info.reprint_from != undefined) && (user.name == post.reprint_info.reprint_from.name)) { %>
+					<% 		flag = 0 %>
+					<% } %>
+					<% if ((post.reprint_info.reprint_to != undefined)) { %>
+						<% post.reprint_info.reprint_to.forEach(function (reprint_to, index) { %>
+							<% if (user.name == reprint_to.name) { %>
+								<% flag = 0 %>
+							<% } %>
+						<% }) %>
+					<% } %>
+				<% } else { %>
+					<% flag = 0 %>
+				<% } %>
   		  		<article>
-	  		        <h2><%- post.title %></h2>		  		
-	  		        <% if (post.reprint_info.reprint_from) { %>
-	  		          <br><a href="/p/<%= post.reprint_info.reprint_from.name %>/<%= post.reprint_info.reprint_from.day %>/<%= post.reprint_info.reprint_from.title %>">原文链接</a>
-	  		        <% } %>
+	  		        <h2><%- post.title %></h2>
 	  		        <p><%- post.post %></p>
-						<p class="info">
-							<!-- 作者：<a href="/u/<%= post.name %>"><%= post.name %></a> |  -->
-						</p>
+	  		        <br />
 					<% if (post.tags.length > 1) { %>
-					<p class="info">
-						标签：
-					<% post.tags.forEach(function (tag, index) { %>
-						<% if (tag) { %>
-							<a class="tag" href="/tags/<%= tag %>"><%= tag %></a>
-						<% } %>
-					<% }) %>
+					<p class="info clearfix">
+						<span class="pull-left">
+								标签：
+							<% post.tags.forEach(function (tag, index) { %>
+								<% if (tag) { %>
+									<a class="tag" href="/tags/<%= tag %>"><%= tag %></a>
+								<% } %>
+							<% }) %>
+						</span>
+						<span class="pull-right">
+							日期：<%= post.time.minute %>
+						</span>
+						
+					</p>
+	  		        <p class="info clearfix">
+	  		        	<span class="pull-left">
+	  		        		阅读：<%= post.pv %> | 
+	  		        		评论：<%= post.comments.length %> | 
+	  		        		转载：
+	  		        		<% if (post.reprint_info.reprint_to) { %>
+	  		        			<%= post.reprint_info.reprint_to.length %>
+	  		        		<% } else { %>
+	  		        			<%= 0 %>
+	  		        		<% } %>
+	  		        	</span>
+						<span class="pull-right">
+							<% if (post.reprint_info.reprint_from) { %>
+							<a href="/p/<%= post.reprint_info.reprint_from.name %>/<%= post.reprint_info.reprint_from.day %>/<%= post.reprint_info.reprint_from.title %>">原文链接</a>|
+							<% } %>
+							<% if (flag) { %>
+							<a href="/reprint/<%= post.name %>/<%= post.time.minute %>/<%= post.title %>">转载</a>
+							<% } %>
+						</span>
 					</p>
 					<% } %>
-	  		        <p class="info clearfix">
-	  		        	<span class="pull-left">日期：<%= post.time.minute %></span>
-	  		        	<span class="pull-right">
-							阅读：<%= post.pv %> | 
-							评论：<%= post.comments.length %> | 
-							转载：
-							<% if (post.reprint_info.reprint_to) { %>
-								<%= post.reprint_info.reprint_to.length %>
-							<% } else { %>
-								<%= 0 %>
-							<% } %>
-						</span>		  		        
-					</p>
 				</article>
-  		      	<hr/>
-  		      	<% include comment %>  		  		
-  		  	</div>
-	  	</div>
+				<hr class="separate pos-rela"/>
+				<% include comment %>
+			</div>
+		</div>
 	  	<script src="/javascripts/jquery-2.0.3.min.js"></script>
-	  	<script src="/javascripts/bootstrap.js"></script>
-	  	<script src="/javascripts/singlepage.js"></script>
-	  	<script src="/javascripts/comment.js"></script>	
-  	</body>
+		<script src="/javascripts/bootstrap.js"></script>
+		<script src="/javascripts/singlepage.js"></script>
+		<script src="/javascripts/comment.js"></script>	
+	</body>
 </html>

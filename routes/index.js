@@ -7,7 +7,8 @@ var crypto = require('crypto'),
     User = require('../models/user.js'),
     Post = require('../models/post.js'),
     Pic = require('../models/pic.js'),
-    Comment = require('../models/comment.js');
+    Comment = require('../models/comment.js'),
+    markdown = require('markdown').markdown;
 module.exports = function (app) {
 	app.get('/', function (req, res) {
 	  //判断是否是第一页，并把请求的页数转换成 number 类型
@@ -30,51 +31,49 @@ module.exports = function (app) {
 	  });
 	});
 //注册
-	app.get('/reg', checkNotLogin);
-	app.get('/reg', function (req, res) {
-		res.render('reg', {
-		    title: '注册',
-		    user: req.session.user,
-		    success: req.flash('success').toString(),
-		    error: req.flash('error').toString()
-		  });
-	});
 	app.post('/reg', checkNotLogin);
 	app.post('/reg', function (req, res) {
-		var name = req.body.username,
-		     password = req.body.password,
-		     password_re = req.body['password-repeat'];
-		 //检验用户两次输入的密码是否一致
-		 if (password_re != password) {
-		   req.flash('error', '两次输入的密码不一致!'); 
-		   return res.redirect('/reg');//返回注册页
-		 }
-		 //生成密码的 md5 值
-		 var md5 = crypto.createHash('md5'),
-		     password = md5.update(req.body.password).digest('hex');
-		 var newUser = new User({
-		     name: req.body.username,
-		     password: password,
-		     email: req.body.email
-		 });
-		 //检查用户名是否已经存在 
-		   User.get(newUser.name, function (err, user) {
-		     if (user) {
-		       req.flash('error', '用户已存在!');
-		       return res.redirect('/reg');//返回注册页
-		     }
-		     //如果不存在则新增用户
-		     newUser.save(function (err, user) {
-		       if (err) {
-		         req.flash('error', err);
-		         return res.redirect('/reg');//注册失败返回主册页
-		       }
-		       req.session.user = user;//用户信息存入 session
-		       req.flash('success', '注册成功!');
-		       res.redirect('/');//注册成功后返回主页
-		     });
-		   });
-
+		var name = req.body.regUserName,
+			password = req.body.regPassword,
+			md5 = crypto.createHash('md5');
+		password = md5.update(req.body.regPassword).digest('hex');
+		var newUser = new User({
+			name: name,
+			password: password,
+			email: req.body.regEmail
+		});
+		//检查用户名是否已经存在 
+		User.get(newUser.name, function (err, user) {
+			if (user) {
+				req.flash('error', '用户名已存在!');
+				return res.send(
+					{
+						type: 1,
+						mes: '用户名已经存在！'
+					}
+				);//返回注册页
+			}
+			//如果不存在则新增用户
+			newUser.save(function (err, user) {
+				if (err) {
+					req.flash('error', err);
+					return res.send(
+						{
+							type: 1,
+							mes: '用户名已经存在！'
+						}
+					);//返回注册页
+				}
+				req.session.user = user;//用户信息存入 session
+				req.flash('success', '注册成功！');
+				return res.send(
+					{
+						type: 2,
+						mes: '注册成功！'
+					}
+				);//返回注册页
+			});
+		});
 	});
 //登录
 	app.get('/login', checkNotLogin);
@@ -142,10 +141,19 @@ module.exports = function (app) {
 			post.save(function (err) {
 			   	if (err) {
 			    	req.flash('error', err); 
-			    	return res.redirect('/');
+			    	return res.send(
+			    		{
+			    			'type': 1
+			    		}
+			    	);//发布失败
 			   	}
 			    req.flash('success', '发布成功!');
-			    res.redirect('/');//发表成功跳转到主页
+			    res.send(
+			    	{
+			    		'type': 3
+
+			    	}
+			    );//发表成功跳转到主页
 			});
 	});
 	//登出
@@ -310,12 +318,12 @@ module.exports = function (app) {
 	  	});
 	});
 	//获得用户文章
-	app.get('/p/:id', function (req, res) {
-	  	Post.getOne(req.params.id, function (err, post) {
-	    	if (err) {
-	      		req.flash('error', err); 
-	      		return res.redirect('/');
-	    	}
+	app.get('/p/:name/:id', function (req, res) {
+	  	Post.getOne(req.params.id, req.params.name, function (err, post) {
+			if (err) {
+				req.flash('error', err); 
+				return res.redirect('/');
+			}
 	    	res.render('article', {
 	    		title: '文章',
 	     		post: post,
@@ -326,7 +334,7 @@ module.exports = function (app) {
 	  	});
 	});
 	//留言
-	app.post('/p/:id', function (req, res) {
+	app.post('/p/:name/:id', function (req, res) {
 	  	var date = new Date(),
 	     	time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
 	             date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
@@ -346,8 +354,9 @@ module.exports = function (app) {
 	      		req.flash('error', err); 
 	      		return res.redirect('back');
 	    	}
+	    	comment.content = markdown.toHTML(comment.content);
 	    	req.flash('success', '留言成功!');
-	    	res.redirect('back');
+	    	res.send(comment);
 	  	});
 	});
 

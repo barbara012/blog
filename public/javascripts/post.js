@@ -24,8 +24,12 @@
   				type: 'POST',
   				url: url,
   				data: data,  				
-  				success: function () {
-  					console.log(12);
+  				success: function (mes) {
+  					if (mes['type'] === 3) {
+  						location.href = '/';
+  					} else {
+  						console.log(mes['type']);
+  					}
   				}
   			}
   		)

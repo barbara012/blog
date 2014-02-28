@@ -5,78 +5,83 @@
 	</head>	
 	<body>
 		<div class="home-page">
-			<div class="page_header">
-				<% if (user) { %>
-					<div class="pull-right"><a href="/logout">退出</a></div>
-				<% } else { %>
-					<div class="pull-right"><a href="/reg">注册</a><a href="/login">登录</a></div>
-				<% } %>				
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-3 col-sm-offset-1">
-							<h1 class="motto">难得糊涂</h1>
-						</div>
-						<div class="col-sm-3 col-sm-offset-5 poem">
-							<p>曾经沧海难为水，</p>
-							<p>除却巫山不是云。</p>
-							<p>取次花丛懒回顾，</p>
-							<p>半缘修道半缘君。</p>
-						</div>
-					</div>
-					<div class="bottom">
-							<% if (user) { %>
-							<div class="head">							
-								<a href="#" title="<%= user.name %>">
-									<img src="<%= user.head %>" alt="<%= user.name %>">
-								</a>
-							</div>
-							<% } else { %>
-							<div class="no-head" title="未登录撒">								
-								 <span class="glyphicon glyphicon-remove-circle"></span>
-							</div>
-							<% } %>
+			<div class="home-page_nav">
+				<div class="container clearfix">
+					<div class="collapse navbar-collapse">
+						<% if (user) { %>
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="/" title="首页"><span class="glyphicon glyphicon-home"></span></a>
+							</li>
+							<li>
+								<a href="/post" title="发表文章"><span class="glyphicon glyphicon-leaf"></span></a>
+							</li>
+						</ul>
+						<form class="navbar-form navbar-left" action="/search" method="GET">
+							<input type="text" class="form-control" name="keyword" placeholder="检索文章">
+						</form>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#" title="<%= user.name %>" class="head-pic"><img src="<%= user.head %>" alt="<%= user.name %>"></a></li>
+							<li><a href="/logout" title="退出"><span class="glyphicon glyphicon-log-out"></span></a></li>
+						</ul>
+						<% } else { %>
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="/"><span class="glyphicon glyphicon-home"></span></a>
+							</li>
+						</ul>
+						<form class="navbar-form navbar-left" action="/search" method="GET">
+							<input type="text" class="form-control" name="keyword" placeholder="检索文章">
+						</form>
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="/login" title="登录"><span class="glyphicon glyphicon-log-in"></span></a>
+							</li>
+						</ul>
+						<% } %>
 					</div>
 				</div>
-			</div>	
+			</div>
+			<div class="banner"></div>
 			<div id="container" class="container">
-				<div class="search-article">
-					<form action="/search" method="GET">
-						<div class="col-xs-2">
-						    <input type="text" class="form-control search" name="keyword" placeholder="检索文章">
-						</div>
-						<button type="submit" class="btn btn-primary">搜索</button>
-					</form>
-				</div>		  
-				
-					<% posts.forEach(function (post, index) { %>
-				<article class="pos-rela">
-					<h2>
-						<a href="/p/<%= post._id %>"><%= post.title %></a>
-					</h2>
-					<a href="/u/<%= post.name %>" class="pos-abso author_head">
-						<img src="<%= post.head %>" class="r_head" />
-					</a>
-					  <% if (post.reprint_info.reprint_from) { %>
-						<br><a href="/u/<%= post.reprint_info.reprint_from.name %>/<%= post.reprint_info.reprint_from.day %>/<%= post.reprint_info.reprint_from.title %>">原文链接</a>
-					  <% } %>
-					<div class="article">
-						<%- post.post.substr(0, 200) %>
-					</div>
-					<p class="info clearfix">
-					<% if (post.tags.length > 1) { %>
-						<span class="pull-left">标签：
-							<% post.tags.forEach(function (tag, index) { %>
-							  <% if (tag) { %>
-								<a class="tag" href="/tags/<%= tag %>"><%= tag %></a>
+				<div class="row-fluid">
+					<div class="span9">
+							<% posts.forEach(function (post, index) { %>
+						<article class="pos-rela">
+							<h2>
+								<a href="/p/<%= post.name %>/<%= post._id %>"><%= post.title %></a>
+							</h2>
+							<a href="/u/<%= post.name %>" class="pos-abso author_head">
+								<img src="<%= post.head %>" class="r_head" />
+							</a>
+							  <% if (post.reprint_info.reprint_from) { %>
+								<br><a href="/u/<%= post.reprint_info.reprint_from.name %>/<%= post.reprint_info.reprint_from.day %>/<%= post.reprint_info.reprint_from.title %>">原文链接</a>
 							  <% } %>
+							<div class="article">
+								<%- post.post.substr(0, 200) %>
+							</div>
+							<p class="info clearfix">
+							<% if (post.tags.length > 1) { %>
+								<span class="pull-left">标签：
+									<% post.tags.forEach(function (tag, index) { %>
+									  <% if (tag) { %>
+										<a class="tag" href="/tags/<%= tag %>"><%= tag %></a>
+									  <% } %>
+									<% }) %>
+								</span>
+							<% } %>
+								<span class="pull-right"><%= post.time.minute %></span>				
+							</p>
+						</article>
 							<% }) %>
-						</span>
-					<% } %>
-						<span class="pull-right"><%= post.time.minute %></span>				
-					</p>
-				</article>
-					<% }) %>			
-				<% include paging %>				
+						<% include paging %>
+					</div>
+					<div class="span3">
+						侧栏
+					</div>
+				</div>
+				
+							
 			</div>
 			<% include footer %>
 		</div>

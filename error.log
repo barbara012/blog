@@ -3320,3 +3320,473 @@ Error: Cannot determine state of server
     at MongoStore.get (D:\blog\node_modules\connect-mongo\lib\connect-mongo.js:211:10)
     at Object.session [as handle] (D:\blog\node_modules\express\node_modules\connect\lib\middleware\session.js:311:11)
     at next (D:\blog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+[Thu Feb 27 2014 10:19:07 GMT+0800 (中国标准时间)] /reg
+TypeError: Not a string or buffer
+    at Hash.update (crypto.js:209:17)
+    at D:\blog\routes\index.js:53:19
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (D:\blog\routes\index.js:443:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+[Thu Feb 27 2014 10:20:12 GMT+0800 (中国标准时间)] /reg
+TypeError: Not a string or buffer
+    at Hash.update (crypto.js:209:17)
+    at D:\blog\routes\index.js:53:19
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (D:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (D:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (D:\blog\routes\index.js:443:5)
+    at callbacks (D:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (D:\blog\node_modules\express\lib\router\index.js:138:11)
+[Thu Feb 27 2014 14:58:11 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ) in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:147:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 14:58:12 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 14:58:42 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ) in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:147:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 14:59:24 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ) in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:147:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 14:59:25 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 14:59:30 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ) in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:147:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 14:59:30 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 14:59:44 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ) in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:147:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 14:59:44 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 15:01:11 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ) in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:147:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 15:01:12 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 15:01:32 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ) in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:147:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 15:01:32 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 15:03:32 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ) in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:147:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 15:03:33 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 15:46:58 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:19:27 GMT+0800 (中国标准时间)] /p/530c9dc09c4d9910286a45d0
+TypeError: D:\blog\views\article.ejs:14
+    12| 					</a>
+    13| 	  				<a href="#" class="author_head">
+ >> 14| 	  					<img src="<%- post.head %>">
+    15| 	  				</a>
+    16| 	  				<h4 class="author_id"><%- post.name %></h4>
+    17| 	  				<p><span>创建时间：</span><%- post.createTime %></p>
+
+Cannot read property 'head' of undefined
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:401)
+    at eval (eval at <anonymous> (D:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:33:310)
+    at D:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:156:17
+[Thu Feb 27 2014 18:41:58 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:41:58 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:42:39 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:42:39 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:43:52 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:43:53 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:44:52 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:44:52 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:46:01 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:46:02 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:47:19 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:47:19 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:48:48 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:48:49 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:48:57 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:48:57 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:49:23 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:49:24 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:50:00 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:50:01 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:51:48 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:52:32 GMT+0800 (中国标准时间)] /p/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/530c9bab9c4d9910286a45cf
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:52:32 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:52:41 GMT+0800 (中国标准时间)] /p/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/530c9bab9c4d9910286a45cf
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:52:42 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:52:50 GMT+0800 (中国标准时间)] /p/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/530c9bab9c4d9910286a45cf
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:52:51 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:52:55 GMT+0800 (中国标准时间)] /p/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/530c97a19c4d9910286a45ce
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:52:55 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:53:01 GMT+0800 (中国标准时间)] /p/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/530c9bab9c4d9910286a45cf
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:53:01 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:56:52 GMT+0800 (中国标准时间)] /p/%E5%A4%9C%E9%9C%B2%E6%AD%BB%E8%8B%A6/530c9bab9c4d9910286a45cf
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:56:52 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:57:25 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:57:26 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:57:33 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:57:33 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:58:33 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:58:34 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Thu Feb 27 2014 18:58:47 GMT+0800 (中国标准时间)] /p/lili/530c9dc09c4d9910286a45d0
+SyntaxError: Unexpected token ; in "D:\\blog\\views\\article.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:318:11
+    at D:\blog\models\post.js:169:14
+    at D:\blog\node_modules\mongodb\lib\mongodb\collection\query.js:147:5
+[Thu Feb 27 2014 18:58:48 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Fri Feb 28 2014 11:49:13 GMT+0800 (中国标准时间)] /
+SyntaxError: Unexpected token ILLEGAL in "D:\\blog\\views\\index.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:21:10
+    at D:\blog\models\post.js:98:25
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:162:16
+[Fri Feb 28 2014 11:49:28 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Fri Feb 28 2014 11:49:52 GMT+0800 (中国标准时间)] /
+SyntaxError: Unexpected token ILLEGAL in "D:\\blog\\views\\index.ejs"
+    at Object.Function (<anonymous>)
+    at exports.compile (D:\blog\node_modules\ejs\lib\ejs.js:237:14)
+    at Object.exports.render (D:\blog\node_modules\ejs\lib\ejs.js:284:10)
+    at View.exports.renderFile [as engine] (D:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (D:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (D:\blog\node_modules\express\lib\response.js:798:7)
+    at D:\blog\routes\index.js:21:10
+    at D:\blog\models\post.js:98:25
+    at D:\blog\node_modules\mongodb\lib\mongodb\cursor.js:162:16
+[Fri Feb 28 2014 11:49:56 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Fri Feb 28 2014 11:50:30 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
+[Fri Feb 28 2014 11:50:52 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'D:\blog\public\images\favicon.ico'
