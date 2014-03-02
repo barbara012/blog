@@ -134,7 +134,7 @@ module.exports = function (app) {
 	app.post('/post', function (req, res) {
 		var currentUser = req.session.user,
 			md5 = crypto.createHash('md5'),
-			tags = req.body.tag.split('，'),
+			tags = req.body.tag.split(';'),
 			email_MD5 = md5.update(currentUser.email.toLowerCase()).digest('hex'),
 			head = "http://www.gravatar.com/avatar/" + email_MD5 + "?s=60",
 		    post = new Post(currentUser.name, head, req.body.title, tags, req.body.content);
@@ -155,6 +155,41 @@ module.exports = function (app) {
 			    	}
 			    );//发表成功跳转到主页
 			});
+	});
+	//
+	app.post('/post/:ower', function (req, res) {
+		var dbpic = [],
+			blobArr,
+			pic;
+	  	for (var i in req.files) {
+	    	if (req.files[i].size == 0){
+	      // 使用同步方式删除一个文件
+	     		fs.unlinkSync(req.files[i].path);	     		
+	      		console.log('Successfully removed an empty file!');
+	    	} else {
+	      		var target_path = './public/images/dbimg/' + req.files[i].name;
+	      		console.log(req.params.ower)
+	      // 使用同步方式重命名一个文件
+	      		fs.renameSync(req.files[i].path, target_path);
+	      		var dbImgUrl = '/images/dbimg/' + req.files[i].name;
+	      		var date = new Date();
+	      		var time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
+	    			date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+	    		blobArr = {};
+	    		blobArr.time = time;
+	    		blobArr.pic = dbImgUrl;
+	    		blobArr.ower = req.params.ower;
+	      		dbpic.push(blobArr);
+	    	}
+		}
+		pic = new Pic(dbpic);
+	    pic.save(function (err){
+	    	if (err) {
+	    		req.flash('error', err); 
+	    	}
+	    	req.flash('success', '文件上传成功!');
+	    	res.send(blobArr.pic);
+	    });		
 	});
 	//登出
 	app.get('/logout', checkLogin);
@@ -220,9 +255,12 @@ module.exports = function (app) {
 	    	}
 		}
 		pic = new Pic(dbpic);
-	    pic.save(function(){});
-		req.flash('success', '文件上传成功!');
-		res.redirect('/upload');
+	    pic.save(function(err){
+	    	if (err) {
+	    		req.flash('error', err)
+	    	}
+	    	req.flash('success', '文件上传成功!');
+	    });		
 	});
 
 	//获得用户信息
@@ -382,17 +420,27 @@ module.exports = function (app) {
 	app.post('/edit/:id', checkLogin);
 	app.post('/edit/:id', function (req, res) {
 	  	var currentUser = req.session.user,
-	  		tags = req.body.tag.split('，');
+	  		tags = req.body.tag.split(';');
 	  	Post.update(req.params.id , tags, req.body.title, req.body.content, function (err) {
-	    	var url = '/p/' + req.params.id;
+	    	var url = '/p/' + currentUser.name + '/' + req.params.id;
 	    	if (err) {
 	    		console.log('err');
 	      		req.flash('error', err); 
-	      		return res.redirect(url);//出错！返回文章页
+	      		return res.send(
+	      			{
+	      				type: 1,
+	      				url: url
+	      			}
+	      		);//出错！返回文章页
 	    	}
 	    	console.log('get ok');
 	    	req.flash('success', '修改成功!');
-	    	// res.redirect(url);//成功！返回文章页
+	    	res.send(
+	    		{
+	    			type: 3,
+	    			url: url
+	    		}
+	    	);//成功！返回文章页
 	  	});
 	});
 //删除文章
@@ -432,7 +480,26 @@ module.exports = function (app) {
 	    	});
 	  	});
 	});	
-
+//	用户已经发布的文章列表
+	app.get('/posted/:username', checkLogin);
+	app.get('/posted/:username', function (req, res) {
+		res.render('posted', {
+			    		title: '文章',
+			     		post: post,
+			      		user: req.session.user,
+			      		success: req.flash('success').toString(),
+			      		error: req.flash('error').toString()
+			    	});
+	});
+	app.post('/posted/:username', checkLogin);
+	app.post('/posted/:username' ,function (req, res) {
+		Post.getAll(req.params.username, function (err, arrayId) {
+			if (err) {
+				req.flash('error', err);
+				return .res.redirect(back);
+			}
+		})
+	});
 	//	404
 	app.use(function (req, res) {
 	  	res.render("404");

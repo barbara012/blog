@@ -24,8 +24,8 @@
   				type: 'POST',
   				url: url,
   				data: data,  				
-  				success: function () {
-  					console.log(12);
+  				success: function (mes) {
+  					location.href = mes.url;
   				}
   			}
   		)
@@ -35,7 +35,7 @@
   			return false;
   		}
   		var content = $('#post').val(),
-  			tag = $('#tag').val(),
+  			tag = $('#tag').val().replace(/(，)|(\t)|(,)|(-)|(\.)|(:)|(--)|(\s)|(：)|(。)|(\|)/g, ';'),
   			title = $('#title').val();
   		post = {};
   		post['content'] = content;

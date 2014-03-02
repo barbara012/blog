@@ -23,7 +23,7 @@
                             <a href="/post" title="发布文章"><span class="glyphicon glyphicon-pencil"></span></a>
                         </li>
                         <li>
-                            <a href="/personal-articles" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+                            <a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -42,7 +42,7 @@
                 <div class="post-title pos-abso">
                     <input type="text" class="post-title_input" id="title" placeholder="文章标题">
                 </div>
-                <div class="editor-container pull-left">
+                <div class="editor-container pull-left" id="editor-container">
                     <div class="editor pull-right">
                         <textarea oninput="this.editor.update()" id="post"  name="post"></textarea>
                     </div>
@@ -63,13 +63,13 @@
                     </button>
                 </div>
                 <div class="collapse navbar-collapse">
-                    <form class="navbar-form " method="post">                                                
-                        <div class="form-group">                            
-                            <input type="text" name="tag" id="tag" class="form-control" placeholder="标签">
-                        </div>
+                    <form class="navbar-form " method="post">
                         <div class="form-group">
-                            <span class="add-on glyphicon glyphicon-tags navbar-left"></span>
-                        </div>
+                            <span class="add-on glyphicon glyphicon-tags"></span>
+                        </div>  
+                        <div class="form-group">                            
+                            <input type="text" name="tag" id="tag" class="form-control" placeholder="标签1，标签2，标签3...">
+                        </div>                        
                         <div class="btn-group dropup navbar-right">
                             <button type="button" id="post-btn" class="btn btn-default">发布</button>
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -86,6 +86,7 @@
                 </div>
             </nav>
         </div>
+        <input type="hidden" id="hidden" value="<%= user.name %>">
         <script src="/javascripts/jquery-2.0.3.min.js"></script>
         <script src="/javascripts/bootstrap.js"></script>
         <script type="text/javascript" src="/javascripts/markdown.js"></script>

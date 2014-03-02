@@ -494,3 +494,36 @@ Post.reprint = function(reprint_from, reprint_to, callback) {
     });
   });
 };
+Post.getAll = function (name, callback) {
+	mongodb.open(function (err, db) {
+		if (err) {
+			return callback(err);
+		}
+		db.collection('posts', function (err, collection) {
+			if (err) {
+				mongodb.close();
+				return callback(err);
+			}
+
+			//根据用户名查出所以文章id
+			collection.find(
+				{
+					'name': name
+				},
+				{
+					'_id': 1
+				}
+			).sort(
+				{
+					time: -1
+				}
+			).toArray(function (err, arrayId) {
+				mongodb.close();
+				if (err) {
+					return callback(err);
+				}
+				callback(null, arrayId);
+			});
+		});
+	});
+};

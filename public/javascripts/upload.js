@@ -39,7 +39,7 @@ $(function () {
 									deleteImg($(this));
 								})
 					)
-										
+
 		};
 	box.addEventListener('drop', function (e) {
 		e.preventDefault(); //取消默认浏览器拖拽

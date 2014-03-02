@@ -20,10 +20,10 @@
                             <a href="/" class="home pos-abso" title="返回首页"><span class="glyphicon glyphicon-home"></span></a>
                         </li>
                         <li class="active">
-                            <a href="javascript:;" title="编辑"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a href="/edit/<%= post._id %>" title="编辑"><span class="glyphicon glyphicon-edit"></span></a>
                         </li>
                         <li>
-                            <a href="/personal-articles" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+                            <a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
                         </li>                       
                     </ul>
                    	<ul class="nav navbar-nav navbar-right">
@@ -63,12 +63,12 @@
 		            </button>
 		        </div>
 		        <div class="collapse navbar-collapse">
-		            <form class="navbar-form " method="post">                                                
-		                <div class="form-group">                            
-		                    <input type="text" name="tag" id="tag" value="<%= post.tags %>" class="form-control" placeholder="标签">
-		                </div>
+		            <form class="navbar-form " method="post">
 		                <div class="form-group">
-		                    <span class="add-on glyphicon glyphicon-tags navbar-left"></span>
+		                    <span class="add-on glyphicon glyphicon-tags"></span>
+		                </div>
+		                <div class="form-group">                            
+		                    <input type="text" name="tag" id="tag" value="<%= post.tags %>" class="form-control" placeholder="标签1，标签2，标签3...">
 		                </div>
 		                <div class="btn-group dropup navbar-right">
 		                    <button type="button" id="post-btn" class="btn btn-default">更新</button>

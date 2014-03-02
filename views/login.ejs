@@ -6,7 +6,7 @@
 	<body>
 		<div class="login pos-rela">
 			<div id="login" class="pos-abso">
-				<div class="log">
+				<div class="log pos-rela">
 					<div class="head">
 						<img src="/img/head.jpg" alt="头像">
 					</div>
@@ -32,7 +32,7 @@
 				</div>				
 				<div class="reg pos-abso">
 					<p class="txt-center"><a href="javascript:;" title="返回登录窗" class="return-log glyphicon glyphicon-circle-arrow-left"></a></p>
-					<div class="form-group">
+					<div class="form-group pos-rela">
 						<label for="reg_username" class="control-label">* &nbsp;用户名</label>
 						<input type="text" id="reg_username" class="form-control" name="reg_username" placeholder="用户名">
 						<div class="tip reg_name-tip pos-abso popover right">
@@ -40,7 +40,7 @@
 							<p>用户名已存在！</p>
 						</div>
 					</div>					
-					<div class="form-group">
+					<div class="form-group pos-rela">
 						<label for="reg_password" class="control-label">* &nbsp;密码</label>
 						<input type="password" id="reg_password" class="form-control" name="reg_password" placeholder="密码">
 						<div class="tip reg_pass-tip input-tip pos-abso popover right">
@@ -48,15 +48,15 @@
 							<p>请输入密码！</p>
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="reg_password-repeat" class="control-label">* &nbsp;重复输入密码</label>
-						<input type="password" id="reg_password-repeat" class="form-control" name="reg_password-repeat" placeholder="重复输入密码">
+					<div class="form-group pos-rela">
+						<label for="reg_password-repeat" class="control-label">* &nbsp;再次输入密码</label>
+						<input type="password" id="reg_password-repeat" class="form-control" name="reg_password-repeat" placeholder="再次输入密码">
 						<div class="tip reg_repeat-tip pos-abso popover right">
 							<div class="arrow"></div>
 							<p>两次输入密码不相同！</p>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group pos-rela">
 						<label for="reg_email" class="control-label">邮箱<span>（方便找回密码）</span></label>
 						<input type="email" id="reg_email" class="form-control" name="reg_email" placeholder="邮箱">
 						<div class="tip reg_email-tip pos-abso popover right">

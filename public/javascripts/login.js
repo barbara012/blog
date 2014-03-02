@@ -42,11 +42,13 @@
 		},
 		regCssSet = {
 			'left': '260px',
-			'opacity': '1'
+			'opacity': '1',
+			'z-index': 220
 		},
 		regCssReset = {
 			'left': '220px',
-			'opacity': 0
+			'opacity': 0,
+			'z-index': -200
 		},
 		lrAjax = function (url, data, option) {
 			$.ajax(

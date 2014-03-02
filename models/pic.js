@@ -39,6 +39,7 @@ Pic.prototype.save = function (callback) {
 			  	  	if (err) {
 			  	    		return callback(err);//失败！返回 err
 			  	  	};
+			  	  	callback(null);//返回 err 为 null
 		  		});
 		  		
 		  	};

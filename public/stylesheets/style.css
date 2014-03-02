@@ -1,10 +1,6 @@
 html, body {
 	height: 100%;
 }
-html, body, p, div, ul, li, a, span {
-	margin: 0;
-	padding: 0;
-}
 .navbar .nav .pull-right {
 	float: right;
 }
@@ -246,7 +242,10 @@ article h2 a {
 	line-height: 2;
 	letter-spacing: 1px;
 }
-
+p {
+	margin: 0;
+	padding: 0;
+}
 /* 注册 */
 .login {
 	height: 100%;
@@ -266,6 +265,9 @@ article h2 a {
 	transition: all 0.2s ease-in;
 	-webkit-transition: all 0.2s ease-in;
 }
+#login .log {
+	z-index: 200;
+}
 .login .matte:after {
 	content: "";
 	height: 100%;
@@ -274,14 +276,13 @@ article h2 a {
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 205; 
 	background: #ffffff;
 	filter: alpha(opacity=0.9);
 	opacity: 0.9;
 }
 #login .form-control {
 	margin-bottom: 20px;
-	height: auto;
-	padding: 4px 12px;
 	font-size: 12px;
 }
 #login .head,
@@ -300,7 +301,7 @@ article h2 a {
 .comment .tip {
 	left: 220px;
 	min-width: 100px;
-	top: 80px;
+	top: 72px;
 	border-radius: 2px;
 	padding: 6px 10px;
 	background: #E27B7B;
@@ -312,19 +313,23 @@ article h2 a {
 	-webkit-transition: all 0.2s ease-in;
 }
 #login .password-tip {
-	top: 130px;
+	top: 127px;
 }
 #login .reg_name-tip {
-	top: 42px;
+	top: auto;
+	bottom: 3px;
 }
 #login .reg_pass-tip {
-	top: 107px;
+	top: auto;
+	bottom: 3px;
 }
 #login .reg_repeat-tip {
-	top: 172px;
+	top: auto;
+	bottom: 3px;
 }
 #login .reg_email-tip {
-	top: 235px;
+	top: auto;
+	bottom: 3px;
 }
 #login .input-tip {
 	background: #3276b1;
@@ -360,6 +365,7 @@ article h2 a {
 	background: #ffffff;
 	filter :alpha(opacity=0);
 	opacity: 0;
+	z-index: -210;
 	box-shadow: 0 0 1px rgba(0,0,0,0.25);
 	transition: all 0.2s ease-in;
 	-webkit-transition: all 0.2s ease-in;
@@ -369,7 +375,8 @@ article h2 a {
 	color: #47a447;
 }
 #login .reg label {
-	color: #666666;
+	color: #bbbbbb;
+	font-weight: normal;
 }
 #login .reg .form-control {
 	margin-bottom: 10px;
@@ -429,23 +436,29 @@ article h2 a {
 	height: 100%;
 	background: #edece4;
 }
-.post .navbar {
+.post .navbar,
+.posted .navbar {
 	padding: 0 10px;
 }
-.post .navbar-nav.navbar-right:last-child {
+.post .navbar-nav.navbar-right:last-child,
+.posted .navbar-nav.navbar-right:last-child {
 	margin-right: 0;
 }
-.post .navbar li > a {
+.post .navbar li > a,
+.posted .navbar li > a {
 	color: #2a6496;
 	padding: 12px 18px;
 	font-size: 26px;
 }
 .post .navbar .active > a,
-.post .navbar .active > a:hover {
+.post .navbar .active > a:hover,
+.posted .navbar .active > a,
+.posted .navbar .active > a:hover {
 	background: #F3CECE;
 	color: #2a6496;
 }
-.post .navbar li .user_head {
+.post .navbar li .user_head,
+.posted .navbar li .user_head {
 	padding: 10px 0 10px;
 }
 .post .textarea {
@@ -506,10 +519,18 @@ article h2 a {
 	height: 100%;
 	width: 100%;
 	overflow: auto;
+	word-break: break-word;
 }
 .post .dropdown-menu input {
 	background: transparent;
 	border: 0;
+}
+.post #tag {
+	border: none;;
+	width: 500px;
+	padding-left: 4px;
+	background: transparent;;
+	box-shadow: none;
 }
 /* 页脚 */
 .footer p {
