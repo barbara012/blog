@@ -1,95 +1,103 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <% include head %>
-    </head>    
-    <body>
-        <div class="post">
-            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="/" class="home pos-abso" title="返回首页"><span class="glyphicon glyphicon-home"></span></a>
-                        </li>                        
-                        <li class="active">
-                            <a href="/post" title="发布文章"><span class="glyphicon glyphicon-pencil"></span></a>
-                        </li>
-                        <li>
-                            <a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="/u/<%= user.name %>" class="user_head" title="<%= user.name %>">
-                                <img src="<%= user.head %>" alt="<%= user.name %>">
-                            </a>
-                        </li>
-                        <li class="navbar-right">
-                            <a href="/logout"><span class="glyphicon glyphicon-log-out"></span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="textarea clearfix pos-rela">
-                <div class="post-title pos-abso">
-                    <input type="text" class="post-title_input" id="title" placeholder="文章标题">
-                </div>
-                <div class="editor-container pull-left" id="editor-container">
-                    <div class="editor pull-right">
-                        <textarea oninput="this.editor.update()" id="post"  name="post"></textarea>
-                    </div>
-                </div>
-                <div class="preview-container pull-right">
-                    <div class="preview pull-left">
-                        <div id="preview"></div>
-                    </div>
-                </div>                
-            </div>
-            <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <form class="navbar-form " method="post">
-                        <div class="form-group">
-                            <span class="add-on glyphicon glyphicon-tags"></span>
-                        </div>  
-                        <div class="form-group">                            
-                            <input type="text" name="tag" id="tag" class="form-control" placeholder="标签1，标签2，标签3...">
-                        </div>                        
-                        <div class="btn-group dropup navbar-right">
-                            <button type="button" id="post-btn" class="btn btn-default">发布</button>
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                <span class="caret"></span>
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">存为草稿</a></li>
-                                <li class="divider"></li>
-                                <li><a></a></li>
-                            </ul>
-                        </div>
-                    </form>
-                </div>
-            </nav>
-        </div>
-        <input type="hidden" id="hidden" value="<%= user.name %>">
-        <script src="/javascripts/jquery-2.0.3.min.js"></script>
-        <script src="/javascripts/bootstrap.js"></script>
-        <script type="text/javascript" src="/javascripts/markdown.js"></script>
-        <script src="/javascripts/post.js"></script>
+	<head>
+		<% include head %>
+	</head>    
+	<body>
+		<div class="post">
+			<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="/" class="home pos-abso" title="返回首页"><span class="glyphicon glyphicon-home"></span></a>
+						</li>                        
+						<li class="active">
+							<a href="/post" title="发布文章"><span class="glyphicon glyphicon-pencil"></span></a>
+						</li>
+						<li>
+							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="/info/<%= user.name %>" class="user_head" title="<%= user.name %>">
+								<img src="<%= user.head %>" alt="<%= user.name %>">
+							</a>
+						</li>
+						<li class="navbar-right">
+							<a href="/logout"><span class="glyphicon glyphicon-log-out"></span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="textarea clearfix pos-rela">					
+					<div class="post-title pos-abso wtf">
+						<div class="container-shadow">
+							<input type="text" class="post-title_input" id="title" placeholder="文章标题">
+						</div>
+					</div>
+					<div class="editor-container pull-left" id="editor-container">
+						<div class="container-shadow  pull-right">
+							<div class="editor">
+								<textarea oninput="this.editor.update()" id="post"  name="post"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="preview-container pull-right">
+						<div class="container-shadow pull-left ">
+							<div class="preview">
+								<div id="preview"></div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					  <span class="sr-only">Toggle navigation</span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse">
+					<form class="navbar-form " method="post">
+						<div class="form-group">
+							<span class="add-on glyphicon glyphicon-tags"></span>
+						</div>  
+						<div class="form-group">                            
+							<input type="text" name="tag" id="tag" class="form-control" placeholder="标签1，标签2，标签3...">
+						</div>                        
+						<div class="btn-group dropup navbar-right">
+							<button type="button" id="post-btn" class="btn btn-default">发布</button>
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a href="#">存为草稿</a></li>
+								<li class="divider"></li>
+								<li><a></a></li>
+							</ul>
+						</div>
+					</form>
+				</div>
+			</nav>
+		</div>
+		<input type="hidden" id="hidden" value="<%= user.name %>">
+		<script src="/javascripts/jquery-2.0.3.min.js"></script>
+		<script src="/javascripts/bootstrap.js"></script>
+		<script type="text/javascript" src="/javascripts/markdown.js"></script>
+		<script src="/javascripts/jquery.noty.packaged.min.js"></script>
+		<script src="/javascripts/postImg.js"></script>
+
   </body>
 </html>

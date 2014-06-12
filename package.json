@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node hwh.js"
   },
   "dependencies": {
     "express": "3.4.8",
@@ -11,6 +11,9 @@
     "mongodb": "*",
     "connect-mongo": "*",
     "connect-flash": "*",
-    "markdown": "*"
+    "markdown": "*",
+    "net": "*",
+    "nodemailer": "*",
+    "less": "*"
   }
 }

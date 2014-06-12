@@ -13,8 +13,10 @@
 	  				<a href="#" class="author_head">
 	  					<img src="<%= post.head %>">
 	  				</a>
-	  				<p><span>用户名：</span><%= post.name %></p>
-	  				<p><span>创建时间：</span><%= post.createTime %></p>
+	  				<div class="info_list">
+	  					<a href="javascript:;"><span>用户名：</span><%= post.name %></a>
+	  					<a href="javascript:;"><span>创建时间：</span><%= post.createTime %></a>
+	  				</div>
   				</div>
   			</div>
   		  	<div class="article_content pull-left pos-rela">
@@ -22,7 +24,7 @@
 				<a class="edit pos-abso" href="/edit/<%= post._id %>" title="编辑">
 					<span class="glyphicon glyphicon-edit"></span>
 				</a>
-				<a class="remove pos-abso" href="/remove/<%= post.name %>/<%= post.time.minute %>/<%= post.title %>" title="删除">
+				<a class="remove pos-abso" href="javascript:;" data-url="/delete/<%= post._id %>" title="删除">
 					<span class="glyphicon glyphicon-trash"></span>
 				</a>
 				<% } %>
@@ -44,21 +46,24 @@
   		  		<article>
 	  		        <h2><%- post.title %></h2>
 	  		        <p><%- post.post %></p>
-	  		        <br />
-					<% if (post.tags.length > 1) { %>
+	  		        <br />					
 					<p class="info clearfix">
+						
 						<span class="pull-left">
 								标签：
+						<% if (post.tags.length > 0 && post.tags[0]) { %>
 							<% post.tags.forEach(function (tag, index) { %>
 								<% if (tag) { %>
 									<a class="tag" href="/tags/<%= tag %>"><%= tag %></a>
 								<% } %>
 							<% }) %>
+						<% } else { %>
+							无
+						<% } %>
 						</span>
 						<span class="pull-right">
 							日期：<%= post.time.minute %>
-						</span>
-						
+						</span>						
 					</p>
 	  		        <p class="info clearfix">
 	  		        	<span class="pull-left">
@@ -73,14 +78,14 @@
 	  		        	</span>
 						<span class="pull-right">
 							<% if (post.reprint_info.reprint_from) { %>
-							<a href="/p/<%= post.reprint_info.reprint_from.name %>/<%= post.reprint_info.reprint_from.day %>/<%= post.reprint_info.reprint_from.title %>">原文链接</a>|
+							<a href="/p/<%= post.reprint_info.reprint_from.name %>/<%= post.reprint_info.reprint_from.id %>">原文链接</a>
 							<% } %>
+							&nbsp;
 							<% if (flag) { %>
-							<a href="/reprint/<%= post.name %>/<%= post.time.minute %>/<%= post.title %>">转载</a>
+							<a href="/reprint/<%= post._id %>">转载</a>
 							<% } %>
 						</span>
-					</p>
-					<% } %>
+					</p>					
 				</article>
 				<hr class="separate pos-rela"/>
 				<% include comment %>
@@ -88,7 +93,7 @@
 		</div>
 	  	<script src="/javascripts/jquery-2.0.3.min.js"></script>
 		<script src="/javascripts/bootstrap.js"></script>
-		<script src="/javascripts/singlepage.js"></script>
+		<script src="/javascripts/help.js"></script>
 		<script src="/javascripts/comment.js"></script>	
 	</body>
 </html>

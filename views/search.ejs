@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html>
-  	<head>
-  		<% include head %>
-  	</head>	
-  	<body>
-  	<div class="navbar navbar-fixed-top">
-  		<div class="navbar-inner">
-  			<div class="container">
-  				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  				</a>
-  				<div class="nav-collapse">
-  					<ul class="nav">
-  						<li>
-  							<a href="/">首页</a>
-  						</li>
-  					</ul>
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-  	<div id="container" class="container">
-  		<article>
-			<ul class="archive">
-      <% var lastYear = 0 %>
-      <% posts.forEach(function (post, index) { %>
-        <% if (lastYear != post.time.year) { %>
-          <li><h3><%= post.time.year %></h3></li>
-        <% lastYear = post.time.year } %>
-          <li><time><%= post.time.day %></time></li>
-          <li><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></li>
-      <% }) %>
-      </ul>
-  		</article>
-  		<% include footer %>
-  	</div>
-  </body>
+	<head>
+		<% include head %>
+	</head>	
+	<body>
+		<div class="search-page">
+			<div id="container" class="container">
+				<div id="list">
+				<% var lastYear = 0 %>
+				<% posts.forEach(function (post, index) { %>
+						<% if (lastYear != post.time.year) { %>
+					<div><h3><%= post.time.year %></h3></div>							
+						<% lastYear = post.time.year } %>
+					<% if (index == 0) { %>	
+					<div class="title-item first">
+						<a class="article-btn clearfix" href="/p/<%= post.name %>/<%= post._id %>">
+							<span class="spa1"><%= post.title %></span>
+							<span class="spa2">
+								<span>作者：<%= post.name %></span>
+								<span><%= post.time.day %></span>
+							</span>						
+						</a>						
+					</div>
+					<% } else { %>
+					<div class="title-item">
+						<a class="article-btn clearfix" href="/p/<%= post.name %>/<%= post._id %>">
+							<span class="spa1"><%= post.title %></span>
+							<span class="spa2">
+								<span>作者：<%= post.name %></span>
+								<span><%= post.time.day %></span>
+							</span>
+						</a>
+					</div>
+					<% } %>
+				<% }) %>
+				</div>
+			</div>
+		</div>
+		<% include footer %>		
+	</body>
 </html>

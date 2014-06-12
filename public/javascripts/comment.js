@@ -1,10 +1,14 @@
 (function () {
+	$('p').has('img').addClass('p-img');
+
 	var $name = $('#form_comment_name'),
 		$email = $('#form_comment_email'),
 		$comment = $('#form_comment_content'),
 		$comments = $('.comments'),
 		$aboutAuthor = $('.about_author'),
 		$singlePage = $('.singlepage'),
+		$remove = $('.remove'),
+		$container = $('<div></div>'),
 		data,
 		timeFlag = 0;
 		tipCss = {
@@ -15,8 +19,8 @@
 			'right': '110px',
 			'opacity': 0
 		},
-		setHeight = function () {
-			$aboutAuthor.css('height', $singlePage.height());
+		createButton = function () {
+			return $('<button type="button"></button>');
 		},
 		commentAjax = function (url, data) {
 			$.ajax(
@@ -44,8 +48,6 @@
 			)
 		};
 
-	setHeight();
-
 	$('.btn-comment').click(function () {
 
 		if (timeFlag === 1) {
@@ -65,4 +67,28 @@
 		setHeight();
 
 	});
+	var sureButton = createButton().addClass('btn').addClass('btn-warning')
+									.addClass('sure')
+									.text('确定')
+									.off('click')
+									.on('click', function () {
+										var url = $remove.data('url');
+										$.ajax(
+											{
+												type: 'post',
+												url: url,
+												success: function (mes) {
+													location.href = '/';
+												}
+											}
+										)
+										return false;
+									});
+	var cancleButton = createButton().addClass('btn').addClass('btn-default')
+									.addClass('cancle')
+									.text('取消')
+									.off('click')
+									.on('click', function () {});
+	$container.empty().append(sureButton).append(cancleButton);
+	PopTip.showPop($remove, null,null, '确定要删除这篇文章吗？', $container, 'warning');
 })();
