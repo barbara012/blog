@@ -22,7 +22,6 @@ app.set('view engine', 'ejs');
 app.use(flash());
 app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
 app.use(express.logger('dev'));
-app.use(express.logger({stream: accessLog}));
 // app.use(express.json());
 // app.use(express.urlencoded());
 app.use(express.bodyParser(
