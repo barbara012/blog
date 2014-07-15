@@ -13,6 +13,8 @@ var settings = require('./settings');
 var flash = require('connect-flash');
 
 var fs = require('fs');
+var accessLog = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
+var errorLog = fs.createWriteStream(__dirname + '/error.log', {flags: 'a'});
 var app = express();
 
 // all environments
@@ -22,6 +24,7 @@ app.set('view engine', 'ejs');
 app.use(flash());
 app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
 app.use(express.logger('dev'));
+app.use(express.logger({stream: accessLog}));
 // app.use(express.json());
 // app.use(express.urlencoded());
 app.use(express.bodyParser(
