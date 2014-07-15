@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<% include head %>
+		<link rel="stylesheet" href="/stylesheets/post.css"/>
 	</head>
 	<body>
 		<div class="post">
@@ -24,7 +25,7 @@
 						</li>
 						<li>
 							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
-						</li>                       
+						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
@@ -32,7 +33,7 @@
 								<img src="<%= user.head %>" alt="<%= user.name %>">
 							</a>
 						</li>
-						<li class="navbar-right">
+						<li class="navbar-right logout">
 							<a href="/logout"><span class="glyphicon glyphicon-log-out"></span></a>
 						</li>
 					</ul>
@@ -73,20 +74,11 @@
 						<div class="form-group">
 							<span class="add-on glyphicon glyphicon-tags"></span>
 						</div>
-						<div class="form-group">                            
+						<div class="form-group">
 							<input type="text" name="tag" id="tag" value="<%= post.tags %>" class="form-control" placeholder="标签1，标签2，标签3...">
 						</div>
 						<div class="btn-group dropup navbar-right">
 							<button type="button" id="post-btn" class="btn btn-default">更新</button>
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-								<span class="caret"></span>
-								<span class="sr-only">Toggle Dropdown</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li><a href="#">存为草稿</a></li>
-								<li class="divider"></li>
-								<li><a hraf="javascript:;">定时保存</a></li>
-							</ul>
 						</div>
 					</form>
 				</div>

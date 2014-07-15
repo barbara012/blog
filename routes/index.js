@@ -12,7 +12,7 @@ var crypto = require('crypto'),
 	markdown = require('markdown').markdown;
 module.exports = function (app) {
 
-	app.get('/', checkLogin);
+	//app.get('/', checkNotLogin);
 	app.get('/', function (req, res) {
 		//判断是否是第一页，并把请求的页数转换成 number 类型
 		var page = req.query.p ? parseInt(req.query.p) : 1;
@@ -20,7 +20,7 @@ module.exports = function (app) {
 		Post.getTen(null, page, function (err, posts, total) {
 			if (err) {
 				posts = [];
-			} 
+			}
 			res.render('index', {
 				title: '首页',
 				posts: posts,
@@ -159,7 +159,7 @@ module.exports = function (app) {
 			post = new Post(currentUser.name, head, req.body.title, tags, req.body.content);
 			post.save(function (err) {
 				if (err) {
-					req.flash('error', err); 
+					req.flash('error', err);
 					return res.send(
 						{
 							'type': 1

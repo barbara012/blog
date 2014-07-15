@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<% include head %>
+		<link rel="stylesheet" href="/stylesheets/post.css"/>
 	</head>
 	<body>
 		<div class="post">
@@ -27,12 +28,12 @@
 						<% } else { %>
 							<a href="/post" title="发布">
 								<span class="glyphicon glyphicon-pencil"></span>
-							</a>	
+							</a>
 						<% } %>
 						</li>
 						<li>
 							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
-						</li>                       
+						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>

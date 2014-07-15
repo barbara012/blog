@@ -2,17 +2,14 @@
 <html>
 	<head>
 		<% include head %>
-	</head>	
+	</head>
 	<body>
-		<div class="home-page">			
+		<div class="home-page">
 			<div class="head">
 				<div class="operate">
-				<% if (user) { %>
-					<a href="/logout" class="glyphicon glyphicon-off"></a>
-				<% } %>
-				</div>				
+				</div>
 				<div class="user-head">
-					<a href="javascript:;"><img src="<%= user.head %>" alt="<%= user.name%>"></a>
+					<a href="javascript:;"><img src="https://avatars3.githubusercontent.com/u/3634578?s=460"></a>
 				</div>
 			</div>
 <!-- 			<div class="home-page_nav">
@@ -23,7 +20,7 @@
 								<span class="sp2 pull-left">15</span>
 								<span class="sp3 pull-left">H</span>
 							</h1>
-						</div>					
+						</div>
 						<% if (user) { %>
 						<ul class="head-nav pull-right">
 							<li>
@@ -40,9 +37,9 @@
 								<a href="javascript:;" class="more">
 									<span data-name="<%= user.name %>" class="user-center">更多</span>
 								</a>
-							</li>													
+							</li>
 						</ul>
-						<% } else { %>						
+						<% } else { %>
 						<ul class="nav navbar-nav navbar-right">
 							<li>
 								<a href="/login" title="登录">

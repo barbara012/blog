@@ -48,7 +48,7 @@
 		)
 	};
 	var getObj = function (id) { return document.getElementById(id); };
-	new Editor(getObj("post"), getObj("preview"));	
+	new Editor(getObj("post"), getObj("preview"));
 	// 插入图片
 	//在textarea光标处插入内容
 	function insertContent(obj, content) {
@@ -68,17 +68,17 @@
 		}
 	};
 	//阻止浏览器默认事件
-	$(document).on({ 
-		dragleave:function(e){    //拖离 
+	$(document).on({
+		dragleave:function(e){    //拖离
 			e.preventDefault(); 
-		}, 
-		drop:function(e){  //拖后放 
+		},
+		drop:function(e){  //拖后放
 			e.preventDefault();
-		}, 
-		dragenter:function(e){    //拖进 
-			e.preventDefault(); 
-		}, 
-		dragover:function(e){    //拖来拖去 
+		},
+		dragenter:function(e){    //拖进
+			e.preventDefault();
+		},
+		dragover:function(e){    //拖来拖去
 			e.preventDefault();
 		}
 	});
@@ -134,4 +134,10 @@
 		post['tag'] = tag;
 		sendAjax(location.pathname, post, 1);
 	});
+	//
+	$('#tag').keydown(function (e) {
+		if (e.keyCode === 13) {
+			return false;
+		}
+	})
 })();

@@ -5,7 +5,4 @@
 		$postBtn = $('#post-btn'),
 		article = {},
 		$post = $('#post');
-	
-	
-	
 })();

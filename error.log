@@ -17411,3 +17411,721 @@ Cannot read property 'head' of undefined
     at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
     at d:\blog\routes\index.js:24:8
     at d:\blog\models\post.js:118:6
+[Mon Jun 16 2014 20:00:31 GMT+0800 (中国标准时间)] /
+TypeError: d:\blog\views\index.ejs:15
+    13| 				</div>				
+    14| 				<div class="user-head">
+ >> 15| 					<a href="javascript:;"><img src="<%= user.head %>" alt="<%= user.name%>"></a>
+    16| 				</div>
+    17| 			</div>
+    18| <!-- 			<div class="home-page_nav">
+
+Cannot read property 'head' of undefined
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:404)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:65)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:24:8
+    at d:\blog\models\post.js:118:6
+[Wed Jun 18 2014 12:03:47 GMT+0800 (中国标准时间)] /
+TypeError: d:\blog\views\index.ejs:15
+    13| 				</div>				
+    14| 				<div class="user-head">
+ >> 15| 					<a href="javascript:;"><img src="<%= user.head %>" alt="<%= user.name%>"></a>
+    16| 				</div>
+    17| 			</div>
+    18| <!-- 			<div class="home-page_nav">
+
+Cannot read property 'head' of undefined
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:404)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:65)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:24:8
+    at d:\blog\models\post.js:118:6
+[Mon Jul 14 2014 09:30:34 GMT+0800 (中国标准时间)] /
+TypeError: d:\blog\views\index.ejs:15
+    13| 				</div>				
+    14| 				<div class="user-head">
+ >> 15| 					<a href="javascript:;"><img src="<%= user.head %>" alt="<%= user.name%>"></a>
+    16| 				</div>
+    17| 			</div>
+    18| <!-- 			<div class="home-page_nav">
+
+Cannot read property 'head' of undefined
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:404)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:65)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:24:8
+    at d:\blog\models\post.js:118:6
+[Mon Jul 14 2014 09:31:57 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'd:\blog\public\images\favicon.ico'
+[Mon Jul 14 2014 09:38:47 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'd:\blog\public\images\favicon.ico'
+[Mon Jul 14 2014 09:40:09 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'd:\blog\public\images\favicon.ico'
+[Mon Jul 14 2014 09:45:32 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'd:\blog\public\images\favicon.ico'
+[Mon Jul 14 2014 09:55:31 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 09:55:31 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 09:55:31 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 09:55:31 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 09:55:31 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 09:55:31 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 09:55:31 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 09:55:31 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 09:55:31 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 09:56:06 GMT+0800 (中国标准时间)] /
+TypeError: d:\blog\views\index.ejs:15
+    13| 				</div>				
+    14| 				<div class="user-head">
+ >> 15| 					<a href="javascript:;"><img src="<%= user.head %>" alt="<%= user.name%>"></a>
+    16| 				</div>
+    17| 			</div>
+    18| <!-- 			<div class="home-page_nav">
+
+Cannot read property 'head' of null
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:404)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:65)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:24:8
+    at d:\blog\models\post.js:118:6
+[Mon Jul 14 2014 09:56:07 GMT+0800 (中国标准时间)] /
+TypeError: d:\blog\views\index.ejs:15
+    13| 				</div>				
+    14| 				<div class="user-head">
+ >> 15| 					<a href="javascript:;"><img src="<%= user.head %>" alt="<%= user.name%>"></a>
+    16| 				</div>
+    17| 			</div>
+    18| <!-- 			<div class="home-page_nav">
+
+Cannot read property 'head' of null
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:404)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:65)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:24:8
+    at d:\blog\models\post.js:118:6
+[Mon Jul 14 2014 09:56:13 GMT+0800 (中国标准时间)] /
+TypeError: d:\blog\views\index.ejs:15
+    13| 				</div>				
+    14| 				<div class="user-head">
+ >> 15| 					<a href="javascript:;"><img src="<%= user.head %>" alt="<%= user.name%>"></a>
+    16| 				</div>
+    17| 			</div>
+    18| <!-- 			<div class="home-page_nav">
+
+Cannot read property 'head' of null
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:404)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:65)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:24:8
+    at d:\blog\models\post.js:118:6
+[Mon Jul 14 2014 09:56:21 GMT+0800 (中国标准时间)] /
+TypeError: d:\blog\views\index.ejs:15
+    13| 				</div>				
+    14| 				<div class="user-head">
+ >> 15| 					<a href="javascript:;"><img src="<%= user.head %>" alt="<%= user.name%>"></a>
+    16| 				</div>
+    17| 			</div>
+    18| <!-- 			<div class="home-page_nav">
+
+Cannot read property 'head' of null
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:404)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:65)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:24:8
+    at d:\blog\models\post.js:118:6
+[Mon Jul 14 2014 09:58:08 GMT+0800 (中国标准时间)] /
+TypeError: d:\blog\views\index.ejs:12
+    10| 				</div>
+    11| 				<div class="user-head">
+ >> 12| 					<a href="javascript:;"><img src="https://avatars3.githubusercontent.com/u/3634578?s=460" alt="<%= user.name%>"></a>
+    13| 				</div>
+    14| 			</div>
+    15| <!-- 			<div class="home-page_nav">
+
+Cannot read property 'name' of null
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:302)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:35:65)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:24:8
+    at d:\blog\models\post.js:118:6
+[Mon Jul 14 2014 10:25:28 GMT+0800 (中国标准时间)] /post
+TypeError: d:\blog\views\post.ejs:26
+    24| 						</li>
+    25| 						<li>
+ >> 26| 							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+    27| 						</li>
+    28| 					</ul>
+    29| 					<ul class="nav navbar-nav navbar-right">
+
+Cannot read property 'name' of null
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:966)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4114)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:146:7
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:06 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:06 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:06 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:06 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:06 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:06 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:06 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:26:17 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.Post.getTen (d:\blog\models\post.js:87:10)
+    at d:\blog\routes\index.js:20:8
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkNotLogin (d:\blog\routes\index.js:675:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 10:27:41 GMT+0800 (中国标准时间)] /post
+TypeError: d:\blog\views\post.ejs:26
+    24| 						</li>
+    25| 						<li>
+ >> 26| 							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+    27| 						</li>
+    28| 					</ul>
+    29| 					<ul class="nav navbar-nav navbar-right">
+
+Cannot read property 'name' of null
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:966)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4114)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:146:7
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 14:58:20 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'd:\blog\public\images\favicon.ico'
+[Mon Jul 14 2014 14:58:20 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'd:\blog\public\images\favicon.ico'
+[Mon Jul 14 2014 14:58:40 GMT+0800 (中国标准时间)] /post
+TypeError: d:\blog\views\post.ejs:26
+    24| 						</li>
+    25| 						<li>
+ >> 26| 							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+    27| 						</li>
+    28| 					</ul>
+    29| 					<ul class="nav navbar-nav navbar-right">
+
+Cannot read property 'name' of undefined
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:966)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4114)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:146:7
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 16:03:06 GMT+0800 (中国标准时间)] /favicon.ico
+Error: ENOENT, open 'd:\blog\public\images\favicon.ico'
+[Mon Jul 14 2014 16:06:37 GMT+0800 (中国标准时间)] /post
+TypeError: d:\blog\views\post.ejs:26
+    24| 						</li>
+    25| 						<li>
+ >> 26| 							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+    27| 						</li>
+    28| 					</ul>
+    29| 					<ul class="nav navbar-nav navbar-right">
+
+Cannot read property 'name' of undefined
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:966)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4114)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:146:7
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 16:08:18 GMT+0800 (中国标准时间)] /post
+TypeError: d:\blog\views\post.ejs:26
+    24| 						</li>
+    25| 						<li>
+ >> 26| 							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+    27| 						</li>
+    28| 					</ul>
+    29| 					<ul class="nav navbar-nav navbar-right">
+
+Cannot read property 'name' of null
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:966)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4114)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:146:7
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 16:15:09 GMT+0800 (中国标准时间)] /post
+TypeError: d:\blog\views\post.ejs:26
+    24| 						</li>
+    25| 						<li>
+ >> 26| 							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+    27| 						</li>
+    28| 					</ul>
+    29| 					<ul class="nav navbar-nav navbar-right">
+
+Cannot read property 'name' of undefined
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:966)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4114)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:146:7
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 16:16:13 GMT+0800 (中国标准时间)] /post
+TypeError: d:\blog\views\post.ejs:26
+    24| 						</li>
+    25| 						<li>
+ >> 26| 							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+    27| 						</li>
+    28| 					</ul>
+    29| 					<ul class="nav navbar-nav navbar-right">
+
+Cannot read property 'name' of null
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:966)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4114)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:146:7
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 16:23:29 GMT+0800 (中国标准时间)] /post
+TypeError: d:\blog\views\post.ejs:26
+    24| 						</li>
+    25| 						<li>
+ >> 26| 							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+    27| 						</li>
+    28| 					</ul>
+    29| 					<ul class="nav navbar-nav navbar-right">
+
+Cannot read property 'name' of undefined
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:966)
+    at eval (eval at <anonymous> (d:\blog\node_modules\ejs\lib\ejs.js:237:14), <anonymous>:31:4114)
+    at d:\blog\node_modules\ejs\lib\ejs.js:250:15
+    at Object.exports.render (d:\blog\node_modules\ejs\lib\ejs.js:288:13)
+    at View.exports.renderFile [as engine] (d:\blog\node_modules\ejs\lib\ejs.js:318:20)
+    at View.render (d:\blog\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (d:\blog\node_modules\express\lib\application.js:504:10)
+    at ServerResponse.res.render (d:\blog\node_modules\express\lib\response.js:798:7)
+    at d:\blog\routes\index.js:146:7
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+[Mon Jul 14 2014 17:35:38 GMT+0800 (中国标准时间)] /post
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (d:\blog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Post.save (d:\blog\models\post.js:40:10)
+    at d:\blog\routes\index.js:160:9
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
+    at param (d:\blog\node_modules\express\lib\router\index.js:138:11)
+    at pass (d:\blog\node_modules\express\lib\router\index.js:145:5)
+    at nextRoute (d:\blog\node_modules\express\lib\router\index.js:100:7)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:167:11)
+    at checkLogin (d:\blog\routes\index.js:667:3)
+    at callbacks (d:\blog\node_modules\express\lib\router\index.js:164:37)
