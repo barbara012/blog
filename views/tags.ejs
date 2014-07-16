@@ -52,7 +52,7 @@
   	<div id="container" class="container">
   		<article>
 			<% posts.forEach(function (tag, index) { %>
-        <a class="tag" href="/tags/<%= tag %>"><%= tag %></a>
+        <a class="tag" href="/tags/<%= tag %>"><% tag %></a>
       <% }) %>
   		</article>
   		<% include footer %>
