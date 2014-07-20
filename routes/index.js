@@ -210,7 +210,7 @@ module.exports = function (app) {
 			}
 			req.flash('success', '文件上传成功!');
 			res.send(blobArr.pic);
-		});		
+		});
 	});
 	//登出
 	app.get('/logout', checkLogin);
