@@ -11,6 +11,12 @@ li {
   margin: 0;
   padding: 0;
 }
+.float--right {
+  float: right;
+}
+.float--left {
+  float: left;
+}
 .popover {
   z-index: 10000;
   background: #ffffff;
@@ -1046,6 +1052,10 @@ article img,
   width: 96%;
   height: 100%;
 }
+.post .add-on {
+  line-height: 34px;
+  margin-right: 10px;
+}
 .container-shadow {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
   -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
@@ -1074,8 +1084,7 @@ article img,
 .post-title_input {
   border: none;
   width: 100%;
-  line-height: 1;
-  padding: 12px 20px;
+  padding: 9px 20px;
   font-size: 24px;
   color: #555555;
   border: 1px solid #cfcfcf;

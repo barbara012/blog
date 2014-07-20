@@ -11,7 +11,7 @@
 		$regRepeatTip = $('.reg_repeat-tip'), //注册密码重复提示
 
 		$regUsername = $('#reg_username'), //注册--用户名
-		// $regEmail = $('#reg_email'), //注册--邮箱
+		 $regEmail = $('#reg_email'), //注册--邮箱
 		$regPassword = $('#reg_password'), //注册--密码		
 		$regPasswordRepeat  = $('#reg_password-repeat'), //注册--重复密码
 
@@ -82,11 +82,11 @@
 								$passwordTip.removeClass('input-tip');
 								$passwordTip.css(tipCssSet);
 							} else {
-								location.href = '/';
+								location.href = '/post';
 							}
 						} else {
 							if (mes['type'] === 0) {
-								location.href = '/';
+								location.href = '/post';
 							} else {
 								$regNameTip.find('p').text(mes['mes']);
 								$regNameTip.removeClass('input-tip')
@@ -212,15 +212,15 @@
 			return false;
 		}
 
-		// if ($regEmail.val() && !(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test($regEmail.val()))) {
-		// 	$regEmailTip.css(tipCssSet);
-		// 	return false;
-		// }
+		if ($regEmail.val() && !(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test($regEmail.val()))) {
+			$regEmailTip.css(tipCssSet);
+			return false;
+		}
 
 		data = {};
 		data['regUserName'] = $regUsername.val();
 		data['regPassword'] = $regPassword.val();
-		// data['regEmail'] = $regEmail.val();
+		 data['regEmail'] = $regEmail.val();
 		lrAjax('/reg', data, 'reg');
 
 	});

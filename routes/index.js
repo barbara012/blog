@@ -39,6 +39,7 @@ module.exports = function (app) {
 		var name = req.body.regUserName,
 			password = req.body.regPassword,
 			md5 = crypto.createHash('md5'),
+			email = req.body.regEmail,
 			reg = /`|~|!|@|#|\$|%|\^|\*|\(|\-|\)|\+|_|=|\/|\||\\|。|，|》|《|>|<|！/;
 		password = md5.update(req.body.regPassword).digest('hex');
 		if (reg.test(name)) {
@@ -60,7 +61,7 @@ module.exports = function (app) {
 		var newUser = new User({
 			name: name,
 			password: password,
-			email: ''
+			email: email
 		});
 		//检查用户名是否已经存在 
 		User.get(newUser.name, function (err, user) {

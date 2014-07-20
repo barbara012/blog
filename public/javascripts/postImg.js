@@ -36,7 +36,7 @@
 									layout: 'topCenter'
 								}
 							)
-							//location.href = mes.url;
+							setTimeout( function (){location.href = mes.url;} , 2000);
 						} else {
 							console.log(mes['type']);
 						}
