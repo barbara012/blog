@@ -34,7 +34,6 @@ $(function () {
 					.addClass('thumbnail')
 					.append($('<a href="#" data-toggle="tooltip" title="删除">&times;</a>')
 								.addClass('close-img')
-								.tooltip()
 								.click(function () {
 									deleteImg($(this));
 								})

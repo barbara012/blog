@@ -76,13 +76,14 @@ li {
   display: inline-block;
   position: relative;
   margin-right: 10px;
+  overflow: hidden;
 }
 .thumbnail:hover {
   border-color: #dddddd;
 }
 .thumbnail img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .thumbnail .close-img {
   position: absolute;
