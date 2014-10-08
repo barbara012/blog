@@ -116,7 +116,6 @@
 
 		postFormData(url, data, function (mes) {
 			//$post.val($post.val() + '![](' + mes.response + ')');
-			console.log(mes.response);
 			insertContent(box, '![15](' + mes.response + ')');
 			new Editor(getObj("post"), getObj("preview"));
 			window.open(mes.response, '_blank');
