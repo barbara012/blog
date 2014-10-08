@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <%- include head %>        
-    </head>    
-    <body>	  	
+        <%- include head %>
+    </head>
+    <body>
 	  	<div class="clearfix  singlepage">
 			<div class="about_author pull-left pos-rela">
   				<div class="author_info">
@@ -44,11 +44,11 @@
 					<% flag = 0 %>
 				<% } %>
   		  		<article>
-	  		        <h2><%- post.title %></h2>
+	  		        <h1><%= post.title %></h1>
 	  		        <p><%- post.post %></p>
-	  		        <br />					
+	  		        <br />
 					<p class="info clearfix">
-						
+
 						<span class="pull-left">
 								标签：
 						<% if (post.tags.length > 0 && post.tags[0]) { %>

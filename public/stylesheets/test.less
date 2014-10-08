@@ -3,6 +3,12 @@ body {
 	height: 100%;
 	font-family: '微软雅黑',Helvetica, Tahoma, Arial, sans-serif;
 }
+h1 {
+	font-size: 30px;
+}
+h1,h2,h3 {
+	font-family: '微软雅黑',Helvetica, Tahoma, Arial, sans-serif;
+}
 p,ul,span,a,li {
 	margin: 0;
 	padding: 0;
@@ -147,7 +153,9 @@ p,ul,span,a,li {
 	.head {
 		@color: #666666;
 		height: 60%;
-		background: @color;
+		background-color: @color;
+		background-image: url(../img/bg.jpg);
+		background-size: 100% auto;
 		position: relative;
 		@w: 20px;
 		.user-head {
@@ -234,10 +242,10 @@ p,ul,span,a,li {
 				color: #ffffff;
 			}
 		}
-	}	
+	}
 	article {
 		padding-top: 20px;
-		
+
 		.title {
 			display: block;
 			font-size: 30px;
@@ -340,7 +348,6 @@ article img,
 		width: 660px;
 		overflow: auto;
 		padding: 40px;
-		font-family: "Hiragino Sans GB","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1",tahoma,arial,simsun,"\5B8B\4F53";
 		article {
 			img {
 				max-width: 600px;
