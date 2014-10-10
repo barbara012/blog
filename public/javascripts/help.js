@@ -68,7 +68,7 @@ var PopTip = {
 					'display': 'block'
 				}
 				$arrow.removeClass('left').removeClass('center');
-			
+
 			} else if ((documentWidth - targetLeft) > 60 && targetLeft > 60) {
 					console.log(w);
 					cssSet = {
@@ -105,7 +105,4 @@ var PopTip = {
 			}
 		});
 	}
-};
-var BackToTop = {
-	
 };

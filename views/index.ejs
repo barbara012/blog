@@ -6,6 +6,9 @@
 	<body>
 		<div class="home-page">
 			<div class="head">
+				<div class="bg-image">
+					<img src="../img/bg.jpg" alt="西湖">
+				</div>
 				<div class="operate">
 				</div>
 				<div class="user-head">
@@ -46,6 +49,39 @@
 				<% include paging %>
 			</div>
 			<% include footer %>
+			<script>
+				$(document).ready(function () {
+					console.log(12);
+					var $head = $('.head');
+					var $img = $('.bg-image img');
+					var imgae_Height = $img.height();
+					var image_Width = $img.width();
+					function setImage () {
+
+						var h,w;
+						var head_Height = $head.outerHeight();
+						var head_Width = $head.outerWidth();
+						console.log(head_Height / head_Width);
+						console.log(imgae_Height / image_Width);
+						if ((head_Height / head_Width) >= (imgae_Height / image_Width)) {
+							h = head_Height;
+							w = head_Height * (image_Width / imgae_Height);
+						} else {
+							w = head_Width;
+							h = head_Width * (imgae_Height / image_Width);
+						}
+						$img.css({
+							'height': h,
+							'width': w
+						})
+					};
+					setImage();
+					$(window).resize(function () {
+						setImage();
+					});
+				})
+
+			</script>
 		</div>
  	</body>
 </html>
