@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <%- include head %>        
-    </head>    
-    <body>	  	
+        <%- include head %>
+    </head>
+    <body>
 	  	<div class="clearfix  singlepage">
-			<div class="about_author pull-left pos-rela">
+			<div class="about_author float-l pos-rela">
   				<div class="author_info">
 					<a href="/" class="home pos-abso" title="返回首页">
 						<span class="glyphicon glyphicon-home"></span>
@@ -14,12 +14,12 @@
 	  					<img src="<%= post.head %>">
 	  				</a>
 	  				<div class="info_list">
-	  					<a href="javascript:;"><span>用户名：</span><%= post.name %></a>
+	  					<a href="javascript:;"><span>用 户 名：</span><%= post.name %></a>
 	  					<a href="javascript:;"><span>创建时间：</span><%= post.createTime %></a>
 	  				</div>
   				</div>
   			</div>
-  		  	<div class="article_content pull-left pos-rela">
+  		  	<div class="article_content float-l pos-rela">
 				<% if (user && (user.name == post.name)) { %>
 				<a class="edit pos-abso" href="/edit/<%= post._id %>" title="编辑">
 					<span class="glyphicon glyphicon-edit"></span>
@@ -44,12 +44,12 @@
 					<% flag = 0 %>
 				<% } %>
   		  		<article>
-	  		        <h2><%- post.title %></h2>
+	  		        <h1><%= post.title %></h1>
 	  		        <p><%- post.post %></p>
-	  		        <br />					
+	  		        <br />
 					<p class="info clearfix">
-						
-						<span class="pull-left">
+
+						<span class="float-l">
 								标签：
 						<% if (post.tags.length > 0 && post.tags[0]) { %>
 							<% post.tags.forEach(function (tag, index) { %>
@@ -61,14 +61,14 @@
 							无
 						<% } %>
 						</span>
-						<span class="pull-right">
+						<span class="float-r">
 							日期：<%= post.time.minute %>
-						</span>						
+						</span>
 					</p>
 	  		        <p class="info clearfix">
-	  		        	<span class="pull-left">
-	  		        		阅读：<%= post.pv %> | 
-	  		        		评论：<%= post.comments.length %> | 
+	  		        	<span class="float-l">
+	  		        		阅读：<%= post.pv %> |
+	  		        		评论：<%= post.comments.length %> |
 	  		        		转载：
 	  		        		<% if (post.reprint_info.reprint_to) { %>
 	  		        			<%= post.reprint_info.reprint_to.length %>
@@ -76,7 +76,7 @@
 	  		        			<%= 0 %>
 	  		        		<% } %>
 	  		        	</span>
-						<span class="pull-right">
+						<span class="float-r">
 							<% if (post.reprint_info.reprint_from) { %>
 							<a href="/p/<%= post.reprint_info.reprint_from.name %>/<%= post.reprint_info.reprint_from.id %>">原文链接</a>
 							<% } %>
@@ -85,14 +85,13 @@
 							<a href="/reprint/<%= post._id %>">转载</a>
 							<% } %>
 						</span>
-					</p>					
+					</p>
 				</article>
 				<hr class="separate pos-rela"/>
 				<% include comment %>
 			</div>
 		</div>
 	  	<script src="/javascripts/jquery-2.0.3.min.js"></script>
-		<script src="/javascripts/bootstrap.js"></script>
 		<script src="/javascripts/help.js"></script>
 		<script src="/javascripts/comment.js"></script>	
 	</body>

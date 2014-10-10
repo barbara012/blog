@@ -17,7 +17,7 @@ var PopTip = {
 		$('.popover').stop().animate(
 			{
 				opacity: 0,
-				top: '-=4px'
+				top: '-4px'
 			},
 			100,
 			function () {
@@ -57,7 +57,7 @@ var PopTip = {
 					  .append($content)
 					  .append($button)
 					  .addClass(theme)
-					  .appendTo($('body'));
+					  .appendTo(target);
 			h = $container.outerHeight(true);
 			w = $container.outerWidth(true);
 			if ((documentWidth - targetLeft) < 60) {
@@ -68,7 +68,7 @@ var PopTip = {
 					'display': 'block'
 				}
 				$arrow.removeClass('left').removeClass('center');
-			
+
 			} else if ((documentWidth - targetLeft) > 60 && targetLeft > 60) {
 					console.log(w);
 					cssSet = {
@@ -105,7 +105,4 @@ var PopTip = {
 			}
 		});
 	}
-};
-var BackToTop = {
-	
 };

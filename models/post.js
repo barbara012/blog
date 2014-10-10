@@ -50,7 +50,7 @@ Post.prototype.save = function(callback) {
 			//将文档插入 posts 集合
 			collection.insert(post, {
 				safe: true
-			}, function (err) {				
+			}, function (err) {
 				if (err) {
 					mongodb.close();
 				 	return callback(err);//失败！返回 err

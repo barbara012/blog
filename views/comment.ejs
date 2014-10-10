@@ -1,11 +1,11 @@
 <div class="comment">
-	<form method="post" class="form-inline" rola="form">	
-		<textarea name="content" class="form-control textarea" id="form_comment_content" rows="3"></textarea><br />
+	<form method="post" class="form-inline" rola="form">
+		<textarea name="content" class="form-control textarea" id="form_comment_content" rows="3"></textarea>
 		<% if (user) { %>
 		<div class="clearfix pos-rela">
-			<input type="text" class="form-control" name="name" id="form_comment_name" value="<%= user.name %>" placeholder="用户名"/>
-			<input type="email" class="form-control" name="email" id="form_comment_email" value="<%= user.email %>" placeholder="邮箱"/>
-			<a href="javascript:;" class="btn btn-comment btn-primary pull-right" data-container="body" data-to>留言</a>
+			<input type="text" name="name" id="form_comment_name" value="<%= user.name %>" placeholder="用户名："/>
+			<input type="email" name="email" id="form_comment_email" value="<%= user.email %>" placeholder="邮箱："/>
+			<a href="javascript:;" class="btn btn-comment float-r">留言</a>
 			<div class="tip time-tip pos-abso popover bottom">
 				<div class="arrow"></div>
 				<p>稍后再试！</p>
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 		<% } %>
-	</form>	
+	</form>
 </div>
 <div class="comments">
 	<% post.comments.reverse().forEach(function (comment, index) { %>

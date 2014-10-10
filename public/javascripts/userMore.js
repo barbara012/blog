@@ -6,5 +6,5 @@
 		$itme3 = $('<a href="/logout"></a>').text('退出');
 	$container.append($itme1).append($itme2).append($itme3);
 	PopTip.showPop($userCenter, 'click', $container, null, null, 'default');
-	
+
 })();
