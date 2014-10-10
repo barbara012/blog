@@ -6,46 +6,39 @@
 	</head>
 	<body>
 		<div class="posted">
-			<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
-					<ul class="nav navbar-nav">
+			<div class="navbar navbar-fixed-top" role="navigation">
+				<div class="container clearfix">
+					<a class="logo float-l" href="/">HwH</a>
+					<ul class="nav navbar-nav float-l clearfix">
 						<li>
-							<a href="/" class="home pos-abso" title="返回首页"><span class="glyphicon glyphicon-home"></span></a>
+							<a href="/" title="返回首页">首页</a>
 						</li>
 						<li>
-							<a href="/post" title="发布文章"><span class="glyphicon glyphicon-pencil"></span></a>
+							<a href="/post" title="发布文章">发布文章</a>
 						</li>
 						<li class="active">
-							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+							<a href="/posted/<%= user.name %>" title="个人文章中心">个人文章中心</a>
 						</li>
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav float-r">
 						<li>
 							<a href="/u/<%= user.name %>" class="user_head" title="<%= user.name %>">
 								<img src="<%= user.head %>" alt="<%= user.name %>">
 							</a>
 						</li>
-						<li class="navbar-right">
-							<a href="/logout"><span class="glyphicon glyphicon-log-out"></span></a>
+						<li>
+							<a href="/logout">退出</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="posted-list clearfix">
 			<% if (arrayId !== 0) { %>
-				<div class="list pull-left">
-					<div id="list" class="pull-right wtf">
+				<div class="list float-l">
+					<div id="list" class="float-r wtf">
 						<div class="list-head">
 							<span>所有文章</span>
-							<a href="/post" class="pull-right"><span class="glyphicon glyphicon-plus"></span></a>
+							<a href="/post" class="float-r"><span class="glyphicon glyphicon-plus"></span></a>
 						</div>
 						<% var active; %>
 						<% arrayId.forEach(function(id, index){ %>
@@ -59,18 +52,23 @@
 						<% }) %>
 					</div>
 				</div>
-				<div class="content pull-left pos-rela">
+				<div class="content float-l pos-rela">
 					<div style="height: 100%;width: 100%;" class="wtf pos-rela">
 						<div class="matte-head pos-abso"></div>
 						<div class="content-head pos-abso clearfix">
-							<div class="pull-left">
+							<div class="float-l">
 								<div class="posted_comment">
 									<a class="posted_comments" href="javascript:;">
 									</a>
 								</div>
 							</div>
-							<div class="pull-right">
-								<span class="glyphicon glyphicon-cog set" data-toggle="popover"></span>
+							<div class="float-r">
+								<span class="glyphicon glyphicon-cog set" data-toggle="popover">
+									<div class="operation-group">
+										<a class="edit" href="/edit/<%= post._id %>">编辑</a>
+										<a class="delete" href="/delete/<%= post._id %>">删除</a>
+									</div>
+								</span>
 							</div>
 						</div>
 						<div id="content">
@@ -81,15 +79,17 @@
 						</div>
 					</div>
 				</div>
-				<input type="hidden" class="hidden" value="<%= post._id %>" />
 			</div>
 		<% } else { %>
 			<p class="txt-center">你还没发布过文章</p>
 		<% } %>
 		</div>
 		<script src="/javascripts/jquery-2.0.3.min.js"></script>
-		<script src="/javascripts/bootstrap.js"></script>
-		<script src="/javascripts/help.js"></script>
 		<script src="/javascripts/userAll.js"></script>
+		<script>
+			$(document).ready(function () {
+
+			});
+		</script>
 	</body>
 </html>

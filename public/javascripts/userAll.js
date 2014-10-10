@@ -1,12 +1,10 @@
 (function () {
 	var $articleBtn = $('.article-btn'),
 		$article = $('.article'),
-		$hidden = $('.hidden'),
 		$edit = $('.posted_edit'),
 		$item = $('.title-item'),
-		$editObj = $('<a></a>').prop('href', '/edit/' + $hidden.val()).text('编辑'),
-		$deleteObj = $('<a></a>').prop('href', '/delete/' + $hidden.val()).text('删除'),
-		container = $('<div></div>').append($editObj).append($deleteObj);
+		$operationEdit = $('.operation-group .edit'),
+		$operationDelete = $('.operation-group .delete'),
 		getOneAjax = function (url) {
 		$.ajax(
 			{
@@ -19,10 +17,8 @@
 					}
 					$('.popover').remove();
 					$article.html('<h2 class="txt-center">' + mes.title + '</h2>' + mes.post);
-					$editObj.prop('href', '/edit/' + mes._id).text('编辑');
-					$deleteObj.prop('href', '/delete/' + mes._id).text('删除');
-					container.empty().append($editObj).append($deleteObj);
-					console.log(container);					
+					$operationEdit.prop('href', '/edit/' + mes._id);
+					$operationDelete.prop('href', '/delete/' + mes._id);
 				}
 			}
 		)
@@ -36,5 +32,4 @@
 		$(this).parent('div').addClass('active');
 		getOneAjax(url);
 	});
-	PopTip.showPop($('.set'), null, container, null, null, 'default');
 })();
