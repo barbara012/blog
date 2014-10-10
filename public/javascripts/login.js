@@ -7,12 +7,12 @@
 
 		$regNameTip = $('.reg_name-tip'), //注册用户名提示
 		$regEmailTip = $('.reg_email-tip'), //注册邮箱提示
-		$regPassTip = $('.reg_pass-tip'), //注册密码提示	
+		$regPassTip = $('.reg_pass-tip'), //注册密码提示
 		$regRepeatTip = $('.reg_repeat-tip'), //注册密码重复提示
 
 		$regUsername = $('#reg_username'), //注册--用户名
 		 $regEmail = $('#reg_email'), //注册--邮箱
-		$regPassword = $('#reg_password'), //注册--密码		
+		$regPassword = $('#reg_password'), //注册--密码
 		$regPasswordRepeat  = $('#reg_password-repeat'), //注册--重复密码
 
 		$btnLogin = $('.btn-login'), //登录按钮
@@ -82,15 +82,15 @@
 								$passwordTip.removeClass('input-tip');
 								$passwordTip.css(tipCssSet);
 							} else {
-								location.href = '/post';
+								location.href = '/';
 							}
 						} else {
 							if (mes['type'] === 0) {
-								location.href = '/post';
+								location.href = '/';
 							} else {
 								$regNameTip.find('p').text(mes['mes']);
 								$regNameTip.removeClass('input-tip')
-											.css(tipCssSet);
+									.css(tipCssSet);
 							}
 						}
 					}
@@ -114,11 +114,11 @@
 	});
 
 	$btnLogin.click(Login);
-	$(document).keydown(function (e) {
-		if (e.keyCode === 13) {
-			Login();
-		}
-	});
+	// $(document).keydown(function (e) {
+	// 	if (e.keyCode === 13) {
+	// 		Login();
+	// 	}
+	// });
 	function Login () {
 		console.log(12);
 		if (!$username.val()) {
@@ -130,7 +130,7 @@
 		if (!$password.val()) {
 			$passwordTip.find('p').text('请输入密码！');
 			$passwordTip.addClass('input-tip')
-						.css(tipCssSet);						
+						.css(tipCssSet);
 			return false;
 		}
 		data = {};
@@ -162,7 +162,7 @@
 			},
 			200
 		);
-		
+
 	});
 	//返回登录窗口
 	$returnLogin.click(function () {
@@ -185,7 +185,7 @@
 		if (!$regUsername.val()) {
 			$regNameTip .find('p').text('请输入用户名！');
 			$regNameTip.addClass('input-tip')
-					   .css(tipCssSet);					  
+					   .css(tipCssSet);
 			return false;
 		}
 		var reg = /`|~|!|@|#|\$|%|\^|\*|\(|\-|\)|\+|_|=|\/|\||\\|。|，|》|《|>|<|！/;

@@ -12,7 +12,7 @@ var crypto = require('crypto'),
 	markdown = require('markdown').markdown;
 module.exports = function (app) {
 
-	//app.get('/', checkNotLogin);
+	app.get('/', checkLogin);
 	app.get('/', function (req, res) {
 		//判断是否是第一页，并把请求的页数转换成 number 类型
 		var page = req.query.p ? parseInt(req.query.p) : 1;
@@ -63,7 +63,7 @@ module.exports = function (app) {
 			password: password,
 			email: email
 		});
-		//检查用户名是否已经存在 
+		//检查用户名是否已经存在
 		User.get(newUser.name, function (err, user) {
 			if (user) {
 				return res.send(
@@ -112,7 +112,7 @@ module.exports = function (app) {
 			//检查用户是否存在
 		User.get(req.body.username, function (err, user) {
 			if (!user) {
-				req.flash('error', '用户不存在!'); 
+				req.flash('error', '用户不存在!');
 				return res.send(
 					{
 						'type': 1,
@@ -259,10 +259,10 @@ module.exports = function (app) {
 		for (var i in req.files) {
 			if (req.files[i].size == 0){
 			// 使用同步方式删除一个文件
-				fs.unlinkSync(req.files[i].path);	     		
+				fs.unlinkSync(req.files[i].path);
 				console.log('Successfully removed an empty file!');
 			} else {
-				var target_path = './public/images/dbimg/' + req.files[i].name;	      		
+				var target_path = './public/images/dbimg/' + req.files[i].name;
 			// 使用同步方式重命名一个文件
 				fs.renameSync(req.files[i].path, target_path);
 				var dbImgUrl = '/images/dbimg/' + req.files[i].name;
@@ -471,15 +471,15 @@ module.exports = function (app) {
 	//删除文章
 	app.post('/delete/:id', checkLogin);
 	app.post('/delete/:id', function (req, res) {
-	  	var currentUser = req.session.user;
-	  	Post.remove(req.params.id, function (err) {
+		var currentUser = req.session.user;
+		Post.remove(req.params.id, function (err) {
 			if (err) {
-		  		req.flash('error', err); 
-		  		return res.redirect('back');
+				req.flash('error', err); 
+				return res.redirect('back');
 			}
 			req.flash('success', '删除成功!');
 			res.send('300');
-	  	});
+		});
 	});
 	//转载
 	app.get('/reprint/:id', checkLogin);
@@ -505,10 +505,15 @@ module.exports = function (app) {
 				res.redirect('/');
 			});
 		});
-	});	
+	});
 //	登录用户已经发布的文章列表
 	app.get('/posted/:name', checkLogin);
 	app.get('/posted/:name', function (req, res) {
+		if (req.session.user.name !== req.params.name) {
+			return res.redirect('/');
+		}
+		console.log(req.session.user);
+		console.log(req.params.name);
 		Post.getAll(req.params.name, function (err, arrayId) {
 			if (err) {
 				req.flash('error', err);
@@ -522,7 +527,7 @@ module.exports = function (app) {
 							success: req.flash('success').toString(),
 							error: req.flash('error').toString()
 						});
-			}			
+			}
 			Post.getOne(arrayId[0]._id.id, req.params.name, 2,  function (err, post) {
 				if (err) {
 					req.flash('error', err);
@@ -562,7 +567,7 @@ module.exports = function (app) {
 			if (arrayId.length === 0) {
 				return res.redirect(back);
 			}
-			
+
 			Post.getOne(arrayId[0]._id.id, req.params.name, 2,  function (err, post) {
 				if (err) {
 					req.flash('error', err);
@@ -614,7 +619,7 @@ module.exports = function (app) {
 				}
 				res.redirect('/');
 			});
-		})		
+		})
 	});
 	//重置页
 	app.get('/reset/:id/:email/:time/:flag', function (req, res) {
@@ -662,7 +667,7 @@ module.exports = function (app) {
 	//判断是否登录
 	function checkLogin(req, res, next) {
 		if (!req.session.user) {
-			req.flash('error', '未登录!'); 
+			req.flash('error', '未登录!');
 			res.redirect('/login');
 		}
 		next();
@@ -670,7 +675,7 @@ module.exports = function (app) {
 
 	function checkNotLogin(req, res, next) {
 		if (req.session.user) {
-			req.flash('error', '已登录!'); 
+			req.flash('error', '已登录!');
 			res.redirect('back');//返回之前的页面
 		}
 		next();

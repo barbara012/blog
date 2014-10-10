@@ -1121,6 +1121,9 @@ article img,
   background: transparent;
   box-shadow: none;
 }
+.post .add-on {
+  padding: 10px 0;
+}
 /*用户信息*/
 .user-info .head {
   width: 220px;
