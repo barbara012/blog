@@ -15,21 +15,21 @@
 					<% if (index == 0) { %>
 					<div class="title-item first">
 						<a class="article-btn clearfix" href="/p/<%= post.name %>/<%= post._id %>">
-							<span class="spa1"><%- post.title %></span>
-							<span class="spa2">
+							<div class="spa1"><b><%- post.title %></b></div>
+							<div class="spa2">
 								<span>作者：<%- post.name %></span>
 								<span><%- post.time.day %></span>
-							</span>
+							</div>
 						</a>
 					</div>
 					<% } else { %>
 					<div class="title-item">
 						<a class="article-btn clearfix" href="/p/<%= post.name %>/<%= post._id %>">
-							<span class="spa1"><%- post.title %></span>
-							<span class="spa2">
+							<div class="spa1"><b><%- post.title %></b></div>
+							<div class="spa2">
 								<span>作者：<%- post.name %></span>
 								<span><%- post.time.day %></span>
-							</span>
+							</div>
 						</a>
 					</div>
 					<% } %>

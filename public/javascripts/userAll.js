@@ -5,6 +5,8 @@
 		$item = $('.title-item'),
 		$operationEdit = $('.operation-group .edit'),
 		$operationDelete = $('.operation-group .delete'),
+		$container = $('<div></div>'),
+		articleId = $('#articleId').val(),
 		getOneAjax = function (url) {
 		$.ajax(
 			{
@@ -16,9 +18,9 @@
 						return false;
 					}
 					$('.popover').remove();
-					$article.html('<h2 class="txt-center">' + mes.title + '</h2>' + mes.post);
+					$article.html('<h1 class="t-c">' + mes.title + '</h1>' + mes.post);
 					$operationEdit.prop('href', '/edit/' + mes._id);
-					$operationDelete.prop('href', '/delete/' + mes._id);
+					articleId = mes._id;
 				}
 			}
 		)
@@ -31,5 +33,21 @@
 		$item.removeClass('active');
 		$(this).parent('div').addClass('active');
 		getOneAjax(url);
+	});
+
+
+	//删除文章
+	$('.delete').click(function () {
+		var url = '/delete/' + articleId;
+		console.log(url);
+		$.ajax(
+			{
+				type: 'post',
+				url: url,
+				success: function (mes) {
+					location.reload();
+				}
+			}
+		)
 	});
 })();

@@ -10,14 +10,16 @@
 					<p class="reset_title txt-center"><span class="glyphicon glyphicon-envelope"></span></p>
 					<form action="/reset" method="post" class="form-inline">
 						<div class="form-group">
-							<label class="sr-only" for="exampleInputEmail2">Email address</label>
-							<input type="email" required="required" name="resetEmail" class="form-control" placeholder="账号绑定的邮箱">
+							<label class="label" for="exampleInputEmail2">Email address</label>
+							<input type="email" required="required" name="resetEmail" class="text" placeholder="账号绑定的邮箱">
 						</div>
 						<button type="submit" class="btn btn-default">
 							<span class="glyphicon glyphicon-send"></span>
 						</button>
-						<p class="reset_tip">账号绑定的邮箱</p>
-						<a href="javascript:;" class="return-log">想起密码了？</a>
+						<p class="reset_tip clearfix">
+							<span class="float-l">账号绑定的邮箱</span>
+							<a href="javascript:;" class="float-r return-log">想起密码了？</a>
+						</p>
 					</form>
 
 				</div>
@@ -26,21 +28,21 @@
 						<img src="/img/head.jpg" alt="头像">
 					</div>
 					<div class="body">
-						<input type="text" class="form-control" id="username" name="username" placeholder="用户名">
-						<input type="password" class="form-control" id="password"  name="password" placeholder="密码">
+						<input type="text" class="text" id="username" name="username" placeholder="用户名">
+						<input type="password" class="text" id="password"  name="password" placeholder="密码">
 						<a class="btn btn-login btn-primary" title="登录">
 							<span class="glyphicon glyphicon-log-in"></span>
 						</a>
 						<div class="clearfix">
-							<a href="javascript:;" class="pull-right show-reg">注册</a>
-							<a href="#" class="pull-left reset-password">忘记密码？</a>
+							<a href="javascript:;" class="float-r show-reg">注册</a>
+							<a href="#" class="float-l reset-password" style="display: none;">忘记密码？</a>
 						</div>
 					</div>
-					<div class="tip username-tip pos-abso popover right">
+					<div class="tip username-tip pos-abso">
 						<div class="arrow"></div>
 						<p>用户名不存在！</p>
 					</div>
-					<div class="tip password-tip pos-abso popover right">
+					<div class="tip password-tip pos-abso">
 						<div class="arrow"></div>
 						<p>密码错误！</p>
 					</div>
@@ -48,33 +50,33 @@
 				<div class="reg pos-abso">
 					<p class="txt-center"><a href="javascript:;" title="返回登录窗" class="return-log glyphicon glyphicon-circle-arrow-left"></a></p>
 					<div class="form-group pos-rela">
-						<label for="reg_username" class="control-label">* &nbsp;用户名</label>
-						<input type="text" id="reg_username" class="form-control" name="reg_username" placeholder="用户名">
-						<div class="tip reg_name-tip pos-abso popover right">
+						<label for="reg_username" class="label">* &nbsp;用户名</label>
+						<input type="text" id="reg_username" class="text" name="reg_username" placeholder="用户名">
+						<div class="tip reg_name-tip pos-abso">
 							<div class="arrow"></div>
 							<p>用户名已存在！</p>
 						</div>
 					</div>
 					<div class="form-group pos-rela">
-						<label for="reg_password" class="control-label">* &nbsp;密码</label>
-						<input type="password" id="reg_password" class="form-control" name="reg_password" placeholder="密码">
-						<div class="tip reg_pass-tip input-tip pos-abso popover right">
+						<label for="reg_password" class="label">* &nbsp;密码</label>
+						<input type="password" id="reg_password" class="text" name="reg_password" placeholder="密码">
+						<div class="tip reg_pass-tip input-tip pos-abso">
 							<div class="arrow"></div>
 							<p>请输入密码！</p>
 						</div>
 					</div>
 					<div class="form-group pos-rela">
-						<label for="reg_password-repeat" class="control-label">* &nbsp;再次输入密码</label>
-						<input type="password" id="reg_password-repeat" class="form-control" name="reg_password-repeat" placeholder="密码">
-						<div class="tip reg_repeat-tip pos-abso popover right">
+						<label for="reg_password-repeat" class="label">* &nbsp;再次输入密码</label>
+						<input type="password" id="reg_password-repeat" class="text" name="reg_password-repeat" placeholder="密码">
+						<div class="tip reg_repeat-tip pos-abso">
 							<div class="arrow"></div>
 							<p>两次输入密码不相同！</p>
 						</div>
 					</div>
 					<div class="form-group pos-rela">
-						<label for="reg_email" class="control-label">邮箱<span>（方便找回密码）</span></label>
-						<input type="email" id="reg_email" class="form-control" name="reg_email" placeholder="邮箱">
-						<div class="tip reg_email-tip pos-abso popover right">
+						<label for="reg_email" class="label">邮箱<span>（方便找回密码）</span></label>
+						<input type="email" id="reg_email" class="text" name="reg_email" placeholder="邮箱">
+						<div class="tip reg_email-tip pos-abso">
 							<div class="arrow"></div>
 							<p>邮箱格式不对。正确格式如：xxx@xxx.com！</p>
 						</div>

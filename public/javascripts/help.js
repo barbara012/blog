@@ -58,43 +58,6 @@ var PopTip = {
 					  .append($button)
 					  .addClass(theme)
 					  .appendTo(target);
-			h = $container.outerHeight(true);
-			w = $container.outerWidth(true);
-			if ((documentWidth - targetLeft) < 60) {
-
-				cssSet = {
-					'right': (documentWidth - targetLeft - targetWidth),
-					'top': (targetTop + targetHeight) + 4,
-					'display': 'block'
-				}
-				$arrow.removeClass('left').removeClass('center');
-
-			} else if ((documentWidth - targetLeft) > 60 && targetLeft > 60) {
-					console.log(w);
-					cssSet = {
-						'left': targetLeft + targetWidth / 2,
-						'top': targetTop + targetHeight + 4,
-						'margin-left': -w / 2,
-						'width':　w,
-						'display': 'block'
-					};
-					$arrow.removeClass('left').addClass('center');
-			} else  {
-				cssSet = {
-					'left': (targetLeft),
-					'top': (targetTop + targetHeight) + 4,
-					'display': 'block'
-				}
-				$arrow.removeClass('right').addClass('left');
-			}
-			$container.css(cssSet);
-			$container.stop().animate(
-				{
-					'top': (targetTop + targetHeight) + 10,
-					'opacity': 1
-				},
-				200
-			);
 			_this.flag = 1;
 			return false;
 		});

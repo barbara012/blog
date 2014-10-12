@@ -44,7 +44,7 @@
 					<% flag = 0 %>
 				<% } %>
   		  		<article>
-	  		        <h1><%= post.title %></h1>
+	  		        <h1><%= post.title.replace('<span>','').replace('</span>', '') %></h1>
 	  		        <p><%- post.post %></p>
 	  		        <br />
 					<p class="info clearfix">
@@ -93,6 +93,6 @@
 		</div>
 	  	<script src="/javascripts/jquery-2.0.3.min.js"></script>
 		<script src="/javascripts/help.js"></script>
-		<script src="/javascripts/comment.js"></script>	
+		<script src="/javascripts/comment.js"></script>
 	</body>
 </html>
