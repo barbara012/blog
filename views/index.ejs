@@ -11,8 +11,10 @@
 					<ul class="nav navbar-nav clearfix float-r">
 						<li class="active"><a href="/">首页</a></li>
 						<li><a href="/post">发布文章</a></li>
-						<li><a href="#mars">我的火星票</a></li>
 						<% if (user) { %>
+							<%if (user.name === 'kai') {%>
+							<li><a href="/mars">火星票</a></li>
+							<% } %>
 						<li><a href="/logout">退出</span></a></li>
 						<% } else {%>
 						<li><a href="/login">登录</span></a></li>

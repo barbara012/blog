@@ -427,7 +427,16 @@ module.exports = function (app) {
 			res.send(comment);
 		});
 	});
-
+//火星票
+	app.get('/mars', checkLogin);
+	app.get('/mars', function (req, res) {
+		res.render('mars', {
+			title: '火星船票',
+			user: req.session.user,
+			success: req.flash('success').toString(),
+			error: req.flash('error').toString()
+		});
+	});
 //编辑文章
 	app.get('/edit/:id', checkLogin);
 	app.get('/edit/:id', function (req, res) {
