@@ -15,11 +15,14 @@ body {
   padding: 0;
 }
 h1 {
-  font-size: 30px;
+  font-size: 24px;
 }
-h1,
-h2,
-h3 {
+h2 {
+  font-size: 20px;
+}
+input,
+button,
+textarea {
   font-family: '微软雅黑', Helvetica, Tahoma, Arial, sans-serif;
 }
 a {
@@ -32,6 +35,12 @@ input:-webkit-autofill {
 pre,
 code {
   white-space: normal;
+}
+code {
+  background-color: #23241F;
+  padding: 10px;
+  color: #F8F8F2;
+  display: inline-block;
 }
 .clearfix:after {
   content: "";
@@ -191,7 +200,7 @@ code {
 }
 /*首页*/
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 .glyphicon {
   color: #000000;
@@ -428,6 +437,20 @@ article img,
   max-width: 600px;
   margin: 20px 0;
 }
+article ul,
+.article ul,
+#preview ul {
+  list-style: inherit;
+  padding-left: 20px;
+}
+article hr,
+.article hr,
+#preview hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid rgba(102, 128, 153, 0.15);
+}
 .p-img {
   display: block;
   width: 100%;
@@ -439,6 +462,40 @@ article img,
 .info {
   font-size: 12px;
   color: #777777;
+}
+/*markdown*/
+blockquote {
+  margin: 0 0 15px;
+  padding: 15px 20px;
+  border-left: 5px solid #DDD;
+  font-size: 14px;
+  background-color: rgba(102, 128, 153, 0.05);
+}
+/*火星*/
+.mars .navbar-static-top {
+  border-bottom: 1px solid #dbdbdb;
+}
+.mars .content {
+  width: 1200px;
+  margin: 50px auto;
+}
+.mars .item {
+  position: relative;
+}
+.mars .head {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -50px;
+}
+.mars .head img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+.mars .ticket {
+  border-radius: 10px;
+  overflow: hidden;
 }
 /* 文章单页 */
 .singlepage {

@@ -15,9 +15,12 @@ body {
 	padding: 0;
 }
 h1 {
-	font-size: 30px;
+	font-size: 24px;
 }
-h1,h2,h3 {
+h2 {
+	font-size: 20px;
+}
+input, button, textarea {
 	font-family: '微软雅黑',Helvetica, Tahoma, Arial, sans-serif;
 }
 a {
@@ -30,6 +33,12 @@ input:-webkit-autofill {
 pre,
 code {
 	white-space: normal;
+}
+code {
+	background-color: #23241F;
+	padding: 10px;
+	color: #F8F8F2;
+	display: inline-block;
 }
 
 .border-radius (@radius: 3px) {
@@ -251,7 +260,7 @@ code {
 }
 /*首页*/
 ul {
-	list-style: none;
+	list-style-type: none;
 }
 .glyphicon {
 	color: #000000;
@@ -488,11 +497,23 @@ article {
 		.transition(color);
 	}
 }
-article img,
-.article img,
-#preview img {
-	max-width: 600px;
-	margin: 20px 0;
+article,
+.article,
+#preview {
+	img {
+		max-width: 600px;
+		margin: 20px 0;
+	}
+	ul {
+		list-style: inherit;
+		padding-left: 20px;
+	}
+	hr {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		border: 0;
+		border-top: 1px solid rgba(102, 128, 153, 0.15);
+	}
 }
 .p-img {
 	display: block;
