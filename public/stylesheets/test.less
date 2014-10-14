@@ -1468,7 +1468,37 @@ hr {
 	body {
 		padding: 0;
 	}
+	.navbar-fixed-top,
+	.navbar-fixed-bottom,
+	.navbar-static-top {
+		margin: 0;
+		width: 100%;
+		overflow: hidden;
+	}
+	.nav {
+		margin: 0;
+		li {
+			&.logout {
+				display: none;
+			}
+		}
+	}
+	.navbar {
+		.container {
+			padding-left: 10px;
+		}
+		.nav {
+			a {
+				padding: 0 10px;
+			}
+		}
+	}
 	.home-page {
+		.navbar {
+			.logo {
+				margin-right: 0;
+			}
+		}
 		.head {
 			height: 80px;
 			.user-head {
@@ -1542,21 +1572,6 @@ hr {
 		#login {
 			position: static;
 			margin: auto;
-		}
-	}
-	.navbar-fixed-top,
-	.navbar-fixed-bottom,
-	.navbar-static-top {
-		margin: 0;
-		width: 100%;
-		overflow: hidden;
-	}
-	.nav {
-		margin: 0;
-		li {
-			&.logout {
-				display: none;
-			}
 		}
 	}
 	.footer {

@@ -1404,6 +1404,28 @@ hr {
   body {
     padding: 0;
   }
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .nav {
+    margin: 0;
+  }
+  .nav li.logout {
+    display: none;
+  }
+  .navbar .container {
+    padding-left: 10px;
+  }
+  .navbar .nav a {
+    padding: 0 10px;
+  }
+  .home-page .navbar .logo {
+    margin-right: 0;
+  }
   .home-page .head {
     height: 80px;
   }
@@ -1471,19 +1493,6 @@ hr {
   .login #login {
     position: static;
     margin: auto;
-  }
-  .navbar-fixed-top,
-  .navbar-fixed-bottom,
-  .navbar-static-top {
-    margin: 0;
-    width: 100%;
-    overflow: hidden;
-  }
-  .nav {
-    margin: 0;
-  }
-  .nav li.logout {
-    display: none;
   }
   .footer div.pull-left,
   .footer div.pull-right {
