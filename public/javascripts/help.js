@@ -72,7 +72,7 @@ var PopTip = {
 var WeiXinShareLink = {
 	imgUrl: '',
 	lineLink: location.href,
-	descContent: '哗（HwH）,美文',
+	descContent: '哗（HwH）美文',
 	shareTitle: '葫芦娃',
 	appid: '',
 	init: function () {

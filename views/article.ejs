@@ -104,7 +104,7 @@
 			});
 			var Share = $.extend( {}, WeiXinShareLink, {
 				imgUrl: $('.author_head img').attr('src'),
-				shareTitle: $('.article-title')
+				shareTitle: $('.article-title').text()
 			});
 			Share.enable();
 		</script>
