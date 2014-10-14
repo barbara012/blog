@@ -50,53 +50,40 @@ code {
   visibility: hidden;
 }
 @font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  font-family: 'hwh-font';
+  src: url('../fonts/hwh-font.eot');
+  src: url('../fonts/hwh-font.eot') format('embedded-opentype'), url('../fonts/hwh-font.woff') format('woff'), url('../fonts/hwh-font.ttf') format('truetype'), url('../fonts/hwh-font.svg') format('svg');
 }
-.glyphicon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
+.icon:before {
+  font-family: 'hwh-font';
   -webkit-font-smoothing: antialiased;
   font-style: normal;
   font-weight: normal;
-  line-height: 1;
   -moz-osx-font-smoothing: grayscale;
 }
-.glyphicon-cog:before {
-  content: "\e019";
+.icon-cog:before {
+  content: "\e80c";
 }
-.glyphicon-log-in:before {
-  content: "\e161";
+.icon-home:before {
+  content: "\e80f";
 }
-.glyphicon-log-out:before {
-  content: "\e163";
+.icon-email:before {
+  content: '\e809';
 }
-.glyphicon-home:before {
-  content: "\e021";
+.icon-send:before {
+  content: '\e812';
 }
-.glyphicon-registration-mark:before {
-  content: '\e195';
+.icon-edit:before {
+  content: '\e810';
 }
-.glyphicon-circle-arrow-left:before {
-  content: '\e132';
+.icon-trash:before {
+  content: '\e811';
 }
-.glyphicon-envelope:before {
-  content: '\2709';
+.icon-share:before {
+  content: '\e804';
 }
-.glyphicon-send:before {
-  content: '\e171';
-}
-.glyphicon-send:before {
-  content: '\e171';
-}
-.glyphicon-edit:before {
-  content: '\e065';
-}
-.glyphicon-trash:before {
-  content: '\e020';
+.icon-weichat:before {
+  content: '\e801';
 }
 .float-l {
   float: left;
@@ -459,9 +446,16 @@ article hr,
 .p-img img {
   width: 100%;
 }
-.info {
+article {
+  color: #666666;
+}
+article .info {
   font-size: 12px;
-  color: #777777;
+  color: #999999;
+}
+article .info,
+article .tag {
+  color: #999999;
 }
 /*markdown*/
 blockquote {
@@ -508,6 +502,8 @@ blockquote {
 .singlepage .about_author .home {
   top: 10px;
   left: 20px;
+  font-size: 18px;
+  color: #ffffff;
 }
 .singlepage .about_author h4 {
   text-align: center;
@@ -559,6 +555,7 @@ blockquote {
   border-radius: 4px;
   box-shadow: 0 0 0 2px #ffffff;
   margin: 0 auto 10px;
+  cursor: pointer;
 }
 .singlepage .author_head img {
   width: 100%;
@@ -566,6 +563,34 @@ blockquote {
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
   border-radius: 60px;
+}
+.singlepage .info {
+  margin-bottom: 10px;
+}
+.singlepage .icon-weichat {
+  margin-right: 10px;
+  position: relative;
+  font-size: 18px;
+  color: green;
+}
+.singlepage .icon-weichat .weixin-qr {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 10;
+  padding: 10px;
+  display: none;
+  border: 1px solid #dbdbdb;
+  border-color: rgba(0, 0, 0, 0);
+  border-top-color: #e6e6e6;
+  -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), -1px 0 0 rgba(0, 0, 0, 0.03), 1px 0 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), -1px 0 0 rgba(0, 0, 0, 0.03), 1px 0 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), -1px 0 0 rgba(0, 0, 0, 0.03), 1px 0 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), -1px 0 0 rgba(0, 0, 0, 0.03), 1px 0 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+}
+.singlepage .icon-weichat:hover .weixin-qr {
+  display: block;
 }
 .singlepage article p,
 .posted #content .article p {
@@ -577,9 +602,10 @@ blockquote {
 .posted #content .article p.p-img {
   text-indent: 0;
 }
-.singlepage article p.info,
-.posted #content .article p.info {
+.singlepage article .info,
+.posted #content .article .info {
   text-indent: 0;
+  margin-bottom: 10px;
 }
 .about_author,
 .article_content {
@@ -1159,9 +1185,7 @@ blockquote {
   text-align: center;
   background-color: #428BCA;
   color: #ffffff;
-}
-.comment .btn-comment .glyphicon {
-  color: #ffffff;
+  font-size: 18px;
 }
 .comment .btn-comment:hover {
   background-color: #3071a9;
