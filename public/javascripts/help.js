@@ -58,43 +58,6 @@ var PopTip = {
 					  .append($button)
 					  .addClass(theme)
 					  .appendTo(target);
-			h = $container.outerHeight(true);
-			w = $container.outerWidth(true);
-			if ((documentWidth - targetLeft) < 60) {
-
-				cssSet = {
-					'right': (documentWidth - targetLeft - targetWidth),
-					'top': (targetTop + targetHeight) + 4,
-					'display': 'block'
-				}
-				$arrow.removeClass('left').removeClass('center');
-
-			} else if ((documentWidth - targetLeft) > 60 && targetLeft > 60) {
-					console.log(w);
-					cssSet = {
-						'left': targetLeft + targetWidth / 2,
-						'top': targetTop + targetHeight + 4,
-						'margin-left': -w / 2,
-						'width':　w,
-						'display': 'block'
-					};
-					$arrow.removeClass('left').addClass('center');
-			} else  {
-				cssSet = {
-					'left': (targetLeft),
-					'top': (targetTop + targetHeight) + 4,
-					'display': 'block'
-				}
-				$arrow.removeClass('right').addClass('left');
-			}
-			$container.css(cssSet);
-			$container.stop().animate(
-				{
-					'top': (targetTop + targetHeight) + 10,
-					'opacity': 1
-				},
-				200
-			);
 			_this.flag = 1;
 			return false;
 		});
@@ -104,5 +67,69 @@ var PopTip = {
 				_this.flag = 0;
 			}
 		});
+	}
+};
+var WeiXinShareLink = {
+	imgUrl: '',
+	lineLink: location.href,
+	descContent: '哗（HwH）美文',
+	shareTitle: '葫芦娃',
+	appid: '',
+	init: function () {
+		var _this = this;
+		function shareFriend() {
+			WeixinJSBridge.invoke('sendAppMessage',{
+				"appid": _this.appid,
+				"img_url": _this.imgUrl,
+				"img_width": "320",
+				"img_height": "320",
+				"link": _this.lineLink,
+				"desc": _this.descContent,
+				"title": _this.shareTitle
+				}, function(res) {
+				_report('send_msg', res.err_msg);
+				})
+		}
+		function shareTimeline() {
+			WeixinJSBridge.invoke('shareTimeline',{
+				"img_url": _this.imgUrl,
+				"img_width": "320",
+				"img_height": "320",
+				"link": _this.lineLink,
+				"desc": _this.descContent,
+				"title": _this.shareTitle
+				}, function(res) {
+				_report('timeline', res.err_msg);
+				});
+		}
+		function shareWeibo() {
+			WeixinJSBridge.invoke('shareWeibo',{
+				"content": _this.descContent,
+				"url": _this.lineLink,
+				}, function(res) {
+				_report('weibo', res.err_msg);
+				});
+		}
+		// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+			// 发送给好友
+			WeixinJSBridge.on('menu:share:appmessage', function(argv){
+				shareFriend();
+			});
+
+			// 分享到朋友圈
+			WeixinJSBridge.on('menu:share:timeline', function(argv){
+				shareTimeline();
+			});
+
+			// 分享到微博
+			WeixinJSBridge.on('menu:share:weibo', function(argv){
+				shareWeibo();
+			});
+		}, false);
+	},
+	enable: function () {
+		this.init();
 	}
 };

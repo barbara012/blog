@@ -11,7 +11,14 @@
 					<ul class="nav navbar-nav clearfix float-r">
 						<li class="active"><a href="/">首页</a></li>
 						<li><a href="/post">发布文章</a></li>
-						<li><a href="/mars">我的火星票</a></li>
+						<% if (user) { %>
+							<%if (user.name === 'kai') {%>
+							<li><a href="/mars">火星票</a></li>
+							<% } %>
+						<li><a href="/logout">退出</span></a></li>
+						<% } else {%>
+						<li><a href="/login">登录</span></a></li>
+						<% } %>
 					</ul>
 				</div>
 			</nav>
@@ -23,7 +30,11 @@
 				<div class="operate">
 				</div>
 				<div class="user-head">
-					<a href="javascript:;"><img src="https://avatars3.githubusercontent.com/u/3634578?s=460"></a>
+					<% if (user) {%>
+					<a href="javascript:;" title="<%= user.name %>"><img alt="<%= user.name %>" src="<%= user.head %>"></a>
+					<% } else {%>
+					<a href="javascript:;" title="鬼冢英吉"><img alt="GTO" src="https://avatars3.githubusercontent.com/u/3634578?s=460"></a>
+					<%}%>
 				</div>
 			</div>
 			<div class="body">
@@ -44,7 +55,7 @@
 					</div>
 					<p class="info clearfix">
 					<% if (post.tags.length > 0 && post.tags[0]) { %>
-						<span class="pull-left">标签：
+						<span class="float-l">标签：
 							<% post.tags.forEach(function (tag, index) { %>
 							  <% if (tag) { %>
 								<a class="tag" href="/tags/<%= tag %>"><%= tag %></a>
@@ -52,7 +63,7 @@
 							<% }) %>
 						</span>
 					<% } %>
-						<span class="pull-right"><%= post.time.minute %></span>
+						<span class="float-r"><%= post.time.minute %></span>
 					</p>
 				</article>
 				<hr class="separate pos-rela"/>

@@ -91,7 +91,6 @@ User.getByEmail = function (email, callback) {
 				mongodb.close();
 				return callback(err);
 			}
-
 			collection.findOne(
 				{
 					email: email
@@ -102,6 +101,44 @@ User.getByEmail = function (email, callback) {
 						return callback(err);
 					}
 					callback(null, user);
+				}
+			)
+		})
+	})
+}
+User.CheckNameEmail = function (name, email, callback) {
+	mongodb.open(function (err, db) {
+		if (err) {
+			mongodb.close();
+			return callback(err);
+		}
+		db.collection('users', function (err, collection) {
+			if (err) {
+				mongodb.close();
+				return callback(err);
+			}
+			collection.findOne(
+				{
+					name: name
+				},
+				function (err, user) {
+					if (user) {
+						mongodb.close();
+						return callback(null, 'name');
+					}
+				}
+			);
+			collection.findOne(
+				{
+					email: email
+				},
+				function (err, user) {
+					mongodb.close();
+					if (user) {
+						return callback(null, 'email');
+					} else {
+						callback(err);
+					}
 				}
 			)
 		})

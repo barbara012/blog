@@ -18,21 +18,21 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
 					<ul class="nav navbar-nav">
 						<li>
-							<a href="/" class="home pos-abso" title="返回首页"><span class="glyphicon glyphicon-home"></span></a>
+							<a href="/" class="home pos-abso" title="返回首页"><span class="icon icon-home"></span></a>
 						</li>
 						<li class="active">
 						<% if (post) { %>
 							<a href="/edit/<%= post._id %>" title="编辑">
-								<span class="glyphicon glyphicon-edit"></span>
+								<span class="icon icon-edit"></span>
 							</a>
 						<% } else { %>
 							<a href="/post" title="发布">
-								<span class="glyphicon glyphicon-pencil"></span>
+								<span class="icon icon-pencil"></span>
 							</a>
 						<% } %>
 						</li>
 						<li>
-							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="glyphicon glyphicon-th-list"></span></a>
+							<a href="/posted/<%= user.name %>" title="个人文章中心"><span class="icon icon-th-list"></span></a>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -42,7 +42,7 @@
 							</a>
 						</li>
 						<li class="navbar-right">
-							<a href="/logout"><span class="glyphicon glyphicon-log-out"></span></a>
+							<a href="/logout"><span class="icon icon-log-out"></span></a>
 						</li>
 					</ul>
 				</div>
@@ -82,10 +82,10 @@
 				<div class="collapse navbar-collapse">
 					<form class="navbar-form " method="post">
 						<div class="form-group">
-							<span class="add-on glyphicon glyphicon-tags"></span>
+							<span class="add-on icon icon-tags"></span>
 						</div>
 						<div class="form-group">
-						<% if (post)  { %>                            
+						<% if (post)  { %>
 							<input type="text" name="tag" id="tag" value="<%= post.tags %>" class="form-control" placeholder="标签1，标签2，标签3...">
 						<% } else { %>
 							<input type="text" name="tag" id="tag" class="form-control" placeholder="标签1，标签2，标签3...">

@@ -62,33 +62,33 @@
 		data['content'] = $comment.val();
 		console.log(data);
 		commentAjax(location.pathname, data);
-		
+
 		timeFlag = 1;
 		setHeight();
 
 	});
-	var sureButton = createButton().addClass('btn').addClass('btn-warning')
-									.addClass('sure')
-									.text('确定')
-									.off('click')
-									.on('click', function () {
-										var url = $remove.data('url');
-										$.ajax(
-											{
-												type: 'post',
-												url: url,
-												success: function (mes) {
-													location.href = '/';
-												}
-											}
-										)
-										return false;
-									});
-	var cancleButton = createButton().addClass('btn').addClass('btn-default')
-									.addClass('cancle')
-									.text('取消')
-									.off('click')
-									.on('click', function () {});
+	var sureButton = createButton().addClass('btn')
+		.addClass('sure')
+		.text('确定')
+		.off('click')
+		.on('click', function () {
+			var url = $remove.data('url');
+			$.ajax(
+				{
+					type: 'post',
+					url: url,
+					success: function (mes) {
+						location.href = '/';
+					}
+				}
+			)
+			return false;
+		});
+	var cancleButton = createButton().addClass('btn')
+		.addClass('cancel')
+		.text('取消')
+		.off('click')
+		.on('click', function () {});
 	$container.empty().append(sureButton).append(cancleButton);
 	PopTip.showPop($remove, null,null, '确定要删除这篇文章吗？', $container, 'warning');
 })();

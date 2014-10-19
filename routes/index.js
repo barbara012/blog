@@ -12,7 +12,6 @@ var crypto = require('crypto'),
 	markdown = require('markdown').markdown;
 module.exports = function (app) {
 
-	app.get('/', checkLogin);
 	app.get('/', function (req, res) {
 		//判断是否是第一页，并把请求的页数转换成 number 类型
 		var page = req.query.p ? parseInt(req.query.p) : 1;
@@ -63,13 +62,20 @@ module.exports = function (app) {
 			password: password,
 			email: email
 		});
-		//检查用户名是否已经存在
-		User.get(newUser.name, function (err, user) {
-			if (user) {
+		//检查用户名与邮箱是否已经存在
+		User.CheckNameEmail(newUser.name, newUser.email, function (err, type) {
+			if (type === 'name') {
 				return res.send(
 					{
 						type: 1,
 						mes: '用户名已经存在！'
+					}
+				);//返回注册页
+			} else if (type === 'email'){
+				return res.send(
+					{
+						type: 3,
+						mes: '邮箱已经存在！'
 					}
 				);//返回注册页
 			}
@@ -413,7 +419,7 @@ module.exports = function (app) {
 		var newComment = new Comment(req.params.id, comment);
 		newComment.save(function (err) {
 			if (err) {
-				req.flash('error', err); 
+				req.flash('error', err);
 				return res.redirect('back');
 			}
 			comment.content = markdown.toHTML(comment.content);
@@ -421,7 +427,16 @@ module.exports = function (app) {
 			res.send(comment);
 		});
 	});
-
+//火星票
+	app.get('/mars', checkLogin);
+	app.get('/mars', function (req, res) {
+		res.render('mars', {
+			title: '火星船票',
+			user: req.session.user,
+			success: req.flash('success').toString(),
+			error: req.flash('error').toString()
+		});
+	});
 //编辑文章
 	app.get('/edit/:id', checkLogin);
 	app.get('/edit/:id', function (req, res) {
@@ -450,7 +465,7 @@ module.exports = function (app) {
 			var url = '/p/' + currentUser.name + '/' + req.params.id;
 			if (err) {
 				console.log('err');
-				req.flash('error', err); 
+				req.flash('error', err);
 				return res.send(
 					{
 						type: 1,
@@ -474,7 +489,7 @@ module.exports = function (app) {
 		var currentUser = req.session.user;
 		Post.remove(req.params.id, function (err) {
 			if (err) {
-				req.flash('error', err); 
+				req.flash('error', err);
 				return res.redirect('back');
 			}
 			req.flash('success', '删除成功!');
@@ -486,7 +501,7 @@ module.exports = function (app) {
 	app.get('/reprint/:id', function (req, res) {
 		Post.edit(req.params.id, function (err, post) {
 			if (err) {
-				req.flash('error', err); 
+				req.flash('error', err);
 				return res.redirect(back);
 			}
 
