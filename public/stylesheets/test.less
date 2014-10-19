@@ -78,6 +78,10 @@ code {
 	-ms-transform: rotate(@deg);
 	transform: rotate(@deg);
 }
+.baseBoxShadow() {
+	border-top: 1px solid #e0e0e0;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
 .clearfix {
 	&:after {
 		content: "";
@@ -1289,70 +1293,47 @@ blockquote {
 }
 /* post */
 .post {
-	height: 100%;
 	color: #666666;
+	.post-content {
+		padding: 30px 0;
+	}
 	.textarea {
-		height: 100%;
-		padding: 122px 0 60px;
+		width: 80%;
+		padding: 20px;
+		max-width: 1314px;
+		margin: auto;
+		background-color: #ffffff;
+		.baseBoxShadow;
+		
+	}
+	.post-title {
+		margin-bottom: 20px;
+	}
+	.post-title_input {
+		border: none;
+		height: 60px;
+		padding: 15px 0;
+		width: 100%;
+		text-align: center;
+		font-size: 24px;
+		outline: none;
 	}
 	.editor-container {
-		width: 50%;
-		padding-right: 5px;
-		height: 100%;
-		.container-shadow {
-			width: 96%;
-			height: 100%;
-		}
+		margin-bottom: 20px;
+		border: 1px solid #dcdcdc;
+		padding: 10px;
 	}
 	.preview-container {
+		display: none;
 		width: 50%;
 		padding-right: 5px;
 		height: 100%;
 		padding-left: 5px;
 		padding-right: 0;
-		.container-shadow {
-			width: 96%;
-			height: 100%;
-		}
 	}
-}
-.container-shadow {
-
-}
-.editor,
-.preview {
-	.post & {
-		height: 100%;
-		width: 100%;
-		padding: 20px;
-		background: #ffffff;
-		border: 1px solid #cfcfcf;
-		.border-radius(2px);
-	}
-}
-.post-title {
-	width: 96%;
-	position: absolute;
-	top: 58px;
-	left: 2%;
-	background: #ffffff;
-}
-.post-title_input {
-	border: none;
-	width: 100%;
-	padding: 12px 20px;
-	font-size: 24px;
-	color: #555555;
-	border: 1px solid #cfcfcf;
-	.border-radius(2px);
-	&:focus {
-		outline: none;
-	}
-}
-.post {
 	.editor {
 		textarea {
-			height: 100%;
+			min-height: 400px;
 			width: 100%;
 			border: none;
 			resize: none;
@@ -1378,13 +1359,9 @@ blockquote {
 	.text {
 		border: none;
 		width: 500px;
-		height: 50px;
-		padding: 20px 5px;
-		background: transparent;
-		box-shadow: none;
-		&:focus {
-			outline: none;
-		}
+		height: 30px;
+		padding: 5px;
+		outline: none;
 	}
 	.add-on {
 		padding: 10px 0;
@@ -1396,8 +1373,6 @@ blockquote {
 		border-radius: 2px;
 		color: #ffffff;
 		padding: 0 15px;
-		margin-top: 10px;
-		margin-right: 20px;
 		cursor: pointer;
 		&:hover {
 			background-color: darken(#428BCA, 10%)

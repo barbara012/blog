@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<div class="post">
-			<div class="navbar navbar-fixed-top">
+			<div class="navbar navbar-static-top">
 				<div class="container clearfix">
 					<a class="logo float-l" href="/">HwH</a>
 					<ul class="nav navbar-nav clearfix float-l">
@@ -32,37 +32,32 @@
 					</ul>
 				</div>
 			</div>
-			<div class="textarea clearfix pos-rela">
-					<div class="post-title pos-abso wtf">
-						<div class="container-shadow">
-							<input type="text" class="post-title_input" id="title" placeholder="文章标题">
+			<div class="post-content">
+				<div class="textarea clearfix pos-rela">
+					<div class="post-title">
+						<input type="text" class="post-title_input" id="title" placeholder="文章标题">
+					</div>
+					<div class="editor-container" id="editor-container">
+						<div class="editor">
+							<textarea oninput="this.editor.update()" id="post"  name="post"></textarea>
 						</div>
 					</div>
-					<div class="editor-container float-l" id="editor-container">
-						<div class="container-shadow  float-r">
-							<div class="editor">
-								<textarea oninput="this.editor.update()" id="post"  name="post"></textarea>
-							</div>
+					<div class="preview-container">
+						<div class="preview">
+							<div id="preview"></div>
 						</div>
 					</div>
-					<div class="preview-container float-r">
-						<div class="container-shadow float-l ">
-							<div class="preview">
-								<div id="preview"></div>
-							</div>
-						</div>
+					<div class="submit-container clearfix">
+						<form class="navbar-form clearfix" method="post">
+							<span class="add-on icon icon-tags"></span>
+							<input type="text" name="tag" id="tag" class="text" placeholder="标签1，标签2，标签3...">
+							<button type="button" id="post-btn" class="btn float-r">发布</button>
+						</form>
 					</div>
-			</div>
-			<nav class="navbar navbar-fixed-bottom static">
-				<div class="container clearfix">
-					<form class="navbar-form clearfix" method="post">
-						<span class="add-on icon icon-tags"></span>
-						<input type="text" name="tag" id="tag" class="text" placeholder="标签1，标签2，标签3...">
-						<button type="button" id="post-btn" class="btn float-r">发布</button>
-					</form>
 				</div>
-			</nav>
+			</div>
 		</div>
+		<% include footer %>
 		<input type="hidden" id="hidden" value="<%= user.name %>">
 		<script src="/javascripts/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="/javascripts/markdown.js"></script>
