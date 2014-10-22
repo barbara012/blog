@@ -1235,67 +1235,47 @@ blockquote {
 }
 /* post */
 .post {
-  height: 100%;
   color: #666666;
 }
+.post .post-content {
+  padding: 30px 0;
+}
 .post .textarea {
-  height: 100%;
-  padding: 122px 0 60px;
+  width: 80%;
+  padding: 20px;
+  max-width: 1314px;
+  margin: auto;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.post .post-title {
+  margin-bottom: 20px;
+}
+.post .post-title_input {
+  border: none;
+  height: 60px;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  outline: none;
 }
 .post .editor-container {
-  width: 50%;
-  padding-right: 5px;
-  height: 100%;
-}
-.post .editor-container .container-shadow {
-  width: 96%;
-  height: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #dcdcdc;
+  padding: 10px;
 }
 .post .preview-container {
+  display: none;
   width: 50%;
   padding-right: 5px;
   height: 100%;
   padding-left: 5px;
   padding-right: 0;
 }
-.post .preview-container .container-shadow {
-  width: 96%;
-  height: 100%;
-}
-.post .editor,
-.post .preview {
-  height: 100%;
-  width: 100%;
-  padding: 20px;
-  background: #ffffff;
-  border: 1px solid #cfcfcf;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-.post-title {
-  width: 96%;
-  position: absolute;
-  top: 58px;
-  left: 2%;
-  background: #ffffff;
-}
-.post-title_input {
-  border: none;
-  width: 100%;
-  padding: 12px 20px;
-  font-size: 24px;
-  color: #555555;
-  border: 1px solid #cfcfcf;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-.post-title_input:focus {
-  outline: none;
-}
 .post .editor textarea {
-  height: 100%;
+  min-height: 400px;
   width: 100%;
   border: none;
   resize: none;
@@ -1316,12 +1296,8 @@ blockquote {
 .post .text {
   border: none;
   width: 500px;
-  height: 50px;
-  padding: 20px 5px;
-  background: transparent;
-  box-shadow: none;
-}
-.post .text:focus {
+  height: 30px;
+  padding: 5px;
   outline: none;
 }
 .post .add-on {
@@ -1334,8 +1310,6 @@ blockquote {
   border-radius: 2px;
   color: #ffffff;
   padding: 0 15px;
-  margin-top: 10px;
-  margin-right: 20px;
   cursor: pointer;
 }
 .post .btn:hover {
