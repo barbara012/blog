@@ -38,7 +38,7 @@
 							)
 							setTimeout( function (){location.href = mes.url;} , 2000);
 						} else {
-							console.log(mes['type']);
+							console.log('葫芦娃');
 						}
 					} else {
 						return false;
@@ -118,7 +118,6 @@
 			//$post.val($post.val() + '![](' + mes.response + ')');
 			insertContent(box, '![15](' + mes.response + ')');
 			new Editor(getObj("post"), getObj("preview"));
-			window.open(mes.response, '_blank');
 		});
 	}, false);
 //post

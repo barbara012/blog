@@ -272,7 +272,7 @@ Post.update = function(id, tags, title, post, callback) {
 	});
 };
 //删除一篇文章
-Post.remove = function(id, callback) {
+Post.remove = function(id, ower, callback) {
 	//打开数据库
 	mongodb.open(function (err, db) {
 		if (err) {
@@ -291,6 +291,11 @@ Post.remove = function(id, callback) {
 				if (err) {
 					mongodb.close();
 					return callback(err);
+				}
+				//如果该文章归登录用户或者超级用户所有，则可以进行删除否则不得进去删除
+				if (doc.name != ower && ower != 'hwh') {
+					mongodb.close();
+					return callback('没有权限');
 				}
 				//如果有 reprint_from，即该文章是转载来的，先保存下来 reprint_from
 				var reprint_from = "";

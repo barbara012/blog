@@ -489,7 +489,7 @@ module.exports = function (app) {
 	app.post('/delete/:id', checkLogin);
 	app.post('/delete/:id', function (req, res) {
 		var currentUser = req.session.user;
-		Post.remove(req.params.id, function (err) {
+		Post.remove(req.params.id, currentUser.name, function (err) {
 			if (err) {
 				req.flash('error', err);
 				return res.redirect('back');

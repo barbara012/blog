@@ -1237,7 +1237,8 @@ blockquote {
 .post {
   color: #666666;
 }
-.post .post-content {
+.post .post-content,
+.post .edit-content {
   padding: 30px 0;
 }
 .post .textarea {

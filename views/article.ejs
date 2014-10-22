@@ -27,6 +27,12 @@
 				<a class="remove pos-abso" href="javascript:;" data-url="/delete/<%= post._id %>" title="删除">
 					<span class="icon icon-trash"></span>
 				</a>
+				<% } else { %>
+					<% if (user && (user.name == 'hwh')) { %>
+						<a class="remove pos-abso" href="javascript:;" data-url="/delete/<%= post._id %>" title="删除">
+							<span class="icon icon-trash"></span>
+						</a>
+					<% } %>
 				<% } %>
 				<% var flag = 1 %>
 				<% if (user && (user.name != post.name)) { %>
