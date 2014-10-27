@@ -689,8 +689,7 @@ blockquote {
   border-top: 1px solid #dbdbdb;
   z-index: 10;
 }
-.post .user_head,
-.posted .user_head {
+.navbar .user_head {
   height: 50px;
   padding: 8px 5px 0 !important;
 }
@@ -840,6 +839,20 @@ blockquote {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
   background: #ffffff;
   z-index: 100;
+}
+.user-set .main {
+  background-color: #EDECE4;
+  padding: 30px 0;
+}
+.user-set .content {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px 0;
+  min-height: 400px;
 }
 /* 标签检索文章页 */
 .tag-page,

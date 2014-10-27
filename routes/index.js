@@ -147,6 +147,35 @@ module.exports = function (app) {
 			)
 		});
 	});
+//设置
+	app.get('/set', checkLogin);
+	app.get('/set', function (req, res) {
+		if (req.session.user.name === 'huwenhua012') {
+			res.render('set', {
+				title: '设置',
+				user: req.session.user,
+				success: req.flash('success').toString(),
+				error: req.flash('error').toString()});
+		} else {
+			res.render('/', {
+			title: '首页',
+			user: req.session.user,
+			success: req.flash('没有权限').toString(),
+			error: req.flash('error').toString()});
+		}
+	});
+//修改
+	app.post('/update/:name', function (req, res) {
+		var name = req.params.name;
+		var md5 = crypto.createHash('md5');
+		var password = md5.update(req.body.password).digest('hex');
+		User.resetPassword(req.params.name, password, function (err) {
+			if (!err) {
+				return res.redirect('/');
+			}
+			console.log(err);
+		});
+	});
 //发布
 	app.get('/post', checkLogin);
 	app.get('/post', function (req, res) {
