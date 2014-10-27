@@ -293,7 +293,7 @@ Post.remove = function(id, ower, callback) {
 					return callback(err);
 				}
 				//如果该文章归登录用户或者超级用户所有，则可以进行删除否则不得进去删除
-				if (doc.name != ower && ower != 'hwh') {
+				if (doc.name != ower && ower != 'huwenhua012') {
 					mongodb.close();
 					return callback('没有权限');
 				}
