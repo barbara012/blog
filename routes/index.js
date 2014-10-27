@@ -395,7 +395,7 @@ module.exports = function (app) {
 			};
 			console.log(24);
 			res.render('article', {
-				title: '文章',
+				title: post.title,
 				post: post,
 				user: req.session.user,
 				success: req.flash('success').toString(),
