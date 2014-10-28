@@ -1,7 +1,6 @@
 {
-  "name": "application-name",
+  "name": "hwh-blog",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "start": "node hwh.js"
   },
@@ -12,7 +11,6 @@
     "connect-mongo": "*",
     "connect-flash": "*",
     "markdown": "*",
-    "net": "*",
     "nodemailer": "*",
     "less": "*"
   }
