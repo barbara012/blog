@@ -103,11 +103,11 @@
 				</div>
 			</div>
 		</div>
-		<script src="/javascripts/jquery-2.0.3.min.js"></script>
-		<script src="/javascripts/jquery.qrcode.js"></script>
-		<script src="/javascripts/qrcode.js"></script>
-		<script src="/javascripts/help.js"></script>
-		<script src="/javascripts/comment.js"></script>
+		<script src="/js/jquery-2.0.3.min.js"></script>
+		<script src="/js/jquery.qrcode.js"></script>
+		<script src="/js/qrcode.js"></script>
+		<script src="/js/help.js"></script>
+		<script src="/js/comment.js"></script>
 		<script>
 			(function () {
 				jQuery('.weixin-qr').qrcode({
@@ -121,7 +121,6 @@
 				} else {
 					url = defaultImgUrl;
 				}
-				console.log(url);
 				var Share = $.extend( {}, WeiXinShareLink, {
 					imgUrl: url,
 					shareTitle: $('.article-title').text()
