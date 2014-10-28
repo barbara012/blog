@@ -4,8 +4,7 @@
     height: 100%;
   }
   .post .textarea {
-    width: 100%;
-    padding: 114px 0 70px;
+    width: 95%;
   }
   .post .editor-container,
   .post .preview-container {

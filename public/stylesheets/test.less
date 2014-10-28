@@ -508,9 +508,6 @@ article,
 	display: block;
 	width: 100%;
 	text-align: center;
-	img {
-		width: 100%;
-	}
 }
 article {
 	color: #666666;
@@ -530,6 +527,9 @@ blockquote {
 	border-left: 5px solid #DDD;
 	font-size: 14px;
 	background-color: rgba(102, 128, 153, 0.05);
+	blockquote, p {
+		margin-bottom: 0 !important;
+	}
 }
 /*火星*/
 .mars {
@@ -561,15 +561,32 @@ blockquote {
 }
 /* 文章单页 */
 .singlepage {
-	height: 100%;
+	padding: 40px 0;
+	background-color: #EDECE4;
+	.content {
+		width: 80%;
+		max-width: 1000px;
+		min-width: 800px;
+		margin: auto;
+	}
+	.icon {
+		&:hover {
+			color: #333333;
+		}
+	}
+	.side {
+		width: 20%;
+	}
 	.about_author {
-		background: #428bca;
 		overflow: hidden;
+		padding: 10px;
+		background-color: #ffffff;
+		.baseBoxShadow;
 		.home {
 			top: 10px;
 			left: 20px;
 			font-size: 18px;
-			color: #ffffff;
+			color: #999999;
 		}
 		h4 {
 			text-align: center;
@@ -578,10 +595,10 @@ blockquote {
 		}
 	}
 	.article_content {
-		min-width: 600px;
-		width: 660px;
-		overflow: auto;
-		padding: 40px;
+		width: 78%;
+		padding: 20px;
+		background-color: #ffffff;
+		.baseBoxShadow;
 		article {
 			img {
 				max-width: 600px;
@@ -589,15 +606,11 @@ blockquote {
 		}
 	}
 	.author_info {
-		width: 300px;
-		padding: 66px 0 10px;
+		width: 100%;
 		color: #ffffff;
 		.info_list {
-			width: 200px;
-			margin: 0 auto;
 			a {
 				display: block;
-				width: 100%;
 				color: #666666;
 				background: #ffffff;
 				text-decoration: none;
@@ -675,18 +688,6 @@ blockquote {
 	text-indent: 0;
 	margin-bottom: 10px;
 }
-.about_author,
-.article_content {
-	width: 300px;
-	height: 100%;
-	min-height: 800px;
-	.transition(all,0.3s,ease);
-}
-.singlepage .about_author .glyphicon-home {
-	color: #ffffff;
-	font-size: 18px;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.23);
-}
 .edit,
 .remove {
 	.singlepage .article_content & {
@@ -696,9 +697,6 @@ blockquote {
 		top: 10px;
 		right: 20px;
 		text-shadow: 1px 1px 1px rgba(0,0,0,0.13);
-	}
-	.singlepage .article_content &:hover  {
-		color: #333333;
 	}
 	.pop-tip {
 		top: 30px;
@@ -738,7 +736,6 @@ blockquote {
 .post,
 .posted {
 	color: #666666;
-	background-color: #edece4;
 	.navbar-fixed-top {
 		border-bottom: 1px solid #dbdbdb;
 		z-index: 10;
@@ -747,7 +744,6 @@ blockquote {
 		border-top: 1px solid #dbdbdb;
 		z-index: 10;
 	}
-	
 }
 .navbar {
 	.user_head {
@@ -1316,6 +1312,7 @@ blockquote {
 	.post-content,
 	.edit-content {
 		padding: 30px 0;
+		background-color: #EDECE4;
 	}
 	.textarea {
 		width: 80%;
@@ -1547,15 +1544,27 @@ hr {
 		}
 	}
 	.singlepage {
-		.about_author,
+		padding: 0;
+		.content {
+			width: 100%;
+			min-width: 0;
+		}
+		.side,
 		.article_content {
 			width: 100%;
 			min-height: 0;
 			height: auto;
 			float: none !important;
 		}
+		.about_author {
+			background-color: #0078b6;
+			.icon {
+				color: #ffffff;
+			}
+		}
 		.author_info {
 			width: 100%;
+			padding: 20px 0;
 			.info_list {
 				width: 100%;
 				padding: 0 10px;
@@ -1568,6 +1577,11 @@ hr {
 		.article_content {
 			padding: 10px;
 			min-width: 0;
+		}
+		.p-img {
+			img {
+				max-width: 100% !important;
+			}
 		}
 		article {
 			h2 {
@@ -1600,12 +1614,11 @@ hr {
 		}
 	}
 	.footer {
-		div.pull-left,
-		div.pull-right {
+		div {
 			float: none !important;
-			p {
-				text-align: center;
-			}
+		}
+		p {
+			text-align: center;
 		}
 	}
 }
