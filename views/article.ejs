@@ -109,14 +109,25 @@
 		<script src="/javascripts/help.js"></script>
 		<script src="/javascripts/comment.js"></script>
 		<script>
-			jQuery('.weixin-qr').qrcode({
-				text: location.href
-			});
-			var Share = $.extend( {}, WeiXinShareLink, {
-				imgUrl: $('.author_head img').attr('src'),
-				shareTitle: $('.article-title').text()
-			});
-			Share.enable();
+			(function () {
+				jQuery('.weixin-qr').qrcode({
+					text: location.href
+				});
+				var url = '';
+				var defaultImgUrl = $('.author_head img').attr('src');
+				var $img = $('article img').eq(0);
+				if ($img.length > 0) {
+					url = 'http://' + location.host + $img.attr('src');
+				} else {
+					url = defaultImgUrl;
+				}
+				console.log(url);
+				var Share = $.extend( {}, WeiXinShareLink, {
+					imgUrl: url,
+					shareTitle: $('.article-title').text()
+				});
+				Share.enable();
+			})();
 		</script>
 	</body>
 </html>
