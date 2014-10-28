@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<% include head %>
-		<link rel="stylesheet" href="/stylesheets/post.css"/>
+		<link rel="stylesheet" href="/css/post.css"/>
 	</head>
 	<body>
 		<div class="post">
@@ -50,8 +50,9 @@
 					<div class="submit-container">
 						<form class="navbar-form clearfix" method="post">
 							<span class="add-on icon icon-tags"></span>
-							<input type="text" name="tag" id="tag" class="text" value="<%= post.tags %>" placeholder="标签1，标签2，标签3...">
+							<input type="text" name="tag" id="tag" class="text tag" value="<%= post.tags %>" placeholder="标签1，标签2，标签3...">
 							<button type="button" id="post-btn" class="btn float-r">更新</button>
+							<a href="javascript:;" class="btn btn-preview float-r">预览</a>
 						</form>
 					</div>
 				</div>
@@ -59,9 +60,12 @@
 		</div>
 		<% include footer %>
 		<input type="hidden" id="hidden" value="<%= user.name %>">
-		<script src="/javascripts/jquery-2.0.3.min.js"></script>
-		<script type="text/javascript" src="/javascripts/markdown.js"></script>
-		<script src="/javascripts/jquery.noty.packaged.min.js"></script>
-		<script src="/javascripts/postImg.js"></script>
+		<script src="/js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="/js/markdown.js"></script>
+		<script src="/js/jquery.noty.packaged.min.js"></script>
+		<script src="/js/postImg.js"></script>
+		<script>
+			Preview.enable();
+		</script>
 	</body>
 </html>

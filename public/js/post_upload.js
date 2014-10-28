@@ -1,0 +1,1 @@
+$(function(){$(document).on({dragleave:function(t){t.preventDefault()},drop:function(t){t.preventDefault(),alert(12)},dragenter:function(t){t.preventDefault()},dragover:function(t){t.preventDefault()}});var t=$("#editor-container");t.on({drop:function(){alert()}})});

@@ -139,5 +139,32 @@
 		if (e.keyCode === 13) {
 			return false;
 		}
-	})
+	});
+	//
 })();
+var Preview = $.extend(
+	{}, {
+
+		init: function () {
+			var $previewContainer = $('.preview-container');
+			var $editorContainer = $('.editor-container');
+			var _this = this;
+			$('.btn-preview').click(function () {
+				if ($previewContainer.hasClass('show')) {
+					$previewContainer.removeClass('show');
+					$editorContainer.css('opacity', 1);
+				} else {
+					$previewContainer.css('height', _this.getHeight($editorContainer))
+						.addClass('show');
+					$editorContainer.css('opacity', 0);
+				}
+			});
+		},
+		getHeight: function ($obj) {
+			return $obj.outerHeight();
+		},
+		enable: function () {
+			this.init();
+		}
+	}
+);

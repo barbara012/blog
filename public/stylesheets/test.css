@@ -443,9 +443,6 @@ article hr,
   width: 100%;
   text-align: center;
 }
-.p-img img {
-  width: 100%;
-}
 article {
   color: #666666;
 }
@@ -464,6 +461,10 @@ blockquote {
   border-left: 5px solid #DDD;
   font-size: 14px;
   background-color: rgba(102, 128, 153, 0.05);
+}
+blockquote blockquote,
+blockquote p {
+  margin-bottom: 0 !important;
 }
 /*火星*/
 .mars .navbar-static-top {
@@ -493,17 +494,33 @@ blockquote {
 }
 /* 文章单页 */
 .singlepage {
-  height: 100%;
+  padding: 40px 0;
+  background-color: #EDECE4;
+}
+.singlepage .content {
+  width: 80%;
+  max-width: 1000px;
+  min-width: 800px;
+  margin: auto;
+}
+.singlepage .icon:hover {
+  color: #333333;
+}
+.singlepage .side {
+  width: 20%;
 }
 .singlepage .about_author {
-  background: #428bca;
   overflow: hidden;
+  padding: 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .singlepage .about_author .home {
   top: 10px;
   left: 20px;
   font-size: 18px;
-  color: #ffffff;
+  color: #999999;
 }
 .singlepage .about_author h4 {
   text-align: center;
@@ -511,26 +528,21 @@ blockquote {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 .singlepage .article_content {
-  min-width: 600px;
-  width: 660px;
-  overflow: auto;
-  padding: 40px;
+  width: 78%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .singlepage .article_content article img {
   max-width: 600px;
 }
 .singlepage .author_info {
-  width: 300px;
-  padding: 66px 0 10px;
+  width: 100%;
   color: #ffffff;
-}
-.singlepage .author_info .info_list {
-  width: 200px;
-  margin: 0 auto;
 }
 .singlepage .author_info .info_list a {
   display: block;
-  width: 100%;
   color: #666666;
   background: #ffffff;
   text-decoration: none;
@@ -607,20 +619,6 @@ blockquote {
   text-indent: 0;
   margin-bottom: 10px;
 }
-.about_author,
-.article_content {
-  width: 300px;
-  height: 100%;
-  min-height: 800px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.singlepage .about_author .glyphicon-home {
-  color: #ffffff;
-  font-size: 18px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.23);
-}
 .singlepage .article_content .edit,
 .singlepage .article_content .remove {
   color: #ffffff;
@@ -629,10 +627,6 @@ blockquote {
   top: 10px;
   right: 20px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.13);
-}
-.singlepage .article_content .edit:hover,
-.singlepage .article_content .remove:hover {
-  color: #333333;
 }
 .edit .pop-tip,
 .remove .pop-tip {
@@ -677,7 +671,6 @@ blockquote {
 .post,
 .posted {
   color: #666666;
-  background-color: #edece4;
 }
 .post .navbar-fixed-top,
 .posted .navbar-fixed-top {
@@ -689,8 +682,7 @@ blockquote {
   border-top: 1px solid #dbdbdb;
   z-index: 10;
 }
-.post .user_head,
-.posted .user_head {
+.navbar .user_head {
   height: 50px;
   padding: 8px 5px 0 !important;
 }
@@ -698,6 +690,7 @@ blockquote {
   height: 100%;
   padding-top: 60px;
   padding-bottom: 10px;
+  background-color: #EDECE4;
 }
 .posted .list {
   width: 30%;
@@ -840,6 +833,20 @@ blockquote {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
   background: #ffffff;
   z-index: 100;
+}
+.user-set .main {
+  background-color: #EDECE4;
+  padding: 30px 0;
+}
+.user-set .content {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px 0;
+  min-height: 400px;
 }
 /* 标签检索文章页 */
 .tag-page,
@@ -1240,6 +1247,7 @@ blockquote {
 .post .post-content,
 .post .edit-content {
   padding: 30px 0;
+  background-color: #EDECE4;
 }
 .post .textarea {
   width: 80%;
@@ -1249,6 +1257,8 @@ blockquote {
   background-color: #ffffff;
   border-top: 1px solid #e0e0e0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 .post .post-title {
   margin-bottom: 20px;
@@ -1261,19 +1271,41 @@ blockquote {
   text-align: center;
   font-size: 24px;
   outline: none;
+  border: 1px dashed #e7e7e7;
 }
 .post .editor-container {
   margin-bottom: 20px;
   border: 1px solid #dcdcdc;
   padding: 10px;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 .post .preview-container {
-  display: none;
-  width: 50%;
-  padding-right: 5px;
+  width: 100%;
   height: 100%;
-  padding-left: 5px;
-  padding-right: 0;
+  position: absolute;
+  bottom: 70px;
+  left: 100%;
+  padding: 30px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+.post .preview-container .preview {
+  height: 100%;
+  overflow: auto;
+}
+.post .preview-container p {
+  line-height: 2;
+  margin-bottom: 1em;
+  text-indent: 2.1em;
+}
+.post .preview-container.show {
+  background-color: #ffffff;
+  left: 0;
+  opacity: 1;
 }
 .post .editor textarea {
   min-height: 400px;
@@ -1304,9 +1336,13 @@ blockquote {
 .post .add-on {
   padding: 10px 0;
 }
+.post .tag {
+  color: #a0a0a0;
+}
 .post .btn {
   background-color: #428BCA;
   height: 30px;
+  line-height: 30px;
   border: none;
   border-radius: 2px;
   color: #ffffff;
@@ -1315,6 +1351,13 @@ blockquote {
 }
 .post .btn:hover {
   background-color: #3071a9;
+}
+.post .btn-preview {
+  margin-right: 20px;
+  background-color: #5CB85C;
+}
+.post .btn-preview:hover {
+  background-color: #449d44;
 }
 /*用户信息*/
 .user-info .head {
@@ -1420,15 +1463,29 @@ hr {
   .home-page article img {
     width: 100%;
   }
-  .singlepage .about_author,
+  .singlepage {
+    padding: 0;
+  }
+  .singlepage .content {
+    width: 100%;
+    min-width: 0;
+  }
+  .singlepage .side,
   .singlepage .article_content {
     width: 100%;
     min-height: 0;
     height: auto;
     float: none !important;
   }
+  .singlepage .about_author {
+    background-color: #0078b6;
+  }
+  .singlepage .about_author .icon {
+    color: #ffffff;
+  }
   .singlepage .author_info {
     width: 100%;
+    padding: 20px 0;
   }
   .singlepage .author_info .info_list {
     width: 100%;
@@ -1441,6 +1498,9 @@ hr {
   .singlepage .article_content {
     padding: 10px;
     min-width: 0;
+  }
+  .singlepage .p-img img {
+    max-width: 100% !important;
   }
   .singlepage article h2 {
     text-align: center;
@@ -1469,12 +1529,10 @@ hr {
     position: static;
     margin: auto;
   }
-  .footer div.pull-left,
-  .footer div.pull-right {
+  .footer div {
     float: none !important;
   }
-  .footer div.pull-left p,
-  .footer div.pull-right p {
+  .footer p {
     text-align: center;
   }
 }
