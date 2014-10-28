@@ -690,6 +690,7 @@ blockquote p {
   height: 100%;
   padding-top: 60px;
   padding-bottom: 10px;
+  background-color: #EDECE4;
 }
 .posted .list {
   width: 30%;
