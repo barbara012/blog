@@ -1,8 +1,14 @@
 {
   "name": "hwh-blog",
   "version": "0.0.1",
+  "description": "The Blog For HWH",
+  "author": "Barbara",
   "scripts": {
     "start": "node hwh.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:barbara012/blog.git"
   },
   "dependencies": {
     "express": "3.4.8",
@@ -13,5 +19,8 @@
     "markdown": "*",
     "nodemailer": "*",
     "less": "*"
+  },
+  "devDependencies": {
+    "grunt": "^0.4"
   }
 }
