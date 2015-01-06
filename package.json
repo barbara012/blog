@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "express": "3.4.8",
-    "ejs": "*",
-    "mongodb": "*",
-    "connect-mongo": "*",
-    "connect-flash": "*",
+    "ejs": "0.8.8",
+    "mongodb": "1.4.15",
+    "connect-mongo": "0.4.1",
+    "connect-flash": "0.1.1",
     "markdown": "0.5.0",
     "nodemailer": "*",
     "less": "*"
