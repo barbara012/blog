@@ -16,7 +16,7 @@
     "mongodb": "*",
     "connect-mongo": "*",
     "connect-flash": "*",
-    "markdown": "*",
+    "markdown": "0.5.0",
     "nodemailer": "*",
     "less": "*"
   },
