@@ -44,15 +44,6 @@
 					<% posts.forEach(function (post, index) { %>
 				<article class="pos-rela">
 					<h1><a href="/p/<%= post.name %>/<%= post._id %>" class="title"><%= post.title.replace('<span>','').replace('</span>', '') %></a></h1>
-					<% if (user && user.name === post.name) { %>
-					<!-- <a href="/posted/<%= post.name %>" class="pos-abso author_info author_head">
-						<img src="<%= post.head %>" class="r_head" />
-					</a> -->
-					<% } else { %>
-					<!-- <a href="/oposted/<%= post.name %>" class="pos-abso author_head">
-						<img src="<%= post.head %>" class="r_head" />
-					</a> -->
-					<% } %>
 					<div class="article">
 						<%- post.post.substr(0, 200) + "···" %>
 					</div>
