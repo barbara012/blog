@@ -54,7 +54,7 @@
 					<% } %>
 					<article>
 						<h1 class="article-title t-c"><%= post.title.replace('<span>','').replace('</span>', '') %></h1>
-						<p><%- post.post %></p>
+						<div class="article-main"><%- post.post %></div>
 						<br />
 						<div class="info clearfix">
 				
@@ -123,7 +123,8 @@
 				}
 				var Share = $.extend( {}, WeiXinShareLink, {
 					imgUrl: url,
-					shareTitle: $('.article-title').text()
+					shareTitle: $('.article-title').text(),
+					descContent: $('.article-main').text().substr(0, 20) + '……'
 				});
 				Share.enable();
 			})();
