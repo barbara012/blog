@@ -45,7 +45,7 @@
 				<article class="pos-rela">
 					<h1><a href="/p/<%= post.name %>/<%= post._id %>" class="title"><%= post.title.replace('<span>','').replace('</span>', '') %></a></h1>
 					<div class="article">
-						<%- post.post.substr(0, 200) + "···" %>
+						<%- post.post.replace(/(<p><img)(.*)(\/><\/p>)/,'(图片)').substr(0, 200) + "···" %>
 					</div>
 					<div class="info clearfix">
 					<% if (post.tags.length > 0 && post.tags[0]) { %>
