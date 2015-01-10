@@ -14,7 +14,7 @@ module.exports = Post;
 
 //存储一篇文章及其相关信息
 Post.prototype.save = function(callback) {
-	var date = new Date((new Date()).getTime() + 13 * 60 * 60 * 1000);
+	var date = new Date();
 	//存储各种时间格式，方便以后扩展
 	var time = {
 		date: date,
@@ -231,7 +231,7 @@ Post.edit = function(id, callback) {
 };
 //更新一篇文章及其相关信息
 Post.update = function(id, tags, title, post, callback) {
-	var date = new Date((new Date()).getTime() + 13 * 60 * 60 * 1000),
+	var date = new Date(),
 		time = {
 			date: date,
 			year : date.getFullYear(),
@@ -496,7 +496,7 @@ Post.reprint = function(reprint_from, reprint_to, callback) {
 					mongodb.close();
 					return callback(err);
 				}
-				var date = new Date((new Date()).getTime() + 13 * 60 * 60 * 1000);
+				var date = new Date();
 				var time = {
 					date: date,
 					year : date.getFullYear(),
