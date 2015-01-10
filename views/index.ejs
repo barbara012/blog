@@ -47,7 +47,7 @@
 					<div class="article">
 						<%- post.post.substr(0, 200) + "···" %>
 					</div>
-					<p class="info clearfix">
+					<div class="info clearfix">
 					<% if (post.tags.length > 0 && post.tags[0]) { %>
 						<span class="float-l">标签：
 							<% post.tags.forEach(function (tag, index) { %>
@@ -57,8 +57,8 @@
 							<% }) %>
 						</span>
 					<% } %>
-						<span class="float-r"><%= post.time.minute %>（美国时间，自己脑补）</span>
-					</p>
+						<span class="float-r"><%= post.time.minute %></span>
+					</div>
 				</article>
 				<hr class="separate pos-rela"/>
 					<% }) %>

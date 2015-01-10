@@ -8,7 +8,7 @@ module.exports = Pic;
 
 //保存上传的图片
 Pic.prototype.save = function (callback) {
-	var date = new Date();
+	var date = new Date((new Date()).getTime() + 13 * 60 * 60 * 1000);
 	//存储各种时间格式，方便以后扩展
 	var time = {
 	    date: date,

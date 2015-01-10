@@ -22,7 +22,8 @@ h2 {
 }
 input,
 button,
-textarea {
+textarea,
+code {
   font-family: '微软雅黑', Helvetica, Tahoma, Arial, sans-serif;
 }
 a {
@@ -35,12 +36,6 @@ input:-webkit-autofill {
 pre,
 code {
   white-space: normal;
-}
-code {
-  background-color: #23241F;
-  padding: 10px;
-  color: #F8F8F2;
-  display: inline-block;
 }
 .clearfix:after {
   content: "";
