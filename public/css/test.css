@@ -1359,6 +1359,30 @@ blockquote p {
   width: 220px;
   height: 220px;
 }
+/*讨论*/
+.discuss-page {
+  background-color: #edece4;
+  padding-top: 30px;
+}
+.discuss-page .main {
+  width: 900px;
+  min-height: 600px;
+  padding: 30px;
+  margin: 30px auto 60px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.discuss-page .issue {
+  margin-top: 30px;
+}
+.discuss-page .issue__title {
+  margin-bottom: 10px;
+}
+.discuss-page .issue__content {
+  color: #666;
+  font-size: 16px;
+}
 /*页脚*/
 .footer {
   border-top: 1px solid #cfcfcf;

@@ -176,6 +176,16 @@ module.exports = function (app) {
 			console.log(err);
 		});
 	});
+//讨论
+	app.get('/discuss', checkLogin);
+	app.get('/discuss', function (req, res) {
+		res.render('discuss', {
+			title: '前端CSS规范讨论',
+			user: req.session.ser,
+			success: req.flash('success').toString(),
+			error: req.flash('error').toString()
+		});
+	});
 //发布
 	app.get('/post', checkLogin);
 	app.get('/post', function (req, res) {
@@ -183,7 +193,8 @@ module.exports = function (app) {
 			title: '发布',
 			user: req.session.user,
 			success: req.flash('success').toString(),
-			error: req.flash('error').toString()});
+			error: req.flash('error').toString()
+		});
 	});
 	app.post('/post', checkLogin);
 	app.post('/post', function (req, res) {
