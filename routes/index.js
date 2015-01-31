@@ -605,7 +605,7 @@ module.exports = function (app) {
 	app.get('/posted/:name/:id', checkLogin);
 	app.get('/posted/:name/:id', function (req, res) {
 		Post.getOne(req.params.id, req.params.name, 2, function (err, post) {
-			if (err)　{
+			if (err) {
 				req.flash('error', err);
 				return res.send('12');
 			};
