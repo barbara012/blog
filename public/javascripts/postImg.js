@@ -10,7 +10,7 @@
 
 	function Editor(input, preview) {
 		this.update = function () {
-			preview.innerHTML = markdown.toHTML(input.value);
+			preview.innerHTML = ME(markdown.toHTML(input.value));
 		};
 		input.editor = this;
 		this.update();
