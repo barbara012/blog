@@ -154,6 +154,7 @@ var Preview = $.extend(
 					$previewContainer.removeClass('show');
 					$editorContainer.css('opacity', 1);
 				} else {
+				    $('#post')[0].editor.update();
 					$previewContainer.css('height', _this.getHeight($editorContainer))
 						.addClass('show');
 					$editorContainer.css('opacity', 0);
