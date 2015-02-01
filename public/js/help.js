@@ -1,1 +1,135 @@
-var PopTip={targetElement:"",flag:0,setTitle:function(t){return $("<div></div>").addClass("title").text(t)},setContent:function(t){return $('<div class="pop-content"></div>').append(t)},setButton:function(t){return $('<div class="pop-footer clearfix"></div>').append(t)},createContainer:function(){return $("<div></div>").addClass("popover").addClass("pop-tip")},closePop:function(){$(".popover").stop().animate({opacity:0,top:"-4px"},100,function(){$(this).detach()})},showPop:function(t,e,n,r,i,o){this.type=e?e:"click",this.content=n?n:"",this.title=r?r:"",this.button=i?i:"",this.theme=o?o:"default";var a=this;t.on(a.type,function(){if(1===a.flag)return a.closePop(),a.flag=0,!1;var e=a.createContainer(),n=a.setTitle(a.title),r=a.setContent(a.content),i=a.setButton(a.button),s=$('<span class="pop-arrow"></span>'),l=$(this).offset();return parseInt(l.left),parseInt(l.top),parseInt($(this).outerHeight(!0)),parseInt($(this).outerWidth(!0)),parseInt($(document).width()),e.append(s).append(n).append(r).append(i).addClass(o).appendTo(t),a.flag=1,!1}),$(document).click(function(){1===a.flag&&(a.closePop(),a.flag=0)})}},WeiXinShareLink={imgUrl:"",lineLink:location.href,descContent:"哗（HwH）美文",shareTitle:"葫芦娃",appid:"",init:function(){function t(){WeixinJSBridge.invoke("sendAppMessage",{appid:r.appid,img_url:r.imgUrl,img_width:"320",img_height:"320",link:r.lineLink,desc:r.descContent,title:r.shareTitle},function(t){_report("send_msg",t.err_msg)})}function e(){WeixinJSBridge.invoke("shareTimeline",{img_url:r.imgUrl,img_width:"320",img_height:"320",link:r.lineLink,desc:r.descContent,title:r.shareTitle},function(t){_report("timeline",t.err_msg)})}function n(){WeixinJSBridge.invoke("shareWeibo",{content:r.descContent,url:r.lineLink},function(t){_report("weibo",t.err_msg)})}var r=this;document.addEventListener("WeixinJSBridgeReady",function(){WeixinJSBridge.on("menu:share:appmessage",function(){t()}),WeixinJSBridge.on("menu:share:timeline",function(){e()}),WeixinJSBridge.on("menu:share:weibo",function(){n()})},!1)},enable:function(){this.init()}};
+var PopTip = {
+	targetElement: "",
+	flag: 0,
+	setTitle: function (title) {
+		return $('<div></div>').addClass('title').text(title);
+	},
+	setContent: function (content) {
+		return $('<div class="pop-content"></div>').append(content);
+	},
+	setButton: function (button) {
+		return $('<div class="pop-footer clearfix"></div>').append(button);
+	},
+	createContainer: function () {
+		return $('<div></div>').addClass('popover').addClass('pop-tip');
+	},
+	closePop: function () {
+		$('.popover').stop().animate(
+			{
+				opacity: 0,
+				top: '-4px'
+			},
+			100,
+			function () {
+				$(this).detach();
+			}
+		)
+	},
+	showPop: function (target, type, content, title, button, theme) {
+		this.type = type ? type : 'click';
+		this.content = content ? content: '';
+		this.title = title ? title: '';
+		this.button = button ? button: '';
+		this.theme = theme ? theme: 'default';
+		var _this = this;
+		target.on(_this.type, function () {
+			if (_this.flag === 1) {
+				_this.closePop();
+				_this.flag = 0;
+				return false;
+			}
+			var $container = _this.createContainer(),
+				$title = _this.setTitle(_this.title),
+				$content = _this.setContent(_this.content),
+				$button = _this.setButton(_this.button),
+				$arrow = $('<span class="pop-arrow"></span>'),
+				targetOffset = $(this).offset(),
+				targetLeft = parseInt(targetOffset.left),
+				targetTop = parseInt(targetOffset.top),
+				targetHeight = parseInt($(this).outerHeight(true)),
+				targetWidth = parseInt($(this).outerWidth(true)),
+				documentWidth = parseInt($(document).width()),
+				cssSet = {},
+				h,
+				w;
+
+			$container.append($arrow).append($title)
+					  .append($content)
+					  .append($button)
+					  .addClass(theme)
+					  .appendTo(target);
+			_this.flag = 1;
+			return false;
+		});
+		$(document).click(function (e) {
+			if (_this.flag === 1) {
+				_this.closePop();
+				_this.flag = 0;
+			}
+		});
+	}
+};
+var WeiXinShareLink = {
+	imgUrl: '',
+	lineLink: location.href,
+	descContent: '哗（HwH）美文',
+	shareTitle: '葫芦娃',
+	appid: '',
+	init: function () {
+		var _this = this;
+		function shareFriend() {
+			WeixinJSBridge.invoke('sendAppMessage',{
+				"appid": _this.appid,
+				"img_url": _this.imgUrl,
+				"img_width": "320",
+				"img_height": "320",
+				"link": _this.lineLink,
+				"desc": _this.descContent,
+				"title": _this.shareTitle
+				}, function(res) {
+				_report('send_msg', res.err_msg);
+				})
+		}
+		function shareTimeline() {
+			WeixinJSBridge.invoke('shareTimeline',{
+				"img_url": _this.imgUrl,
+				"img_width": "320",
+				"img_height": "320",
+				"link": _this.lineLink,
+				"desc": _this.descContent,
+				"title": _this.shareTitle
+				}, function(res) {
+				_report('timeline', res.err_msg);
+				});
+		}
+		function shareWeibo() {
+			WeixinJSBridge.invoke('shareWeibo',{
+				"content": _this.descContent,
+				"url": _this.lineLink,
+				}, function(res) {
+				_report('weibo', res.err_msg);
+				});
+		}
+		// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+			// 发送给好友
+			WeixinJSBridge.on('menu:share:appmessage', function(argv){
+				shareFriend();
+			});
+
+			// 分享到朋友圈
+			WeixinJSBridge.on('menu:share:timeline', function(argv){
+				shareTimeline();
+			});
+
+			// 分享到微博
+			WeixinJSBridge.on('menu:share:weibo', function(argv){
+				shareWeibo();
+			});
+		}, false);
+	},
+	enable: function () {
+		this.init();
+	}
+};

@@ -1,1 +1,36 @@
-!function(){var t=($("#post-content"),$("#post-title"),$(".post-title_input"),$("#post-btn")),e=$("#post"),n=function(t,e){$.ajax({type:"POST",url:t,data:e,success:function(t){location.href=t.url}})};t.click(function(){if(""==e.val())return!1;var t=$("#post").val(),r=$("#tag").val().replace(/(，)|(\t)|(,)|(-)|(\.)|(:)|(--)|(\s)|(：)|(。)|(\|)/g,";"),i=$("#title").val();post={},post.content=t,post.title=null!=i?i:t.substr(0,10),post.tag=r,console.log(post.content),n(location.pathname,post,1)})}();
+(function () {
+	var $content = $('#post-content'),
+		$title = $('#post-title'),
+		$titleInput = $('.post-title_input'),
+		$postBtn = $('#post-btn'),
+		article = {},
+		$post = $('#post');
+
+	//提交
+	var sendAjax = function (url, data) {
+		$.ajax(
+			{
+				type: 'POST',
+				url: url,
+				data: data,
+				success: function (mes) {
+					location.href = mes.url;
+				}
+			}
+		)
+	};
+	$postBtn.click(function (e) {
+		if ($post.val() == '') {
+			return false;
+		}
+		var content = $('#post').val(),
+			tag = $('#tag').val().replace(/(，)|(\t)|(,)|(-)|(\.)|(:)|(--)|(\s)|(：)|(。)|(\|)/g, ';'),
+			title = $('#title').val();
+		post = {};
+		post['content'] = content;
+		post['title'] = (title != null) ? title : content.substr(0, 10);
+		post['tag'] = tag;
+		console.log(post['content']);
+		sendAjax(location.pathname, post, 1);
+	});
+})();

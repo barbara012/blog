@@ -1,1 +1,171 @@
-!function(){function t(t,e){this.update=function(){e.innerHTML=markdown.toHTML(t.value)},t.editor=this,this.update()}function e(t,e){if(document.selection){var n=document.selection.createRange();n.text=e}else if("number"==typeof t.selectionStart&&"number"==typeof t.selectionEnd){var r=t.selectionStart,i=t.selectionEnd,a=r,o=t.value;t.value=o.substring(0,r)+e+o.substring(i,o.length),a+=e.length,t.selectionStart=t.selectionEnd=a}else t.value+=e}function n(t,e,n){if("undefined"==typeof FormData)throw new Error("FormData is not implemented");var r=new XMLHttpRequest;r.open("POST",t),r.onreadystatechange=function(){4===r.readyState&&n&&n(r)};var i=new FormData;for(var a in e)if(e.hasOwnProperty(a)){var o=e[a];"function"!=typeof o&&i.append(a,o)}r.send(i)}var r=$("#hidden"),i=document.getElementById("post"),a=($("#post-content"),$("#post-title"),$(".post-title_input"),$("#post-btn")),o=$("#post"),s=function(t,e,n){$.ajax({type:"POST",url:t,data:e,success:function(t){return 1!==n?!1:(3===t.type?(noty({text:t.mes,type:"success",timeout:2e3,killer:!1,dismissQueue:!0,layout:"topCenter"}),setTimeout(function(){location.href=t.url},2e3)):console.log("葫芦娃"),void 0)}})},l=function(t){return document.getElementById(t)};new t(l("post"),l("preview")),$(document).on({dragleave:function(t){t.preventDefault()},drop:function(t){t.preventDefault()},dragenter:function(t){t.preventDefault()},dragover:function(t){t.preventDefault()}}),i.addEventListener("drop",function(a){a.preventDefault();var o=a.dataTransfer.files,s={},c="/post/"+r.val();return 0===o.length?!1:-1===o[0].type.indexOf("image")?!1:(s.image=o[0],n(c,s,function(n){e(i,"![15]("+n.response+")"),new t(l("post"),l("preview"))}),void 0)},!1),a.click(function(){if(""==o.val())return!1;var t=$("#post").val(),e=$("#tag").val().replace(/(，)|(\t)|(,)|(-)|(\.)|(:)|(--)|(\s)|(：)|(。)|(\|)/g,";"),n=$("#title").val();post={},post.content=t,post.title=null!=n?n:t.substr(0,10),post.tag=e,s(location.pathname,post,1)}),$("#tag").keydown(function(t){return 13===t.keyCode?!1:void 0})}();var Preview=$.extend({},{init:function(){var t=$(".preview-container"),e=$(".editor-container"),n=this;$(".btn-preview").click(function(){t.hasClass("show")?(t.removeClass("show"),e.css("opacity",1)):(t.css("height",n.getHeight(e)).addClass("show"),e.css("opacity",0))})},getHeight:function(t){return t.outerHeight()},enable:function(){this.init()}});
+(function () {
+	var $hideIput = $('#hidden'),
+		box = document.getElementById('post'),
+		$content = $('#post-content'),
+		$title = $('#post-title'),
+		$titleInput = $('.post-title_input'),
+		$postBtn = $('#post-btn'),
+		article = {},
+		$post = $('#post');
+
+	function Editor(input, preview) {
+		this.update = function () {
+			preview.innerHTML = ME(markdown.toHTML(input.value));
+		};
+		input.editor = this;
+		this.update();
+	};
+
+	//ajax
+	var sendAjax = function (url, data, option) {
+		$.ajax(
+			{
+				type: 'POST',
+				url: url,
+				data: data,
+				success: function (mes) {
+					if (option === 1) {
+						if (mes['type'] === 3) {
+							noty(
+								{
+									text: mes['mes'],
+									type: 'success',
+									timeout: 2000,
+									killer: false,
+									dismissQueue: true,
+									layout: 'topCenter'
+								}
+							)
+							setTimeout( function (){location.href = mes.url;} , 2000);
+						} else {
+							console.log('葫芦娃');
+						}
+					} else {
+						return false;
+					}
+				}
+			}
+		)
+	};
+	var getObj = function (id) { return document.getElementById(id); };
+	new Editor(getObj("post"), getObj("preview"));
+	// 插入图片
+	//在textarea光标处插入内容
+	function insertContent(obj, content) {
+		if (document.selection) {
+			var selected = document.selection.createRange();
+			selected.text = content;
+		} else if (typeof obj.selectionStart === 'number' && typeof obj.selectionEnd === 'number') {
+			var startPos = obj.selectionStart,
+				endPos = obj.selectionEnd,
+				cursorPos = startPos,
+				tmpStr = obj.value;
+			obj.value = tmpStr.substring(0, startPos) + content + tmpStr.substring(endPos, tmpStr.length);
+			cursorPos += content.length;
+			obj.selectionStart = obj.selectionEnd = cursorPos;
+		} else {
+			obj.value += content;
+		}
+	};
+	//阻止浏览器默认事件
+	$(document).on({
+		dragleave:function(e){    //拖离
+			e.preventDefault(); 
+		},
+		drop:function(e){  //拖后放
+			e.preventDefault();
+		},
+		dragenter:function(e){    //拖进
+			e.preventDefault();
+		},
+		dragover:function(e){    //拖来拖去
+			e.preventDefault();
+		}
+	});
+	function postFormData(url, data, callback) {
+		if (typeof FormData === 'undefined') {
+			throw new Error ('FormData is not implemented');
+		};
+
+		var request = new XMLHttpRequest();
+		request.open("POST", url);
+		request.onreadystatechange = function () {
+			if (request.readyState === 4 && callback)
+				callback(request);
+		};
+		var formdata = new FormData();
+		for (var name in data) {
+			if (!data.hasOwnProperty(name)) continue;
+			var value = data[name];
+			if (typeof value === 'function') continue;
+			formdata.append(name, value);
+		};
+		request.send(formdata);
+	};
+	box.addEventListener('drop', function (e) {
+		e.preventDefault(); //取消默认浏览器拖拽
+		var imgFile = e.dataTransfer.files,	//获取文件对象
+			data = {},
+			imgUrl,
+			url = '/post/' + $hideIput.val();
+		if (imgFile.length === 0) return false;
+
+		if (imgFile[0].type.indexOf('image') === -1)  return false;
+
+		data['image'] = imgFile[0];
+
+		postFormData(url, data, function (mes) {
+			//$post.val($post.val() + '![](' + mes.response + ')');
+			insertContent(box, '![15](' + mes.response + ')');
+			new Editor(getObj("post"), getObj("preview"));
+		});
+	}, false);
+//post
+	$postBtn.click(function (e) {
+		if ($post.val() == '') {
+			return false;
+		}
+		var content = $('#post').val(),
+			tag = $('#tag').val().replace(/(，)|(\t)|(,)|(-)|(\.)|(:)|(--)|(\s)|(：)|(。)|(\|)/g, ';'),
+			title = $('#title').val();
+		post = {};
+		post['content'] = content;
+		post['title'] = (title != null) ? title : content.substr(0, 10);
+		post['tag'] = tag;
+		sendAjax(location.pathname, post, 1);
+	});
+	//
+	$('#tag').keydown(function (e) {
+		if (e.keyCode === 13) {
+			return false;
+		}
+	});
+	//
+})();
+var Preview = $.extend(
+	{}, {
+
+		init: function () {
+			var $previewContainer = $('.preview-container');
+			var $editorContainer = $('.editor-container');
+			var _this = this;
+			$('.btn-preview').click(function () {
+				if ($previewContainer.hasClass('show')) {
+					$previewContainer.removeClass('show');
+					$editorContainer.css('opacity', 1);
+				} else {
+				    $('#post')[0].editor.update();
+					$previewContainer.css('height', _this.getHeight($editorContainer))
+						.addClass('show');
+					$editorContainer.css('opacity', 0);
+				}
+			});
+		},
+		getHeight: function ($obj) {
+			return $obj.outerHeight();
+		},
+		enable: function () {
+			this.init();
+		}
+	}
+);

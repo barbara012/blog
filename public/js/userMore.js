@@ -1,1 +1,10 @@
-!function(){var t=$(".user-center"),e=$("<div></div>"),n=$("<a></a>").text("设置"),r=$("<a></a>").text("个人中心"),i=$('<a href="/logout"></a>').text("退出");e.append(n).append(r).append(i),PopTip.showPop(t,"click",e,null,null,"default")}();
+(function () {
+	var $userCenter = $('.user-center'),
+		$container = $('<div></div>'),
+		$itme1 = $('<a></a>').text('设置'),
+		$itme2 = $('<a></a>').text('个人中心'),
+		$itme3 = $('<a href="/logout"></a>').text('退出');
+	$container.append($itme1).append($itme2).append($itme3);
+	PopTip.showPop($userCenter, 'click', $container, null, null, 'default');
+
+})();
