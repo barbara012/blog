@@ -124,7 +124,7 @@
 				var Share = $.extend( {}, WeiXinShareLink, {
 					imgUrl: url,
 					shareTitle: $('.article-title').text(),
-					descContent: $('.article-main').text().substr(0, 20) + '……'
+					descContent: ($('.article-main').text()).substr(0, 20) + '……'
 				});
 				Share.enable();
 			})();
