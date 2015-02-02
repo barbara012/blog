@@ -176,6 +176,16 @@ module.exports = function (app) {
 			console.log(err);
 		});
 	});
+//讨论
+	app.get('/discuss', checkLogin);
+	app.get('/discuss', function (req, res) {
+		res.render('discuss', {
+			title: '前端CSS规范讨论',
+			user: req.session.ser,
+			success: req.flash('success').toString(),
+			error: req.flash('error').toString()
+		});
+	});
 //发布
 	app.get('/post', checkLogin);
 	app.get('/post', function (req, res) {
@@ -183,7 +193,8 @@ module.exports = function (app) {
 			title: '发布',
 			user: req.session.user,
 			success: req.flash('success').toString(),
-			error: req.flash('error').toString()});
+			error: req.flash('error').toString()
+		});
 	});
 	app.post('/post', checkLogin);
 	app.post('/post', function (req, res) {
@@ -224,13 +235,14 @@ module.exports = function (app) {
 				fs.unlinkSync(req.files[i].path);
 				console.log('Successfully removed an empty file!');
 			} else {
-				var target_path = './public/images/dbimg/' + req.files[i].name;
+				var date = new Date();
+				var target_path = './public/images/dbimg/' + date.getTime() + req.files[i].name;
 				console.log(req.params.ower);
 			// 使用同步方式重命名一个文件
 				fs.renameSync(req.files[i].path, target_path);
 				console.log(0123);
-				var dbImgUrl = '/images/dbimg/' + req.files[i].name;
-				var date = new Date();
+				var dbImgUrl = '/images/dbimg/' + date.getTime() + req.files[i].name;
+				
 				var time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
 					date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
 				blobArr = {};
@@ -593,7 +605,7 @@ module.exports = function (app) {
 	app.get('/posted/:name/:id', checkLogin);
 	app.get('/posted/:name/:id', function (req, res) {
 		Post.getOne(req.params.id, req.params.name, 2, function (err, post) {
-			if (err)　{
+			if (err) {
 				req.flash('error', err);
 				return res.send('12');
 			};

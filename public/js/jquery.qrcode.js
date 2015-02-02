@@ -1,1 +1,55 @@
-!function(t){t.fn.qrcode=function(e){"string"==typeof e&&(e={text:e}),e=t.extend({},{render:"canvas",width:200,height:200,typeNumber:-1,correctLevel:QRErrorCorrectLevel.H,background:"#ffffff",foreground:"#000000"},e);var n=function(){var t=new QRCode(e.typeNumber,e.correctLevel);t.addData(e.text),t.make();var n=document.createElement("canvas");n.width=e.width,n.height=e.height;for(var r=n.getContext("2d"),i=e.width/t.getModuleCount(),o=e.height/t.getModuleCount(),a=0;a<t.getModuleCount();a++)for(var s=0;s<t.getModuleCount();s++){r.fillStyle=t.isDark(a,s)?e.foreground:e.background;var l=Math.ceil((s+1)*i)-Math.floor(s*i),c=Math.ceil((a+1)*i)-Math.floor(a*i);r.fillRect(Math.round(s*i),Math.round(a*o),l,c)}return n};return this.each(function(){var r="canvas"==e.render?n():createTable();t(r).appendTo(this)})}}(jQuery);
+(function( $ ){
+	$.fn.qrcode = function(options) {
+		// if options is string,
+		if( typeof options === 'string' ){
+			options	= { text: options };
+		}
+
+		// set default values
+		// typeNumber < 1 for automatic calculation
+		options	= $.extend( {}, {
+			render		: "canvas",
+			width		: 200,
+			height		: 200,
+			typeNumber	: -1,
+			correctLevel	: QRErrorCorrectLevel.H,
+                        background      : "#ffffff",
+                        foreground      : "#000000"
+		}, options);
+
+		var createCanvas	= function(){
+			// create the qrcode itself
+			var qrcode	= new QRCode(options.typeNumber, options.correctLevel);
+			qrcode.addData(options.text);
+			qrcode.make();
+
+			// create canvas element
+			var canvas	= document.createElement('canvas');
+			canvas.width	= options.width;
+			canvas.height	= options.height;
+			var ctx		= canvas.getContext('2d');
+
+			// compute tileW/tileH based on options.width/options.height
+			var tileW	= options.width  / qrcode.getModuleCount();
+			var tileH	= options.height / qrcode.getModuleCount();
+
+			// draw in the canvas
+			for( var row = 0; row < qrcode.getModuleCount(); row++ ){
+				for( var col = 0; col < qrcode.getModuleCount(); col++ ){
+					ctx.fillStyle = qrcode.isDark(row, col) ? options.foreground : options.background;
+					var w = (Math.ceil((col+1)*tileW) - Math.floor(col*tileW));
+					var h = (Math.ceil((row+1)*tileW) - Math.floor(row*tileW));
+					ctx.fillRect(Math.round(col*tileW),Math.round(row*tileH), w, h);
+				}
+			}
+			// return just built canvas
+			return canvas;
+		}
+
+
+		return this.each(function(){
+			var element	= options.render == "canvas" ? createCanvas() : createTable();
+			$(element).appendTo(this);
+		});
+	};
+})( jQuery );

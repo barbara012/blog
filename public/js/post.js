@@ -1,1 +1,8 @@
-!function(){$("#post-content"),$("#post-title"),$(".post-title_input"),$("#post-btn"),$("#post")}();
+(function () {
+	var $content = $('#post-content'),
+		$title = $('#post-title'),
+		$titleInput = $('.post-title_input'),
+		$postBtn = $('#post-btn'),
+		article = {},
+		$post = $('#post');
+})();

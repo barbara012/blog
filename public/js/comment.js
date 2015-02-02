@@ -1,1 +1,94 @@
-!function(){$("p").has("img").addClass("p-img");var t,e=$("#form_comment_name"),n=$("#form_comment_email"),r=$("#form_comment_content"),i=$(".comments"),a=($(".about_author"),$(".singlepage"),$(".remove")),o=$("<div></div>"),s=0;tipCss={right:"116px",opacity:1},tipCssReset={right:"110px",opacity:0},createButton=function(){return $('<button type="button"></button>')},commentAjax=function(t,e){$.ajax({type:"POST",url:t,data:e,success:function(t){$('<div class="commented pos-rela"></div>').append($('<a class="comment_head pos-abso"></a>').append($('<img src="'+t.head+'">'))).append($('<div class="comment_content"></div>').append($("<p>"+t.content+"</p>")).append($('<p class="info"></p>').append($('<a href="javascript:;">'+t.name+"</a>")).append($("<span>回复于"+t.time+"</span>")))).prependTo(i),$(".time-tip").css(tipCssReset),s=0}})},$(".btn-comment").click(function(){return 1===s?($(".time-tip").css(tipCss),!1):r.val()?(t={},t.name=e.val()?e.val():"匿名",t.email=n.val()?n.val():"838186163@qq.com",t.content=r.val(),console.log(t),commentAjax(location.pathname,t),s=1,setHeight(),void 0):!1});var l=createButton().addClass("btn").addClass("sure").text("确定").off("click").on("click",function(){var t=a.data("url");return $.ajax({type:"post",url:t,success:function(){location.href="/"}}),!1}),u=createButton().addClass("btn").addClass("cancel").text("取消").off("click").on("click",function(){});o.empty().append(l).append(u),PopTip.showPop(a,null,null,"确定要删除这篇文章吗？",o,"warning")}();
+(function () {
+	$('p').has('img').addClass('p-img');
+
+	var $name = $('#form_comment_name'),
+		$email = $('#form_comment_email'),
+		$comment = $('#form_comment_content'),
+		$comments = $('.comments'),
+		$aboutAuthor = $('.about_author'),
+		$singlePage = $('.singlepage'),
+		$remove = $('.remove'),
+		$container = $('<div></div>'),
+		data,
+		timeFlag = 0;
+		tipCss = {
+			'right': '116px',
+			'opacity': 1
+		},
+		tipCssReset = {
+			'right': '110px',
+			'opacity': 0
+		},
+		createButton = function () {
+			return $('<button type="button"></button>');
+		},
+		commentAjax = function (url, data) {
+			$.ajax(
+				{
+					type: 'POST',
+					url: url,
+					data: data,
+					success: function (comment) {
+						$('<div class="commented pos-rela"></div>')
+							.append($('<a class="comment_head pos-abso"></a>').append($('<img src="' + comment.head + '">')))
+							.append(
+								$('<div class="comment_content"></div>')
+									.append($('<p>' + comment.content + '</p>'))
+									.append(
+										$('<p class="info"></p>')
+											.append($('<a href="javascript:;">' + comment.name + '</a>'))
+											.append($('<span>回复于' + comment.time + '</span>'))
+									)
+								)
+							.prependTo($comments);
+						$('.time-tip').css(tipCssReset);
+						timeFlag = 0;
+					}
+				}
+			)
+		};
+
+	$('.btn-comment').click(function () {
+
+		if (timeFlag === 1) {
+			$('.time-tip').css(tipCss);
+			return false;
+		}
+		if (!$comment.val()) return false;
+
+		data = {};
+		data['name'] = $name.val() ? $name.val() : '匿名';
+		data['email'] = $email.val() ? $email.val() : '838186163@qq.com';
+		data['content'] = $comment.val();
+		console.log(data);
+		commentAjax(location.pathname, data);
+
+		timeFlag = 1;
+		setHeight();
+
+	});
+	var sureButton = createButton().addClass('btn')
+		.addClass('sure')
+		.text('确定')
+		.off('click')
+		.on('click', function () {
+			var url = $remove.data('url');
+			$.ajax(
+				{
+					type: 'post',
+					url: url,
+					success: function (mes) {
+						location.href = '/';
+					}
+				}
+			)
+			return false;
+		});
+	var cancleButton = createButton().addClass('btn')
+		.addClass('cancel')
+		.text('取消')
+		.off('click')
+		.on('click', function () {});
+	$container.empty().append(sureButton).append(cancleButton);
+	PopTip.showPop($remove, null,null, '确定要删除这篇文章吗？', $container, 'warning');
+})();

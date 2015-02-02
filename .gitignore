@@ -2,4 +2,7 @@
 /error.log
 /access.log
 
+/public/images/dbimg
+/public/css
+
 .idea

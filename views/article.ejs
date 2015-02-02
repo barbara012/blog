@@ -108,6 +108,7 @@
 		<script src="/js/qrcode.js"></script>
 		<script src="/js/help.js"></script>
 		<script src="/js/comment.js"></script>
+        <script src="/js/markdown_extend.js"></script>
 		<script>
 			(function () {
 				jQuery('.weixin-qr').qrcode({
@@ -127,6 +128,8 @@
 					descContent: ($('.article-main').text()).substr(0, 20) + '……'
 				});
 				Share.enable();
+
+				$('.article-main').html(ME($('.article-main').html()));
 			})();
 		</script>
 	</body>
