@@ -121,10 +121,12 @@
 		});
 	}, false);
 //post
+	var flagPost = 0;
 	$postBtn.click(function (e) {
 		if ($post.val() == '') {
 			return false;
 		}
+		if (flagPost === 1) return;
 		var content = $('#post').val(),
 			tag = $('#tag').val().replace(/(，)|(\t)|(,)|(-)|(\.)|(:)|(--)|(\s)|(：)|(。)|(\|)/g, ';'),
 			title = $('#title').val();
@@ -133,6 +135,7 @@
 		post['title'] = (title != null) ? title : content.substr(0, 10);
 		post['tag'] = tag;
 		sendAjax(location.pathname, post, 1);
+		flagPost = 1;
 	});
 	//
 	$('#tag').keydown(function (e) {
