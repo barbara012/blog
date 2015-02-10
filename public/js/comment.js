@@ -54,15 +54,13 @@
 			$('.time-tip').css(tipCss);
 			return false;
 		}
-		if (!$comment.val()) return false;
+		if (!$comment.text()) return false;
 
 		data = {};
 		data['name'] = $name.val() ? $name.val() : '匿名';
 		data['email'] = $email.val() ? $email.val() : '838186163@qq.com';
-		data['content'] = $comment.val();
-		console.log(data);
+		data['content'] = $comment.text();
 		commentAjax(location.pathname, data);
-
 		timeFlag = 1;
 		setHeight();
 

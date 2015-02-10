@@ -45,8 +45,8 @@ code {
 	-webkit-text-shadow: 0 1px 1px @color;
 	text-shadow: 0 1px 1px @color;
 }
-.float (@direction) {
-	float: @direction;
+.hidden {
+	display: none;
 }
 .position (@style) {
 	position: @style;
@@ -590,7 +590,7 @@ blockquote {
 	}
 	.article_content {
 		width: 78%;
-		padding: 20px;
+		padding: 45px;
 		background-color: #ffffff;
 		.baseBoxShadow;
 		article {
@@ -1244,20 +1244,6 @@ blockquote {
 			}
 		}
 	}
-	.btn-comment {
-		border-radius: 2px;
-		display: inline-block;
-		height: 30px;
-		line-height: 30px;
-		width: 50px;
-		text-align: center;
-		background-color: #428BCA;
-		color: #ffffff;
-		font-size: 18px;
-		&:hover {
-			background-color: darken(#428BCA, 10%);
-		}
-	}
 }
 .comment_head {
 	top: 10px;
@@ -1280,7 +1266,11 @@ blockquote {
 	}
 }
 .comment {
-	margin-top: 20px;
+	margin-top: 50px;
+	border: 1px solid #E0E0E0;
+	border-radius: 2px;
+	padding: 5px;
+	position: relative;
 	input,
 	textarea {
 		border: none;
@@ -1293,12 +1283,63 @@ blockquote {
 		height: 30px;
 		border-bottom: 1px solid #cccccc;
 	}
+	.comment__inner {
+		height: 100%;
+		position: relative;
+		padding-right: 65px;
+	}
+	.btn-comment {
+		border-radius: 2px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 60px;
+		text-align: center;
+		background-color: #428BCA;
+		color: #ffffff;
+		font-size: 18px;
+		&:hover {
+			background-color: darken(#428BCA, 10%);
+			color: #ffffff;
+		}
+		&:after {
+			content: "";
+			height: 100%;
+		}
+		&:after,
+		&:before {
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
 	.textarea {
 		width: 100%;
 		resize: none;
-		padding: 10px 10px 50px;
-		border: 1px solid #cccccc;
-		border-top-width: 0;
+		outline: none;
+		min-height: 60px;
+		padding: 10px;
+	}
+}
+/*markdown*/
+pre {
+	display: block;
+	padding: 10px;
+	margin: 0 0 10px;
+	font-size: 14px;
+	color: #333;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: #F5F5F5;
+	border: 1px solid #CCC;
+	border-radius: 2px;
+}
+p {
+	code {
+		background-color: rgba(0, 0, 0, 0.04);
+		padding: 2px 3px;
+		border-radius: 3px;
+		margin: 0 2px;
 	}
 }
 /* post */
