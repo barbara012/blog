@@ -8,9 +8,19 @@ var routes = require('./routes');
 // var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
-var MongoStore = require('connect-mongo')(express);
 var settings = require('./settings');
 var flash = require('connect-flash');
+var favicon = require('serve-favicon');
+var methodOverride = require('method-override');
+var session = require('express-session');
+var errorHandler = require('errorhandler');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var logger = require('morgan');
+var _static = require('serve-static');
+var multer = require('multer');
+var MongoStore = require('connect-mongo')(session);
+
 
 var fs = require('fs');
 var accessLog = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
@@ -22,46 +32,51 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(flash());
-app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
-app.use(express.logger('dev'));
-app.use(express.logger({stream: accessLog}));
-// app.use(express.json());
-// app.use(express.urlencoded());
-app.use(express.bodyParser(
+app.use(favicon(__dirname + '/public/images/favicon/icon32.png'));
+app.use(logger('dev'));
+app.use(logger({stream: accessLog}));
+
+app.use(bodyParser(
 	{
 		keepExtensions: true,
 		uploadDir: './public/images/dbimg'
 	}
 ));
-app.use(express.methodOverride());
-app.use(express.cookieParser());
-app.use(express.session({
-  secret: settings.cookieSecret,
-  key: settings.db,//cookie name
-  cookie: {maxAge: 1000 * 60 * 60 * 24},//1 days
-  store: new MongoStore({
-    db: settings.db
-  })
+
+app.use(multer({
+	dest: './public/images',
+	rename: function (fieldname, filename) {
+		return filename;
+	}
 }));
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride());
+app.use(cookieParser());
+app.use(session({
+	secret: settings.cookieSecret,
+	key: settings.db,//cookie name
+	cookie: {
+		maxAge: 1000 * 60 * 60 * 24
+	},//1 days
+	store: new MongoStore({
+		db: settings.db
+	})
+}));
+// app.use(app.router);
+app.use(_static(path.join(__dirname, 'public')));
 app.use(function (err, req, res, next) {
-  var meta = '[' + new Date() + '] ' + req.url + '\n';
-  errorLog.write(meta + err.stack + '\n');
-  next();
+	var meta = '[' + new Date() + '] ' + req.url + '\n';
+	errorLog.write(meta + err.stack + '\n');
+	next();
 });
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+ 	app.use(errorHandler());
 }
-
-// app.get('/', routes.index);
-// app.get('/users', user.list);
 
 //新添加
 routes(app);
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('药！药！切克闹，煎饼果子来一套 ' + app.get('port'));
+ 	console.log('药！药！切克闹，煎饼果子来一套 ' + app.get('port'));
 });

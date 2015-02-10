@@ -225,7 +225,6 @@ module.exports = function (app) {
 	});
 	//
 	app.post('/post/:ower', function (req, res) {
-		console.log(3210)
 		var dbpic = [],
 			blobArr,
 			pic;
@@ -236,11 +235,11 @@ module.exports = function (app) {
 				console.log('Successfully removed an empty file!');
 			} else {
 				var date = new Date();
+				
 				var target_path = './public/images/dbimg/' + date.getTime() + req.files[i].name;
-				console.log(req.params.ower);
 			// 使用同步方式重命名一个文件
 				fs.renameSync(req.files[i].path, target_path);
-				console.log(0123);
+
 				var dbImgUrl = '/images/dbimg/' + date.getTime() + req.files[i].name;
 				
 				var time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 

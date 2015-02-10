@@ -58,9 +58,9 @@
 				<div class="editor-container pull-left">
 					<div class="editor pull-right">
 					<% if (post) { %>
-						<textarea oninput="this.editor.update()" id="post"  name="post"><%- post.post %></textarea>
+						<div id="post" contenteditable="true" name="post"><%- post.post %></div>
 					<% } else { %>
-						<textarea oninput="this.editor.update()" id="post"  name="post"></textarea>
+						<div id="post" contenteditable="true" name="post"></div>
 					<% } %>
 					</div>
 				</div>

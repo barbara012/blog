@@ -8,13 +8,13 @@
 		article = {},
 		$post = $('#post');
 
-	function Editor(input, preview) {
-		this.update = function () {
-			preview.innerHTML = ME(markdown.toHTML(input.value));
-		};
-		input.editor = this;
-		this.update();
-	};
+	// function Editor(input, preview) {
+	// 	this.update = function () {
+	// 		preview.innerHTML = ME(markdown.toHTML(input.value));
+	// 	};
+	// 	input.editor = this;
+	// 	this.update();
+	// };
 
 	//ajax
 	var sendAjax = function (url, data, option) {
@@ -48,7 +48,7 @@
 		)
 	};
 	var getObj = function (id) { return document.getElementById(id); };
-	new Editor(getObj("post"), getObj("preview"));
+	// new Editor(getObj("post"), getObj("preview"));
 	// 插入图片
 	//在textarea光标处插入内容
 	function insertContent(obj, content) {
@@ -106,7 +106,6 @@
 		e.preventDefault(); //取消默认浏览器拖拽
 		var imgFile = e.dataTransfer.files,	//获取文件对象
 			data = {},
-			imgUrl,
 			url = '/post/' + $hideIput.val();
 		if (imgFile.length === 0) return false;
 
@@ -115,19 +114,18 @@
 		data['image'] = imgFile[0];
 
 		postFormData(url, data, function (mes) {
-			//$post.val($post.val() + '![](' + mes.response + ')');
 			insertContent(box, '![15](' + mes.response + ')');
-			new Editor(getObj("post"), getObj("preview"));
+			// new Editor(getObj("post"), getObj("preview"));
 		});
 	}, false);
 //post
 	var flagPost = 0;
 	$postBtn.click(function (e) {
-		if ($post.val() == '') {
+		if ($post.text() == '') {
 			return false;
 		}
 		if (flagPost === 1) return;
-		var content = $('#post').val(),
+		var content = $('#post').text(),
 			tag = $('#tag').val().replace(/(，)|(\t)|(,)|(-)|(\.)|(:)|(--)|(\s)|(：)|(。)|(\|)/g, ';'),
 			title = $('#title').val();
 		post = {};
