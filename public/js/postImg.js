@@ -8,13 +8,13 @@
 		article = {},
 		$post = $('#post');
 
-	// function Editor(input, preview) {
-	// 	this.update = function () {
-	// 		preview.innerHTML = ME(markdown.toHTML(input.value));
-	// 	};
-	// 	input.editor = this;
-	// 	this.update();
-	// };
+	function Editor(input, preview) {
+		this.update = function () {
+			preview.innerHTML = ME(markdown.toHTML(input.value));
+		};
+		input.editor = this;
+		this.update();
+	};
 
 	//ajax
 	var sendAjax = function (url, data, option) {
@@ -48,7 +48,7 @@
 		)
 	};
 	var getObj = function (id) { return document.getElementById(id); };
-	// new Editor(getObj("post"), getObj("preview"));
+	new Editor(getObj("post"), getObj("preview"));
 	// 插入图片
 	//在textarea光标处插入内容
 	function insertContent(obj, content) {
@@ -106,6 +106,7 @@
 		e.preventDefault(); //取消默认浏览器拖拽
 		var imgFile = e.dataTransfer.files,	//获取文件对象
 			data = {},
+			imgUrl,
 			url = '/post/' + $hideIput.val();
 		if (imgFile.length === 0) return false;
 
@@ -114,18 +115,19 @@
 		data['image'] = imgFile[0];
 
 		postFormData(url, data, function (mes) {
+			//$post.val($post.val() + '![](' + mes.response + ')');
 			insertContent(box, '![15](' + mes.response + ')');
-			// new Editor(getObj("post"), getObj("preview"));
+			new Editor(getObj("post"), getObj("preview"));
 		});
 	}, false);
 //post
 	var flagPost = 0;
 	$postBtn.click(function (e) {
-		if ($post.text() == '') {
+		if ($post.val() == '') {
 			return false;
 		}
 		if (flagPost === 1) return;
-		var content = $('#post').text(),
+		var content = $('#post').val(),
 			tag = $('#tag').val().replace(/(，)|(\t)|(,)|(-)|(\.)|(:)|(--)|(\s)|(：)|(。)|(\|)/g, ';'),
 			title = $('#title').val();
 		post = {};
@@ -142,6 +144,24 @@
 		}
 	});
 	//
+	$(document).delegate('#post', 'keydown', function(e) {
+	  var keyCode = e.keyCode || e.which;
+
+	  if (keyCode == 9) {
+	    e.preventDefault();
+	    var start = $(this).get(0).selectionStart;
+	    var end = $(this).get(0).selectionEnd;
+
+	    // set textarea value to: text before caret + tab + text after caret
+	    $(this).val($(this).val().substring(0, start)
+	                + "\t"
+	                + $(this).val().substring(end));
+
+	    // put caret at right position again
+	    $(this).get(0).selectionStart =
+	    $(this).get(0).selectionEnd = start + 1;
+	  }
+	});
 })();
 var Preview = $.extend(
 	{}, {
