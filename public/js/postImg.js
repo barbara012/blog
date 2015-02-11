@@ -117,7 +117,7 @@
 	function setProgress (percent) {
 		progressBar.style.width = progress.clientWidth * percent + 'px';
 		if (percent === 1) {
-			progressBar.style.opacity = '0';
+			progress.style.display = 'none';
 		}
 	};
 
@@ -139,7 +139,7 @@
 
 		data['image'] = imgFile[0];
 
-		progressBar.style.opacity = '1';
+		progress.style.display = 'block';
 
 		postFormData(url, data, function (mes) {
 			//$post.val($post.val() + '![](' + mes.response + ')');
