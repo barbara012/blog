@@ -82,17 +82,17 @@
 			e.preventDefault();
 		}
 	});
+
+	var progress = document.getElementById('progress-container');
+	var progressBar = document.getElementById('progress-bar');
+	var flagDropRepeat = 0; // 防止拖拽重叠
+
 	function postFormData(url, data, callback) {
 		if (typeof FormData === 'undefined') {
 			throw new Error ('FormData is not implemented');
 		};
 
 		var request = new XMLHttpRequest();
-		request.open("POST", url);
-		request.onreadystatechange = function () {
-			if (request.readyState === 4 && callback)
-				callback(request);
-		};
 		var formdata = new FormData();
 		for (var name in data) {
 			if (!data.hasOwnProperty(name)) continue;
@@ -100,27 +100,55 @@
 			if (typeof value === 'function') continue;
 			formdata.append(name, value);
 		};
+		request.onreadystatechange = function () {
+			if (request.readyState === 4 && callback)
+				callback(request);
+		};
+		request.upload.onprogress = function (event) {
+			if (event.lengthComputable) {
+			 	setProgress(event.loaded / event.total);
+			}
+		};
+		request.open("POST", url);
 		request.send(formdata);
+		flagDropRepeat = 1;
 	};
+	//
+	function setProgress (percent) {
+		progressBar.style.width = progress.clientWidth * percent + 'px';
+		if (percent === 1) {
+			progressBar.style.opacity = '0';
+		}
+	};
+
 	box.addEventListener('drop', function (e) {
 		e.preventDefault(); //取消默认浏览器拖拽
+		if (flagDropRepeat === 1) return;
 		var imgFile = e.dataTransfer.files,	//获取文件对象
 			data = {},
 			imgUrl,
 			url = '/post/' + $hideIput.val();
-		if (imgFile.length === 0) return false;
+		if (imgFile.length === 0) return;
 
-		if (imgFile[0].type.indexOf('image') === -1)  return false;
+		if (imgFile[0].type.indexOf('image') === -1)  return;
+
+		if (imgFile[0].size > 2097152) { //  2 * 1024 * 1024
+			alert('图片尺寸过大！服务器硬盘扛不住！');
+			return;
+		}
 
 		data['image'] = imgFile[0];
 
+		progressBar.style.opacity = '1';
+
 		postFormData(url, data, function (mes) {
 			//$post.val($post.val() + '![](' + mes.response + ')');
+			flagDropRepeat = 0;
 			insertContent(box, '![15](' + mes.response + ')');
 			new Editor(getObj("post"), getObj("preview"));
 		});
 	}, false);
-//post
+	//post
 	var flagPost = 0;
 	$postBtn.click(function (e) {
 		if ($post.val() == '') {
