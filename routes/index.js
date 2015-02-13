@@ -32,7 +32,7 @@ module.exports = function (app) {
 			});
 		});
 	});
-//注册
+	//注册
 	app.post('/reg', checkNotLogin);
 	app.post('/reg', function (req, res) {
 		var name = req.body.regUserName,
@@ -101,7 +101,7 @@ module.exports = function (app) {
 			});
 		});
 	});
-//登录
+	//登录
 	app.get('/login', checkNotLogin);
 	app.get('/login', function (req, res) {
 		res.render('login', {
@@ -147,7 +147,7 @@ module.exports = function (app) {
 			)
 		});
 	});
-//设置
+	//设置
 	app.get('/set', checkLogin);
 	app.get('/set', function (req, res) {
 		if (req.session.user.name === 'huwenhua012') {
@@ -164,7 +164,7 @@ module.exports = function (app) {
 			error: req.flash('error').toString()});
 		}
 	});
-//修改
+	//修改
 	app.post('/update/:name', function (req, res) {
 		var name = req.params.name;
 		var md5 = crypto.createHash('md5');
@@ -176,7 +176,7 @@ module.exports = function (app) {
 			console.log(err);
 		});
 	});
-//讨论
+	//讨论
 	app.get('/discuss', checkLogin);
 	app.get('/discuss', function (req, res) {
 		res.render('discuss', {
@@ -186,7 +186,7 @@ module.exports = function (app) {
 			error: req.flash('error').toString()
 		});
 	});
-//发布
+	//发布
 	app.get('/post', checkLogin);
 	app.get('/post', function (req, res) {
 		res.render('post', {
@@ -268,7 +268,7 @@ module.exports = function (app) {
 		res.redirect('/');//登出成功后跳转到主页
 	});
 
-//相册
+	//相册
 	app.get('/album', checkLogin);
 	app.get('/album', function (req, res) {
 		var page = page = req.query.p ? parseInt(req.query.p) : 1;
@@ -289,7 +289,7 @@ module.exports = function (app) {
 			});
 		});
 	});
-//上传文件
+	//上传文件
 	app.get('/upload', checkLogin);
 	app.get('/upload', function (req, res) {
 		res.render('upload', {
@@ -469,7 +469,7 @@ module.exports = function (app) {
 			res.send(comment);
 		});
 	});
-//火星票
+	//火星票
 	app.get('/mars', checkLogin);
 	app.get('/mars', function (req, res) {
 		res.render('mars', {
@@ -479,7 +479,7 @@ module.exports = function (app) {
 			error: req.flash('error').toString()
 		});
 	});
-//编辑文章
+	//编辑文章
 	app.get('/edit/:id', checkLogin);
 	app.get('/edit/:id', function (req, res) {
 		var currentUser = req.session.user;
@@ -498,7 +498,7 @@ module.exports = function (app) {
 			});
 		});
 	});
-//保存文章
+	//保存文章
 	app.post('/edit/:id', checkLogin);
 	app.post('/edit/:id', function (req, res) {
 		var currentUser = req.session.user,
@@ -563,7 +563,7 @@ module.exports = function (app) {
 			});
 		});
 	});
-//	登录用户已经发布的文章列表
+	//登录用户已经发布的文章列表
 	app.get('/posted/:name', checkLogin);
 	app.get('/posted/:name', function (req, res) {
 		if (req.session.user.name !== req.params.name) {
@@ -613,7 +613,7 @@ module.exports = function (app) {
 			res.send(post);
 		})
 	});
-//	作者已经发布的文章列表
+	//作者已经发布的文章列表
 	app.get('/oposted/:name', checkLogin);
 	app.get('/oposted/:name', function (req, res) {
 		Post.getAll(req.params.name, function (err, arrayId) {
