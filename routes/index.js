@@ -9,7 +9,8 @@ var crypto = require('crypto'),
 	Pic = require('../models/pic.js'),
 	Comment = require('../models/comment.js'),
 	Email = require('../models/email.js'),
-	markdown = require('markdown').markdown;
+	markdown = require('markdown').markdown,
+	passport = require('passport');
 module.exports = function (app) {
 
 	app.get('/', function (req, res) {
@@ -147,6 +148,36 @@ module.exports = function (app) {
 			)
 		});
 	});
+	//github login
+	app.get('/login/github', passport.authenticate('github', {session: false}));
+	app.get('/login/github/callback', passport.authenticate('github', {
+		session: false,
+		failureRedirect: '/login',
+		successFlash: '登陆成功！'
+	}), function (req, res) {
+		var saveAsGithubName = req.user.username + 'huluwa$github';
+		User.get(saveAsGithubName, function (err, user) {
+			if (user) {
+				req.session.user = user;
+				return res.redirect('/');
+
+			};
+
+			var newUser = new User({
+				'name': saveAsGithubName,
+				'password': 'woaichensiyun',
+				'email': '5201314@hwh.com'
+			})
+			newUser.save(function(err, user) {
+				if (err) {
+					return res.redirect('/');
+				}
+				req.session.user = user;
+				res.redirect('/');
+			});
+		});
+		
+	});
 	//设置
 	app.get('/set', checkLogin);
 	app.get('/set', function (req, res) {
@@ -191,13 +222,14 @@ module.exports = function (app) {
 	app.get('/post', function (req, res) {
 		res.render('post', {
 			title: '发布',
-			user: req.session.user,
+			user: req.session.user || {'name': '葫芦娃'},
 			success: req.flash('success').toString(),
 			error: req.flash('error').toString()
 		});
 	});
 	app.post('/post', checkLogin);
 	app.post('/post', function (req, res) {
+		console.log(req.session.user.email);
 		var currentUser = req.session.user,
 			md5 = crypto.createHash('md5'),
 			tags = req.body.tag.split(';'),
@@ -236,11 +268,11 @@ module.exports = function (app) {
 			} else {
 				var date = new Date();
 				
-				var target_path = './public/images/dbimg/' + date.getTime() + req.files[i].name;
+				var target_path = './public/images/dbimg/' + req.files[i].name;
 			// 使用同步方式重命名一个文件
 				fs.renameSync(req.files[i].path, target_path);
 
-				var dbImgUrl = '/images/dbimg/' + date.getTime() + req.files[i].name;
+				var dbImgUrl = '/images/dbimg/' + req.files[i].name;
 				
 				var time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
 					date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
@@ -426,14 +458,13 @@ module.exports = function (app) {
 	});
 	//获得用户文章
 	app.get('/p/:name/:id', function (req, res) {
-
+		
 		Post.getOne(req.params.id, req.params.name, 1, function (err, post) {
 			if (err) {
 				req.flash('error', err);
 				console.log(err);
 				return res.redirect('/');
 			};
-			console.log(24);
 			res.render('article', {
 				title: post.title,
 				post: post,
@@ -569,8 +600,6 @@ module.exports = function (app) {
 		if (req.session.user.name !== req.params.name) {
 			return res.redirect('/');
 		}
-		console.log(req.session.user);
-		console.log(req.params.name);
 		Post.getAll(req.params.name, function (err, arrayId) {
 			if (err) {
 				req.flash('error', err);
@@ -726,6 +755,7 @@ module.exports = function (app) {
 		if (!req.session.user) {
 			req.flash('error', '未登录!');
 			res.redirect('/login');
+			return;
 		}
 		next();
 	}
@@ -734,6 +764,7 @@ module.exports = function (app) {
 		if (req.session.user) {
 			req.flash('error', '已登录!');
 			res.redirect('back');//返回之前的页面
+			return;
 		}
 		next();
 	}

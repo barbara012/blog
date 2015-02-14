@@ -20,7 +20,8 @@ var logger = require('morgan');
 var _static = require('serve-static');
 var multer = require('multer');
 var MongoStore = require('connect-mongo')(session);
-
+var passport = require('passport');
+var GithubStrategy = require('passport-github').Strategy;
 
 var fs = require('fs');
 var accessLog = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
@@ -34,19 +35,13 @@ app.set('view engine', 'ejs');
 app.use(flash());
 app.use(favicon(__dirname + '/public/images/favicon/icon32.png'));
 app.use(logger('dev'));
-app.use(logger({stream: accessLog}));
-
-app.use(bodyParser(
-	{
-		keepExtensions: true,
-		uploadDir: './public/images/dbimg'
-	}
-));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extend: false}));
 
 app.use(multer({
-	dest: './public/images',
+	dest: './public/images/dbimg',
 	rename: function (fieldname, filename) {
-		return filename;
+		return (new Date).getTime() + filename;
 	}
 }));
 app.use(methodOverride());
@@ -54,6 +49,8 @@ app.use(cookieParser());
 app.use(session({
 	secret: settings.cookieSecret,
 	key: settings.db,//cookie name
+	saveUninitialized: true,
+	resave: false,
 	cookie: {
 		maxAge: 1000 * 60 * 60 * 24
 	},//1 days
@@ -68,12 +65,19 @@ app.use(function (err, req, res, next) {
 	errorLog.write(meta + err.stack + '\n');
 	next();
 });
-
+//github
+passport.use(new GithubStrategy({
+  clientID: "c236c5b3ce11c027c837",
+  clientSecret: "eab3268a9b8dfa9f8dea533270e311816fa4da30",
+  callbackURL: "http://hwh.club/login/github/callback"
+}, function(accessToken, refreshToken, profile, done) {
+  done(null, profile);
+}));
 // development only
 if ('development' == app.get('env')) {
  	app.use(errorHandler());
 }
-
+app.use(passport.initialize());
 //新添加
 routes(app);
 
