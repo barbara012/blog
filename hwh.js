@@ -68,7 +68,7 @@ app.use(function (err, req, res, next) {
 //github
 passport.use(new GithubStrategy({
   clientID: "c236c5b3ce11c027c837",
-  clientSecret: "eab3268a9b8dfa9f8dea533270e311816fa4da30",
+  clientSecret: "fbbf3563241d3025bd7f59b839194d1288995645",
   callbackURL: "http://hwh.club/login/github/callback"
 }, function(accessToken, refreshToken, profile, done) {
   done(null, profile);
