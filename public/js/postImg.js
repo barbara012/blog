@@ -160,7 +160,7 @@
 			title = $('#title').val();
 		post = {};
 		post['content'] = content;
-		post['title'] = (title != null) ? title : content.substr(0, 10);
+		post['title'] = (title) ? title : content.substr(0, 10);
 		post['tag'] = tag;
 		sendAjax(location.pathname, post, 1);
 		flagPost = 1;

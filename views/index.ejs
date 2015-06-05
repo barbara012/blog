@@ -44,7 +44,11 @@
 			<div class="body">
 					<% posts.forEach(function (post, index) { %>
 				<article class="pos-rela">
+					<% if (post.title) {%>
 					<h1><a href="/p/<%= post.name %>/<%= post._id %>" class="title"><%= post.title.replace('<span>','').replace('</span>', '') %></a></h1>
+					<%} else { %>
+						<h1><a href="/p/<%= post.name %>/<%= post._id %>" class="title">作者太懒，没加标题</a></h1>
+					<% }%>
 					<div class="article">
 						<%- post.post.replace(/(<img)(.*)(\/>)/g,'(图片)').substr(0, 200) + "···" %>
 					</div>

@@ -53,7 +53,11 @@
 						<% flag = 0 %>
 					<% } %>
 					<article>
+						<% if (post.title) {%>
 						<h1 class="article-title t-c"><%= post.title.replace('<span>','').replace('</span>', '') %></h1>
+						<%} else { %>
+							<h1 class="article-title t-c">作者太懒，没加标题</h1>
+						<% }%>
 						<div class="article-main"><%- post.post %></div>
 						<br />
 						<div class="info clearfix">
