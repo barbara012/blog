@@ -1605,13 +1605,24 @@ hr {
 				}
 			}
 		}
-		article {
-			.title {
-				text-align: center;
+		.body {
+			width: 100%;
+			padding: 20px 10px 10px;
+			background-color: #EDECE4;
+		}
+		.pos-rela {
+			padding: 10px 20px;
+			background-color: #fff;
+			margin-top: 10px;
+			&:first-child {
+				margin-top: 0;
 			}
 			img {
 				width: 100%;
 			}
+		}
+		.separate {
+			display: none;
 		}
 	}
 	.singlepage {
@@ -1667,11 +1678,6 @@ hr {
 		}
 		input[type="text"] {
 			margin-right: 2%;
-		}
-		.btn-comment {
-			width: 100%;
-			float: none !important;
-			clear: both;
 		}
 	}
 	.login {

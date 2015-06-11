@@ -22,7 +22,7 @@ module.exports = function (app) {
 				posts = [];
 			}
 			res.render('index', {
-				title: '首页',
+				title: '葫芦娃的博客',
 				posts: posts,
 				page: page,
 				isFirstPage: (page - 1) == 0,
@@ -189,7 +189,7 @@ module.exports = function (app) {
 				error: req.flash('error').toString()});
 		} else {
 			res.render('/', {
-			title: '首页',
+			title: '葫芦娃的博客',
 			user: req.session.user,
 			success: req.flash('没有权限').toString(),
 			error: req.flash('error').toString()});
@@ -310,7 +310,7 @@ module.exports = function (app) {
 				imgs = [];
 			} 
 			res.render('album', {
-				title: '首页',
+				title: '葫芦娃的博客',
 				imgs: imgs,
 				page: page,
 				isFirstPage: (page - 1) == 0,
@@ -713,7 +713,7 @@ module.exports = function (app) {
 
 		if ((time - req.params.time)/(1000 * 60 * 60) > 1) {
 			return res.render('reset', {
-						title: '首页',
+						title: '葫芦娃的博客',
 						past: true,
 						success: req.flash('success').toString(),
 						error: req.flash('error').toString()
@@ -725,7 +725,7 @@ module.exports = function (app) {
 				return res.redirect('/');
 			}
 			res.render('reset', {
-				title: '首页',
+				title: '葫芦娃的博客',
 				past: false,
 				user: user,
 				success: req.flash('success').toString(),
