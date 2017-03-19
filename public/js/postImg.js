@@ -90,7 +90,7 @@
 	function postFormData(url, data, callback) {
 		if (typeof FormData === 'undefined') {
 			throw new Error ('FormData is not implemented');
-		};
+		}
 
 		var request = new XMLHttpRequest();
 		var formdata = new FormData();
@@ -99,7 +99,7 @@
 			var value = data[name];
 			if (typeof value === 'function') continue;
 			formdata.append(name, value);
-		};
+		}
 		request.onreadystatechange = function () {
 			if (request.readyState === 4 && callback)
 				callback(request);
@@ -112,14 +112,14 @@
 		request.open("POST", url);
 		request.send(formdata);
 		flagDropRepeat = 1;
-	};
+	}
 	//
 	function setProgress (percent) {
 		progressBar.style.width = progress.clientWidth * percent + 'px';
 		if (percent === 1) {
 			progress.style.display = 'none';
 		}
-	};
+	}
 
 	box.addEventListener('drop', function (e) {
 		e.preventDefault(); //取消默认浏览器拖拽

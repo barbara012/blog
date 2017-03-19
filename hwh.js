@@ -48,12 +48,13 @@ app.use(methodOverride());
 app.use(cookieParser());
 app.use(session({
 	secret: settings.cookieSecret,
+	name: settings.cookieSecret,
 	key: settings.db,//cookie name
-	saveUninitialized: true,
-	resave: false,
+	saveUninitialized: false,
+	resave: true,
 	cookie: {
 		maxAge: 1000 * 60 * 60 * 24
-	},//1 days
+	},
 	store: new MongoStore({
 		db: settings.db
 	})

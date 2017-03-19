@@ -8,8 +8,6 @@ body {
 	background-color: #FFF;
 }
 * {
-	webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -696,10 +694,22 @@ blockquote {
 	text-indent: 0;
 	margin-bottom: 10px;
 }
+.singlepage-app {
+  .article_content {
+    border-top-width: 0;
+  }
+  article {
+    img {
+      margin: 0 0;
+    }
+    p {
+      text-indent: 0;
+    }
+  }
+}
 .edit,
 .remove {
 	.singlepage .article_content & {
-		color: #ffffff;
 		font-size: 18px;
 		color: #999999;
 		top: 10px;

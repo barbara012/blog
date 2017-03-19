@@ -33,6 +33,33 @@ module.exports = function (app) {
 			});
 		});
 	});
+	//app 获取文章列表
+    app.get('/getArticles', function (req, res) {
+        //判断是否是第一页，并把请求的页数转换成 number 类型
+        var page = req.query.p ? parseInt(req.query.p) : 1;
+        //查询并返回第 page 页的 10 篇文章
+        Post.getTen(null, page, function (err, posts, total) {
+            if (err) {
+                posts = [];
+            }
+            return res.send({
+                articles: posts
+            });
+        });
+    });
+    //app登录判断
+    app.get('/checkLogin', function(req, res) {
+        if (req.session.user) {
+            return res.send({
+                login: true,
+                user: req.session.user
+            });
+        } else {
+            return res.send({
+                login: false
+            });
+        }
+    });
 	//注册
 	app.post('/reg', checkNotLogin);
 	app.post('/reg', function (req, res) {
@@ -116,6 +143,9 @@ module.exports = function (app) {
 		//生成密码的 md5 值
 		var md5 = crypto.createHash('md5'),
 			password = md5.update(req.body.password).digest('hex');
+		console.log('-------------------');
+		console.log(req.body.password);
+		console.log('-------------------');
 			//检查用户是否存在
 		User.get(req.body.username, function (err, user) {
 			if (!user) {
@@ -141,10 +171,11 @@ module.exports = function (app) {
 			req.session.user = user;
 			req.flash('success', '登陆成功!');
 			res.send(
-					{
-						'type': 3,
-						'mes': '登录成功'
-					}
+				{
+                    'type': 3,
+                    'mes': '登录成功',
+                    'user': user
+				}
 			)
 		});
 	});
@@ -161,13 +192,13 @@ module.exports = function (app) {
 				req.session.user = user;
 				return res.redirect('/');
 
-			};
+			}
 
 			var newUser = new User({
 				'name': saveAsGithubName,
 				'password': 'woaichensiyun',
 				'email': '5201314@hwh.com'
-			})
+			});
 			newUser.save(function(err, user) {
 				if (err) {
 					return res.redirect('/');
@@ -235,8 +266,8 @@ module.exports = function (app) {
 			tags = req.body.tag.split(';'),
 			email_MD5 = md5.update(currentUser.email.toLowerCase()).digest('hex'),
 			head = "http://www.gravatar.com/avatar/" + email_MD5 + "?s=60",
-			post = new Post(currentUser.name, head, req.body.title, tags, req.body.content);
-			post.save(function (err) {
+			post = new Post(currentUser.name, head, req.body.title, tags, req.body.content, req.body.local);
+			post.save(function (err, article, user) {
 				if (err) {
 					req.flash('error', err);
 					return res.send(
@@ -250,7 +281,9 @@ module.exports = function (app) {
 					{
 						'type': 3,
 						'mes': '发布成功！',
-						'url': '/'
+						'url': '/',
+                        'article': article,
+                        'user': user
 					}
 				);//发表成功跳转到主页
 			});
@@ -299,6 +332,15 @@ module.exports = function (app) {
 		req.flash('success', '登出成功!');
 		res.redirect('/');//登出成功后跳转到主页
 	});
+
+	//app退出登录
+    app.get('/quit', function (req, res) {
+        req.session.user = null;
+        req.flash('success', '登出成功!');
+        res.send({
+            type: 3 //成功
+        })
+    });
 
 	//相册
 	app.get('/album', checkLogin);
@@ -464,14 +506,24 @@ module.exports = function (app) {
 				req.flash('error', err);
 				console.log(err);
 				return res.redirect('/');
-			};
-			res.render('article', {
-				title: post.title,
-				post: post,
-				user: req.session.user,
-				success: req.flash('success').toString(),
-				error: req.flash('error').toString()
-			});
+			}
+            if (req.headers['user-agent'] === 'hwh-app') {
+                res.render('app_article', {
+                    title: post.title,
+                    post: post,
+                    user: req.session.user,
+                    success: req.flash('success').toString(),
+                    error: req.flash('error').toString()
+                });
+            } else {
+                res.render('article', {
+                    title: post.title,
+                    post: post,
+                    user: req.session.user,
+                    success: req.flash('success').toString(),
+                    error: req.flash('error').toString()
+                });
+            }
 		});
 	});
 	//留言
@@ -732,7 +784,7 @@ module.exports = function (app) {
 				error: req.flash('error').toString()
 			})
 		})
-	})
+	});
 	//重置
 	app.post('/reset/password/:name', checkLogin);
 	app.post('/reset/password/:name', function (req, res) {
@@ -752,6 +804,7 @@ module.exports = function (app) {
 	});
 	//判断是否登录
 	function checkLogin(req, res, next) {
+	    console.log(req.session);
 		if (!req.session.user) {
 			req.flash('error', '未登录!');
 			res.redirect('/login');
@@ -761,6 +814,7 @@ module.exports = function (app) {
 	}
 
 	function checkNotLogin(req, res, next) {
+        console.log(req.session);
 		if (req.session.user) {
 			req.flash('error', '已登录!');
 			res.redirect('back');//返回之前的页面

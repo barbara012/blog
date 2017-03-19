@@ -2,12 +2,13 @@ var ObjectID = require('mongodb').ObjectID,
 	mongodb = require('./db'),
 	markdown = require('markdown').markdown;
 
-function Post(name, head, title, tags, post) {
+function Post(name, head, title, tags, post, local) {
 	this.name = name;
 	this.head = head;
 	this.title = title;
 	this.tags = tags;
 	this.post = post;
+	this.local = local;
 }
 
 module.exports = Post;
@@ -23,7 +24,7 @@ Post.prototype.save = function(callback) {
 		day : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
 		minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
 		date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) 
-	}
+	};
 	//要存入数据库的文档
 	var post = {
 		name: this.name,
@@ -32,6 +33,7 @@ Post.prototype.save = function(callback) {
 		title: this.title,
 		tags: this.tags,
 		post: this.post,
+        local: this.local,
 		comments: [],
 		reprint_info: {},
 		pv: 0
@@ -50,7 +52,7 @@ Post.prototype.save = function(callback) {
 			//将文档插入 posts 集合
 			collection.insert(post, {
 				safe: true
-			}, function (err) {
+			}, function (err, article) {
 				if (err) {
 					mongodb.close();
 				 	return callback(err);//失败！返回 err
@@ -72,10 +74,10 @@ Post.prototype.save = function(callback) {
 							if (err) {
 								return callback(err);
 							}
+                            callback(null, article.ops[0]);//返回 err 为 null
 						}
 					);
-				})
-				callback(null);//返回 err 为 null
+				});
 			});
 		});
 	});
