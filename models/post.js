@@ -74,6 +74,7 @@ Post.prototype.save = function(callback) {
 							if (err) {
 								return callback(err);
 							}
+                            article.ops[0].post = markdown.toHTML(article.ops[0].post);
                             callback(null, article.ops[0]);//返回 err 为 null
 						}
 					);
