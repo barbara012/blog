@@ -62,8 +62,64 @@
                 </div>
             </article>
             <% include comments %>
+            <% include comment %>
         </div>
     </div>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+    <script src="/js/jquery.qrcode.js"></script>
+    <script src="/js/help.js"></script>
+    <script src="/js/markdown_extend.js"></script>
+    <script>
+        (function () {
+            $('.article-main').html(ME($('.article-main').html()));
+            var $name = $('#form_comment_name'),
+                $email = $('#form_comment_email'),
+                $comment = $('#form_comment_content'),
+                $comments = $('.comments'),
+                data,
+                timeFlag = 0,
+                commentAjax = function (url, data) {
+                    $.ajax(
+                        {
+                            type: 'POST',
+                            url: url,
+                            data: data,
+                            success: function (comment) {
+                                $('<div class="commented pos-rela"></div>')
+                                    .append($('<a class="comment_head pos-abso"></a>').append($('<img src="' + comment.head + '">')))
+                                    .append(
+                                        $('<div class="comment_content"></div>')
+                                            .append($('<p>' + comment.content + '</p>'))
+                                            .append(
+                                                $('<p class="info"></p>')
+                                                    .append($('<a href="javascript:;">' + comment.name + '</a>'))
+                                                    .append($('<span>回复于' + comment.time + '</span>'))
+                                            )
+                                    )
+                                    .prependTo($comments);
+                                timeFlag = 0;
+                                $comment.text('');
+                                window.postMessage('true');
+                            }
+                        }
+                    )
+                };
+
+            $('.btn-comment').click(function () {
+                if (timeFlag === 1) {
+                    return false;
+                }
+                timeFlag = 1;
+                if (!$comment.text()) return false;
+
+                data = {};
+                data['name'] = $name.val() ? $name.val() : '匿名';
+                data['email'] = $email.val() ? $email.val() : '838186163@qq.com';
+                data['content'] = $comment.text();
+                commentAjax(location.pathname, data);
+            });
+        })();
+    </script>
 </div>
 </body>
 </html>
