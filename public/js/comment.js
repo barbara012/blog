@@ -10,7 +10,7 @@
 		$remove = $('.remove'),
 		$container = $('<div></div>'),
 		data,
-		timeFlag = 0,
+		timeFlag = 0;
 		tipCss = {
 			'right': '116px',
 			'opacity': 1
@@ -49,6 +49,7 @@
 		};
 
 	$('.btn-comment').click(function () {
+
 		if (timeFlag === 1) {
 			$('.time-tip').css(tipCss);
 			return false;
@@ -78,7 +79,7 @@
 						location.href = '/';
 					}
 				}
-			);
+			)
 			return false;
 		});
 	var cancleButton = createButton().addClass('btn')
