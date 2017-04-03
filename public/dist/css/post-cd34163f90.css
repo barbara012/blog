@@ -1,0 +1,86 @@
+@media (max-width: 767px) {
+  html,
+  body {
+    height: 100%;
+  }
+  .post .textarea {
+    width: 95%;
+  }
+  .post .editor-container,
+  .post .preview-container {
+    width: 100%;
+    padding: 0;
+    float: none !important;
+  }
+  .post .editor-container .container-shadow,
+  .post .preview-container .container-shadow {
+    margin: auto;
+    float: none !important;
+  }
+  .post .navbar-fixed-bottom {
+    padding: 0;
+    border-width: 0;
+  }
+  .post .navbar-fixed-bottom .navbar-right {
+    float: right;
+  }
+  .post .preview-container {
+    position: absolute;
+    left: -100%;
+    top: 0;
+  }
+  .post #tag {
+    width: 200px;
+    padding: 4px 10px;
+  }
+  .post .post-title {
+    top: 64px;
+  }
+  .post .post-title_input {
+    line-height: normal;
+    padding: 8px;
+    font-size: 18px;
+  }
+  .posted .list-head {
+    padding: 0 8px;
+  }
+  .posted .posted-list {
+    padding: 0 10px;
+  }
+  .posted .list {
+    padding: 0 0 20px;
+  }
+  .posted h2 {
+    margin: 0 0 10px;
+  }
+  .posted .title-item {
+    -ms-box-shadow: inset 4px 0 0 #CFCFCF;
+    -moz-box-shadow: inset 4px 0 0 #CFCFCF;
+    -webkit-box-shadow: inset 4px 0 0 #CFCFCF;
+    box-shadow: inset 4px 0 0 #CFCFCF;
+  }
+  .posted .title-item.active {
+    -ms-box-shadow: inset 4px 0 0 #CFCFCF;
+    -moz-box-shadow: inset 4px 0 0 #CFCFCF;
+    -webkit-box-shadow: inset 4px 0 0 #CFCFCF;
+    box-shadow: inset 4px 0 0 #CFCFCF;
+    background: #f0f0f0;
+  }
+  .posted .title-item .article-btn {
+    padding: 10px 0 0 16px;
+  }
+  .posted .title-item .article-btn p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .posted .content {
+    padding-right: 0;
+  }
+  .posted .content #content .article {
+    width: 100%;
+  }
+  .posted .content #content .article p {
+    line-height: 1.5;
+  }
+}

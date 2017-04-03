@@ -1,0 +1,1 @@
+!function(){var a=$(".user-center"),e=$("<div></div>"),t=$("<a></a>").text("设置"),p=$("<a></a>").text("个人中心"),n=$('<a href="/logout"></a>').text("退出");e.append(t).append(p).append(n),PopTip.showPop(a,"click",e,null,null,"default")}();
